@@ -35,7 +35,7 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+National Council of Austria composition:
 
 # 1928: 43.0, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="Social Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapo_r +]%
