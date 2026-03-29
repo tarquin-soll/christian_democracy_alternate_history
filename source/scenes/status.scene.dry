@@ -38,8 +38,7 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 Reichstag composition:
 
 # 1928: 43.0, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Worker's Party of Austria>SDAPÖ</span>!}: [+ sdapo_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+{!<span class="tooltip-text" title="Social Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapo_r +]%
 # 1928: 49.7, 1930: 15, 1932: 
 {!<span class="tooltip-text" title="Christian Social Party">CS</span>!}: [+ cs_r +]%
 # 1928: 1.8, 1930: 13
