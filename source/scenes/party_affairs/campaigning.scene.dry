@@ -11,12 +11,12 @@ tags: party_affairs
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
+- @catholics: The austrian catholics, our traditional support base.
 - @workers: The urban working class, who typically support the Social Democrats.
 - @new_middle: The "new middle class" of government employees and white-collar workers.
 - @old_middle: The "old middle class" of small independent businessmen and artisans.
 - @rural: Rural workers and small farmers, our secondary base.
 - @unemployed: The unemployed.
-- @catholics: Catholics, our traditional support base.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 
