@@ -37,13 +37,13 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 National Council of Austria composition:
 
-# 1928: 43.0, 1930: 25, 1932: 22
+# 1928: 43.0
 {!<span class="tooltip-text" title="Social Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapo_r +]%
-# 1928: 49.7, 1930: 15, 1932: 
+# 1928: 49.7
 {!<span class="tooltip-text" title="Christian Social Party">CS</span>!}: [+ cs_r +]%
-# 1928: 1.8, 1930: 13
+# 1928: 1.8
 {!<span class="tooltip-text" title="Greater German People's Party">GDVP</span>!}: [+ gdvp_r +]%
-# 1928: 5.5, 1930: 5
+# 1928: 5.5
 {!<span class="tooltip-text" title="Landbund">DVP</span>!}: [+ lb_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
