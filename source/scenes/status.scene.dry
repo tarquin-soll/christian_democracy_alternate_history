@@ -76,7 +76,7 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapö_relation : relationships +]
+{!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapo_relation : relationships +]
 
 {!<span class="tooltip-text" title="Greater German People's Party">GDVP</span>!}: [+ gdvp_relation : relationships +]
 
