@@ -76,27 +76,21 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapö_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Greater German People's Party">GDVP</span>!}: [+ gdvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
+{!<span class="tooltip-text" title="Landbund">LB</span>!}: [+ lb_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+= Internal Factions of the CS
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+{!<span class="tooltip-text" title="The Centrists are the bureaucratic and legalistic core of the party, prioritizing the 1920 Constitution and the maintenance of the Republic through parliamentary compromise.">Centrist</span>!} strength: [+ centrist_strength : strength +], dissent: [+ centrist_dissent : dissent +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="The Labor wing represents Catholic trade unions and the working class, advocating for social welfare and workers' rights within the framework of Christian Social Teaching.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-= Internal Factions of the SPD
+{!<span class="tooltip-text" title="The Right wing represents the nationalist and conservative elements of the party, favoring strong executive leadership and traditionalist reforms to ensure national order.">Right</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
-
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
-
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
-
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Clerical wing represents the religious and rural heart of the party, focused on preserving the role of the Church in education and social life through the Concordat.">Clerical</span>!} strength: [+ clerical_strength : strength +], dissent: [+ clerical_dissent : dissent +]
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
