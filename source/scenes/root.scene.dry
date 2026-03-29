@@ -96,7 +96,7 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.sdapö_relation = 0;
+Q.sdapo_relation = 5;
 Q.gdvp_relation = 70;
 Q.lb_relation = 65;
 
@@ -219,7 +219,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['sdapö', 'cs', 'gdvp', 'lb'];
+Q.parties = ['sdapo', 'cs', 'gdvp', 'lb'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -279,13 +279,13 @@ Q.catholics_other = 12;
 
 
 // April 1927 National Council of Austria Composition
-Q.sdapö_r = 43;
+Q.sdapo_r = 43;
 Q.cs_r = 50;
 Q.gdvp_r = 2;
 Q.lb_r = 5;
 
 // idk what this do
-Q.old_sdapö_r = 43;
+Q.old_sdapo_r = 43;
 Q.old_cs_r = 50;
 Q.old_gdvp_r = 2;
 Q.old_lb_r = 5;
