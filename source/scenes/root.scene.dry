@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Christian Democracy: An Alternate History
 
 @start_menu_2
 
@@ -96,9 +96,9 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.sdapö_relation = 25;
-Q.gdvp_relation = 60;
-Q.lb_relation = 0;
+Q.sdapö_relation = 0;
+Q.gdvp_relation = 70;
+Q.lb_relation = 65;
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
