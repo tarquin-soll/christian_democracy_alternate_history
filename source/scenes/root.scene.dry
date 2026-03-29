@@ -46,27 +46,22 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['right', 'center', 'labor', 'clerical'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.right_strength = 30;
+Q.right_dissent = 5;
+Q.center_strength = 15;
+Q.center_dissent = 5;
+Q.labor_strength = 10;
+Q.labor_dissent = 15;
+Q.clerical_strength = 45;
+Q.clerical_dissent = 0;
 
 // secret events...
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
-
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -101,13 +96,9 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.sdapö_relation = 25;
+Q.gdvp_relation = 60;
+Q.lb_relation = 0;
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -228,10 +219,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
-
-// TODO: add 'sapd' later on
-Q.sapd_formed = 0;
+Q.parties = ['sdapö', 'cs', 'gdvp', 'lb'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
