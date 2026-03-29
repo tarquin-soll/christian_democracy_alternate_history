@@ -10,12 +10,11 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The SPD cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the SPD, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The Christliche Sozialpartei cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the "Unity List" Coalition of the CS, GDVP, and LB. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
-- @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
-- @center: Strengthen our bonds with the Catholic Center Party.
+- @right: Strengthen our bonds with the Greater German People's Party and the Landbund.
 - @sdapo: Work towards repairing relationships with the Social Democratic Worker's Party of Austria.
-- @spd_alone: The SPD can stand alone for now.
+- @cs_alone: The CS can stand alone for now.
 - @easy_discard
 
 
@@ -113,7 +112,7 @@ The liberal parties (both the [+ ddp_name +] and DVP) are electorally moribund, 
 
 However, given the influence of the DVP among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
 
-@spd_alone
+@cs_alone
 
 Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
 
