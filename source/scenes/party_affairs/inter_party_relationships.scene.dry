@@ -18,6 +18,14 @@ The Christliche Sozialpartei cannot govern by itself yet. Because we do not have
 - @easy_discard
 
 
+@right
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; z_relation += 10*(1 - dissent)
+
+We are currently coalition partners with them, so improving relations comes naturally.
+
 @sdapo
 subtitle: -1 resources
 choose-if: resources >= 1
