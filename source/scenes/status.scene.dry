@@ -143,29 +143,21 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+SDAPÖ: [+ sdapo_votes +]%
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+CS: [+ cs_votes +]%
 
-Z + BVP: [+ z_votes +]%
+GDVP: [+ gdvp_votes +]%
 
-KPD: [+ kpd_votes +]%
-
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
-
-DVP: [+ dvp_votes +]%
-
-DNVP: [+ dnvp_votes +]%
-
-NSDAP: [+ nsdap_votes +]%
-
-Others: [+ other_votes +]%
+LB: [+ lb_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Catholics: SDAPÖ: [+ catholics_sdapo_display +]%, CS: [+ catholics_cs_display +]%, GDVP: [+ catholics_gdvp_display +]%, LB: [+ catholics_lb_display +]%
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+Workers: SDAPÖ: [+ workers_sdapo_display +]%, CS: [+ workers_cs_display +]%, GDVP: [+ workers_gdvp_display +]%, LB: [+ workers_lb_display +]%
+
+New Middle Class: SDAPÖ: [+ new_middle_sdapo_display +]%, CS: [+ new_middle_cs_display +]%, GDVP: [+ new_middls_gdvp_display +]%, LB: [+ new_middle_lb_display +]%
 
 Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
