@@ -121,9 +121,9 @@ Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
+// Heimwehr and Republikanischer Schutzbund wikipedia says the Schutzbund peaked at 100,000 so its 90,000 here
+Q.rs_strength = 90;
+Q.rs_militancy = 0.01;
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
 Q.sh_strength = 500;
