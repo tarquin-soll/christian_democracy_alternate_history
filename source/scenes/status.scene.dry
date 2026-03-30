@@ -100,11 +100,11 @@ if (Q.hw_strength) {
 
 {!<span class="tooltip-text" title="The The Republikanischer Schutzbund is a paramilitary organization defending democracy, affiliated with the SDAPÖ.">Republikanischer Schutzbund</span>!} Strength: [+ rs_strength_2 +] thousand
 
-Republikanischer Schutzbund Militarization: [+ rb_militancy : militancy +]
+Republikanischer Schutzbund Militarization: [+ rs_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The Heimwehr is an anti-democratic nationalist paramilitary associated with the CS.">Heimwehr</span>!} Strength: [+ hw_strength_2 +] thousand
 
-Heimwehr Militarization: [+ rfb_militancy : militancy +]
+Heimwehr Militarization: [+ hw_militancy : militancy +]
 
 = Official military/paramilitaries
 
