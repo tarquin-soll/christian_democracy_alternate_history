@@ -37,13 +37,13 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 National Council of Austria composition:
 
-# 1928: 43.0
+# 1928: 44
 {!<span class="tooltip-text" title="Social Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapo_r +]%
-# 1928: 49.7
+# 1928: 49
 {!<span class="tooltip-text" title="Christian Social Party">CS</span>!}: [+ cs_r +]%
-# 1928: 1.8
+# 1928: 2
 {!<span class="tooltip-text" title="Greater German People's Party">GDVP</span>!}: [+ gdvp_r +]%
-# 1928: 5.5
+# 1928: 5
 {!<span class="tooltip-text" title="Landbund">DVP</span>!}: [+ lb_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
@@ -88,37 +88,23 @@ Economic growth: [+ economic_growth_2 +]%
 
 @paramilitaries
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.rs_strength) {
+    Q.rs_strength_2 = Q.rs_strength.toFixed(1);
 }
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
-}
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
-}
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+if (Q.hw_strength) {
+    Q.hw_strength_2 = Q.hw_strength.toFixed(1);
 }
 !}
 
 = Paramilitaries
 
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The The Republikanischer Schutzbund is a paramilitary organization defending democracy, affiliated with the SDAPÖ.">Republikanischer Schutzbund</span>!} Strength: [+ rs_strength_2 +] thousand
 
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
+Republikanischer Schutzbund Militarization: [+ rb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Heimwehr is an anti-democratic nationalist paramilitary associated with the CS.">Heimwehr</span>!} Strength: [+ hw_strength_2 +] thousand
 
-RFB Militarization: [+ rfb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
-
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
-
-SA Militarization: [+ sa_militancy : militancy +]
+Heimwehr Militarization: [+ rfb_militancy : militancy +]
 
 = Official military/paramilitaries
 
@@ -153,18 +139,16 @@ LB: [+ lb_votes +]%
 
 **Detailed results for each demographic**
 
-Catholics: SDAPÖ: [+ catholics_sdapo_display +]%, CS: [+ catholics_cs_display +]%, GDVP: [+ catholics_gdvp_display +]%, LB: [+ catholics_lb_display +]%
+Catholics: CS: [+ catholics_cs_display +]%, SDAPÖ: [+ catholics_sdapo_display +]%, GDVP: [+ catholics_gdvp_display +]%, LB: [+ catholics_lb_display +]%
 
-Workers: SDAPÖ: [+ workers_sdapo_display +]%, CS: [+ workers_cs_display +]%, GDVP: [+ workers_gdvp_display +]%, LB: [+ workers_lb_display +]%
+Workers: CS: [+ workers_cs_display +]%, SDAPÖ: [+ workers_sdapo_display +]%, GDVP: [+ workers_gdvp_display +]%, LB: [+ workers_lb_display +]%
 
-New Middle Class: SDAPÖ: [+ new_middle_sdapo_display +]%, CS: [+ new_middle_cs_display +]%, GDVP: [+ new_middls_gdvp_display +]%, LB: [+ new_middle_lb_display +]%
+New Middle Class: CS: [+ new_middle_cs_display +]%, SDAPÖ: [+ new_middle_sdapo_display +]%, GDVP: [+ new_middle_gdvp_display +]%, LB: [+ new_middle_lb_display +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: CS: [+ old_middle_cs_display +]%, SDAPÖ: [+ old_middle_sdapo_display +]%, GDVP: [+ old_middle_gdvp_display +]%, LB: [+ old_middle_lb_display +]%
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: CS: [+ rural_cs_display +]%, SDAPÖ: [+ rural_sdapo_display +]%, GDVP: [+ rural_gdvp_display +]%, LB: [+ rural_lb_display +]%
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
-
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Unemployed: CS: [+ unemployed_cs_display +]%, SDAPÖ: [+ unemployed_sdapo_display +]%, GDVP: [+ unemployed_gdvp_display +]%, LB: [+ unemployed_lb_display +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
