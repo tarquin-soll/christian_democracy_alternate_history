@@ -181,7 +181,7 @@ Q.election_records.push(election_result);
 !}
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
-data = data.concat([
+data = [
     {
         "id": "sdapo",
         "legend": "SDAPÖ",
@@ -206,7 +206,7 @@ data = data.concat([
         "name": "LB",
         "seats": Math.round(Q.lb_r*1.65),
     },
-]);
+];
 
 if (window && d3) {
     var width = 500; 
