@@ -205,7 +205,7 @@ data = data.concat([
         "legend": "LB",
         "name": "LB",
         "seats": Math.round(Q.lb_r*1.65),
-    },
+    }
 ]);
 
 if (window && d3) {
