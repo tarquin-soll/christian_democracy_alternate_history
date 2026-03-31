@@ -36,7 +36,7 @@ Q.old_demographics = 0;
 Q.use_decimals = 0;
 
 // party resources
-Q.resources = 2;
+Q.resources = 4;
 // party dues
 Q.dues = 2;
 
@@ -245,14 +245,14 @@ Q.catholics_lb = 10;
 
 
 // April 1927 National Council of Austria Composition
-Q.sdapo_r = 43;
-Q.cs_r = 50;
+Q.sdapo_r = 44;
+Q.cs_r = 49;
 Q.gdvp_r = 2;
 Q.lb_r = 5;
 
 // idk what this do
-Q.old_sdapo_r = 43;
-Q.old_cs_r = 50;
+Q.old_sdapo_r = 44;
+Q.old_cs_r = 49;
 Q.old_gdvp_r = 2;
 Q.old_lb_r = 5;
 
