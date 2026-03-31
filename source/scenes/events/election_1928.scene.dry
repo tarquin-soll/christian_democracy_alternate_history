@@ -196,7 +196,7 @@ data = data.concat([
     },
     {
         "id": "gdvp",
-        "legend": GDVP",
+        "legend": "GDVP",
         "name": "GDVP",
         "seats": Math.round(Q.gdvp_r*1.65),
     },
