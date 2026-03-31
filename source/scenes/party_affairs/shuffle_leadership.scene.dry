@@ -32,6 +32,14 @@ title: Stop changing advisors.
 go-to: root
 tags: remove_advisor
 
+@remove_miklas
+title: Remove Miklas
+view-if: miklas_advisor = 1
+on-arrival: miklas_advisor = 0; center_dissent += 5; n_advisors -= 1
+tags: remove_advisor
+go-to: rm_main
+
+Miklas has been removed as an advisor. The Centrist faction disapproves.
 
 @remove_hilferding
 title: Remove Hilferding
@@ -328,6 +336,16 @@ view-if: neorevisionism > 0 and n_advisors < 3
 view-if: n_advisors < 3
 
 - #nonfactional_advisor
+
+@add_miklas
+title: Wilhelm Miklas
+subtitle: Wilhelm Miklas is a staunch legalist and devout Catholic who serves as a bridge between our center and the religious heart of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+is-card: true
+card-image: 0
+tags: center_advisor
+view-if: miklas_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: miklas_advisor = 1; n_advisors += 1
+go-to: advisor_menu
 
 @add_hilferding
 title: Rudolf Hilferding
