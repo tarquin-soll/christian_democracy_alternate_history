@@ -36,7 +36,7 @@ title: Deradicalization
 subtitle: Address extremist position such as Anti-Semitism.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; right_dissent += 15; clerical_dissent += 10; center_dissent += 5; labor_dissent += 5; right_strenght -= 10; clerical_strenght -= 5; center_strenght += 10; labor_strenght += 5;
+on-arrival: advisor_action_timer = 6; right_dissent += 15; clerical_dissent += 10; center_dissent += 5; labor_dissent += 5; right_strength -= 10; clerical_strength -= 5; center_strength += 10; labor_strength += 5;
 
 The nationalist right member and clerical members of the party aren't pleased to hear this change in agenda.
   
