@@ -180,7 +180,7 @@ for (var party of Q.parties) {
 Q.election_records.push(election_result);
 !}
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
-on-display: {
+on-display: {!
 data = data.concat([
     {
         "id": "sdapo",
@@ -205,7 +205,7 @@ data = data.concat([
         "legend": "LB",
         "name": "LB",
         "seats": Math.round(Q.lb_r*1.65),
-    }
+    },
 ]);
 
 if (window && d3) {
@@ -224,7 +224,7 @@ if (window && d3) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#reichstag").datum(data).call(parliament);
 }
-}
+!}
 go-to: coalition_menu
 
 = Election results
