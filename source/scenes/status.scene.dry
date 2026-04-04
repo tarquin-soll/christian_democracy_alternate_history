@@ -83,7 +83,12 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Clerical wing represents the religious and rural heart of the party, focused on preserving the role of the Church in education and social life through the Concordat.">Clerical</span>!} strength: [+ clerical_strength : strength +], dissent: [+ clerical_dissent : dissent +]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+= Internal Party Positions
+
+
+Minority Stance: <span style="color: #00B0C0;">Anti-Semitism</span>
+
+View on Socialism: <span style="color: #D00000;">Opposed</span>
 
 
 @paramilitaries
