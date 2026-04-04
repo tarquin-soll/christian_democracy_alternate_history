@@ -129,9 +129,9 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SDAPÖ: [+ spd_votes +]%
+SDAPÖ: [+ sdapo_votes +]%
 
-CS: [+ z_votes +]%
+CS: [+ cs_votes +]%
 
 GDVP: [+ gdvp_votes +]%
 
