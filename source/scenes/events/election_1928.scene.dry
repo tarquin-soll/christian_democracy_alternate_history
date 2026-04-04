@@ -235,11 +235,11 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#000000; outline: 2px; outline-style: solid;'> </div> !} **CS:** {!</td><td>!} **[+ cs_r +]%** {!</td><td>!} **[+ str_change_cs +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E3000F'> </div> !} SDAPÖ: {!</td><td>!} [+ sdapo_r +]% {!</td><td>!} [+ str_change_sdapo +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E30000'> </div> !} SDAPÖ: {!</td><td>!} [+ sdapo_r +]% {!</td><td>!} [+ str_change_sdapo +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#07408F'> </div> !} GDVP: {!</td><td>!} [+ gdvp_r +]% {!</td><td>!} [+ str_change_gdvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#006090'> </div> !} GDVP: {!</td><td>!} [+ gdvp_r +]% {!</td><td>!} [+ str_change_gdvp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#365A36'> </div> !} LB: {!</td><td>!} [+ lb_r +] % {!</td><td>!} [+ str_change_lb +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#408040'> </div> !} LB: {!</td><td>!} [+ lb_r +] % {!</td><td>!} [+ str_change_lb +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
