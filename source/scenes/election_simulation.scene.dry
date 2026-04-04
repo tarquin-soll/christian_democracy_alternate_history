@@ -29,12 +29,12 @@ Q.workers_lb = 0;
 
 Q.old_middle_sdapo = 20;
 Q.old_middle_cs = 60;
-Q.old_middles_gdvp = 10;
+Q.old_middle_gdvp = 10;
 Q.old_middle_lb = 10;
 
 Q.new_middle_sdapo = 30;
 Q.new_middle_cs = 40;
-Q.new_middles_gdvp = 20;
+Q.new_middle_gdvp = 20;
 Q.new_middle_lb = 10;
 
 Q.rural_sdapo = 10;
