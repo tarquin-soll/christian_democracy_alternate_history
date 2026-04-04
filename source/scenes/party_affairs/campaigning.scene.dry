@@ -64,6 +64,6 @@ We have increased our campaigning among the unemployed. [? if welfare < 0: The w
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: catholics_cs += 6*(1-dissent); resources -= 1
+on-arrival: catholics_cs += 8*(1-dissent); resources -= 1
 
 We have increased our campaigning among Catholics.
