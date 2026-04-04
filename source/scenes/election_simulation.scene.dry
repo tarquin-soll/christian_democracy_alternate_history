@@ -2,11 +2,11 @@ title: Election Simulation
 set-jump: post_election
 
 
-- @1928: 1928 historical scenario
+- @1927: 1927 historical scenario
 - @1930: 1930 historical scenario
 - @1932: 1932 (July) historical scenario
 
-@1928
+@1927
 on-arrival: {!
 Q.workers = 46; // industry and trade
 Q.old_middle = 13; // "old mittelstand"
@@ -18,63 +18,39 @@ Q.unemployed = 8.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['sdapo', 'cs', 'gdvp', 'lb'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 65;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_sdapo = 100;
+Q.workers_cs = 0;
+Q.workers_gdvp = 0;
+Q.workers_lb = 0;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.old_middle_sdapo = 20;
+Q.old_middle_cs = 60;
+Q.old_middles_gdvp = 10;
+Q.old_middle_lb = 10;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 0;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.new_middle_sdapo = 30;
+Q.new_middle_cs = 40;
+Q.new_middles_gdvp = 20;
+Q.new_middle_lb = 10;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.rural_sdapo = 10;
+Q.rural_cs = 30;
+Q.rural_gdvp = 20;
+Q.rural_lb = 40;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.unemployed_sdapo = 60;
+Q.unemployed_cs = 40;
+Q.unemployed_gdvp = 0;
+Q.unemployed_lb = 0;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 5;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 10;
+Q.catholics_sdapo = 0;
+Q.catholics_cs = 70;
+Q.catholics_gdvp = 20;
+Q.catholics_lb = 10;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -279,29 +255,21 @@ The electoral system is essentially proportional, with the proportion of Reichst
  
 **Election results:**
 
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]
+# 1927: 30, 1930: 43
+SDAPÖ: [+ sdapo_r +]
 
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+# 1927: 15, 1930: 40
+CS: [+ cs_r +]
 
-# 1928: 10, 1930: 13
-KPD: [+ kpd_r +]
+# 1927: 10, 1930: 6
+GDVP: [+ gdvp_r +]
 
-# 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]
+# 1927: 5, 1930: 5
+LB: [+ lb_r +]
 
-# 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
+# 1930: 6
+HB: 6
 
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
-
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
-
-# 1928: 9, 1930: 10
-Other: [+ other_r +]
 
 **Potential coalitions:**
 
