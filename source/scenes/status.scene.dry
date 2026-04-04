@@ -37,14 +37,14 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 National Council of Austria composition:
 
-# 1928: 44
-{!<span class="tooltip-text" title="Social Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapo_r +]%
 # 1928: 49
-{!<span class="tooltip-text" title="Christian Social Party">CS</span>!}: [+ cs_r +]%
+{!<span class="tooltip-text" title="Christian Social Party"><span style="color: #000000;"><b>CS</b></span></span>!}: [+ cs_r +]%
+# 1928: 44
+{!<span class="tooltip-text" title="Social Democratic Worker's Party of Austria"><span style="color: #D00000;"><b>SDAPÖ</b></span></span>!}: [+ sdapo_r +]%
 # 1928: 2
-{!<span class="tooltip-text" title="Greater German People's Party">GDVP</span>!}: [+ gdvp_r +]%
+{!<span class="tooltip-text" title="Greater German People's Party"><span style="color: #2080A0;"><b>GDVP</b></span></span>!}: [+ gdvp_r +]%
 # 1928: 5
-{!<span class="tooltip-text" title="Landbund">DVP</span>!}: [+ lb_r +]%
+{!<span class="tooltip-text" title="Landbund"><span style="color: #408040;"><b>LB</b></span></span>!}: [+ lb_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
@@ -67,11 +67,11 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria"><span style="color: #E30000;">**SDAPÖ**</span></span>!}: [+ sdapo_relation : relationships +]
+{!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria"><span style="color: #D00000;"><b>SDAPÖ</b></span></span>!}: [+ sdapo_relation : relationships +]
 
-{!<span class="tooltip-text" title="Greater German People's Party"><span style="color: #006090;">**GDVP**</span></span>!}: [+ gdvp_relation : relationships +]
+{!<span class="tooltip-text" title="Greater German People's Party"><span style="color: #2080A0;"><b>GDVP</b></span></span>!}: [+ gdvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Landbund"><span style="color: #408040;">**LB**</span></span>!}: [+ lb_relation : relationships +]
+{!<span class="tooltip-text" title="Landbund"><span style="color: #408040;"><b>LB</b></span></span>!}: [+ lb_relation : relationships +]
 
 = Internal Factions of the CS
 
@@ -129,13 +129,13 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-<span style="color: #000000;">**CS**</span>: [+ cs_votes +]%
+<span style="color: #000000;"><b>CS</b></span>: [+ cs_votes +]%
 
-<span style="color: #E30000;">**SDAPÖ*</span>: [+ sdapo_votes +]%
+<span style="color: #D00000;"><b>SDAPÖ</b></span>: [+ sdapo_votes +]%
 
-<span style="color: #006090;">**GDVP**</span>: [+ gdvp_votes +]%
+<span style="color: #2080A0;"><b>GDVP</b></span>: [+ gdvp_votes +]%
 
-<span style="color: #408040;">**LB**</span>: [+ lb_votes +]%
+<span style="color: #408040;"><b>LB</b></span>: [+ lb_votes +]%
 
 **Detailed results for each demographic**
 
