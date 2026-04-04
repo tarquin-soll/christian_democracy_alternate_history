@@ -67,11 +67,11 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria">SDAPÖ</span>!}: [+ sdapo_relation : relationships +]
+{!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria"><span style="color: #E30000;">**SDAPÖ**</span></span>!}: [+ sdapo_relation : relationships +]
 
-{!<span class="tooltip-text" title="Greater German People's Party">GDVP</span>!}: [+ gdvp_relation : relationships +]
+{!<span class="tooltip-text" title="Greater German People's Party"><span style="color: #006090;">**GDVP**</span></span>!}: [+ gdvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Landbund">LB</span>!}: [+ lb_relation : relationships +]
+{!<span class="tooltip-text" title="Landbund"><span style="color: #408040;">**LB**</span></span>!}: [+ lb_relation : relationships +]
 
 = Internal Factions of the CS
 
@@ -129,13 +129,13 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SDAPÖ: [+ sdapo_votes +]%
+<span style="color: #000000;">**CS**</span>: [+ cs_votes +]%
 
-CS: [+ cs_votes +]%
+<span style="color: #E30000;">**SDAPÖ*</span>: [+ sdapo_votes +]%
 
-GDVP: [+ gdvp_votes +]%
+<span style="color: #006090;">**GDVP**</span>: [+ gdvp_votes +]%
 
-LB: [+ lb_votes +]%
+<span style="color: #408040;">**LB**</span>: [+ lb_votes +]%
 
 **Detailed results for each demographic**
 
