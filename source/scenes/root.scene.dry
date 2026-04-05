@@ -221,28 +221,28 @@ Q.parties = ['sdapo', 'cs', 'gdvp', 'lb'];
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_sdapo = 91;
-Q.workers_cs = 6;
+Q.workers_cs = 7;
 Q.workers_gdvp = 2;
-Q.workers_lb = 1;
+Q.workers_lb = 0;
 
 Q.old_middle_sdapo = 9;
 Q.old_middle_cs = 85;
 Q.old_middle_gdvp = 5;
 Q.old_middle_lb = 1;
 
-Q.new_middle_sdapo = 30;
-Q.new_middle_cs = 40;
-Q.new_middle_gdvp = 20;
-Q.new_middle_lb = 10;
+Q.new_middle_sdapo = 55;
+Q.new_middle_cs = 15;
+Q.new_middle_gdvp = 30;
+Q.new_middle_lb = 0;
 
-Q.rural_sdapo = 10;
-Q.rural_cs = 30;
-Q.rural_gdvp = 20;
-Q.rural_lb = 40;
+Q.rural_sdapo = 5;
+Q.rural_cs = 50;
+Q.rural_gdvp = 10;
+Q.rural_lb = 35;
 
-Q.unemployed_sdapo = 60;
-Q.unemployed_cs = 40;
-Q.unemployed_gdvp = 0;
+Q.unemployed_sdapo = 91;
+Q.unemployed_cs = 2;
+Q.unemployed_gdvp = 7;
 Q.unemployed_lb = 0;
 
 Q.catholics_sdapo = 3;
