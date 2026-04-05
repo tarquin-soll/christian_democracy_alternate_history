@@ -250,7 +250,7 @@ go-to: coalition_menu
 
 Unity List Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span>): [+ unity_coalition +]%
 
-Right-Wing Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span> + <span style="color: #408040;"><b>LB</b></span> ): [+ rightwing_coalition +]%
+Right-Wing Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span> + <span style="color: #408040;"><b>LB</b></span>): [+ rightwing_coalition +]%
 
 Social-Christian Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #D00000;"><b>SDAPÖ</b></span>): [+ socialchristian_coalition +]%
 
