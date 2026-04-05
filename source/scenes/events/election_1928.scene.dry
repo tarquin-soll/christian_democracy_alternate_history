@@ -100,9 +100,9 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 
 // coalitions
 Q.cs_majority = Q.cs_r;
+Q.bourgeoisbloc_coalition = Q.cs_r + Q.gdvp_r + Q.lb_r;
 Q.unity_coalition = Q.cs_r + Q.gdvp_r;
 Q.socialchristian_coalition = Q.cs_r + Q.sdapo_r;
-Q.rightwing_coalition = Q.cs_r + Q.gdvp_r + Q.lb_r;
 Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
 Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
@@ -132,6 +132,7 @@ Q.coalition_dissent = 0;
 Q.kpd_coalition_dissent = 0;
 Q.cs_in_government = 0;
 Q.in_unity_coaltion = 0;
+Q.in_bourgeoisbloc_coalition = 0;
 Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
 Q.in_left_front = 0;
@@ -251,7 +252,7 @@ go-to: coalition_menu
 
 Unity List Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span>): [+ unity_coalition +]%
 
-Right-Wing Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span> + <span style="color: #408040;"><b>LB</b></span>): [+ rightwing_coalition +]%
+Bourgeois Bloc Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span> + <span style="color: #408040;"><b>LB</b></span>): [+ rightwing_coalition +]%
 
 Social-Christian Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #D00000;"><b>SDAPÖ</b></span>): [+ socialchristian_coalition +]%
 
@@ -264,6 +265,7 @@ There are some potential coalition arrangements.
 @coalition_menu
 
 - @unity_coalition
+- @bourgeoisbloc_coalition
 - @spd_majority
 - @weimar_coalition
 - @grand_coalition
@@ -279,17 +281,39 @@ There are some potential coalition arrangements.
 # TODO: black-brown coalition
 
 @unity_coalition
-title: Unity List Coalition
+title: We can form a <span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span> coalition
 subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%)
 unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?]
 choose-if: gdvp_relation >= 50
+on-arrival: in_unity_coalition = 1; gdvp_relation += 10; right_dissent -= 10; clerical_dissent -= 10; center_dissent -= 10; labor_dissent -= 10
 
-We have enough votes to form a "Unity List" government consisting of the <span style="color: #000000;"><b>CS</b></span> and <span style="color: #2080A0;"><b>GDVP</b></span>! This has been our preferred governing coalition since 1920.
+We have enough votes to form a "<span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span>" government consisting of the <span style="color: #000000;"><b>CS</b></span> and <span style="color: #2080A0;"><b>GDVP</b></span>! This has been our preferred governing coalition since 1920.
 
 Who should be chancellor?
 
 - @seipel
 - @no_govt
+
+@bourgeoisebloc_coalition
+title: We can form a <span style="color: #000000;">Bour</span<span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span> coalition.
+subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> + <span style="color: #408040;">LB</span> ([+ bourgeoisbloc_coalition +]%)
+unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?][? if lb_relation < 50 : We do not have adequate relations with the <span style="color: #408040;">LB</span>. ?]
+choose-if: gdvp_relation >= 50; lb_relation >= 50
+on-arrival: in_bourgeoisbloc_coalition = 1; gdvp_relation += 10; lb_relation += 15; right_dissent -= 10; clerical_dissent -= 10; center_dissent -= 10; labor_dissent -= 10
+
+We have enough votes to form a <span style="color: #000000;">Bour</span<span style="color: #2080A0;">geois</span><span style="color: #408040;">Bloc</span>, this is a good approach to foster a good relations with the <span style="color: #408040;">Landbund</span>.
+
+Who should be chancellor?
+
+- @seipel
+- @no_govt
+
+@seipel
+title: Ignaz Seipel for Chancellor
+view-if: seipel_dead = 0
+subtitle: Seipel has been our go-to choice for the Chancellory, he is also the preferred candidate of other parties.
+on-arrival: leverage += 5; cs_in_government = 1; chancellor = "Seipel"; chancellor_party = "CS"; in_unity_coalition = 1 if in_bourgeoisbloc_coalition == 0
+go-to: ministries
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
@@ -1093,12 +1117,6 @@ Who should be the chancellor?
 - @z_chancellor_wirth
 - @no_govt
 
-@seipel
-title: Ignaz Seipel for Chancellor
-view-if: seipel_dead = 0
-subtitle: Seipel has been our go-to choice for the Chancellory, he is also the preferred candidate of other parties.
-on-arrival: cs_in_government = 1; chancellor = "Seipel"; chancellor_party = "CS"; in_unity_coalition = 1
-go-to: ministries
 
 @muller
 title: Hermann Müller for Chancellor
