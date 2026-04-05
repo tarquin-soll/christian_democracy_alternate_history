@@ -15,13 +15,13 @@ A violent confrontation in Austria on January 30, 1927, where right-wing paramil
   
 @blame
 title: Blame the <span style="color: #D00000;">Socialists</span>
-on-arrival: socialism_stance -= 1; republicanism_stance -= 1; new_middle_sdapo -=3; old_middle_sdapo -=4; new_middle_gdvp +=3; new_middle_gdvp +=4; workers_sdapo +=8
+on-arrival: socialism_stance -= 1; republicanism_stance -= 1; new_middle_sdapo -=3; old_middle_sdapo -=4; new_middle_gdvp +=3; new_middle_gdvp +=4; workers_sdapo +=8; rural_sdapo -=10; rural_lb +=10
 
 W.I.P
 
 @demilitarize
 title: Demilitarize
 subtitle: It is the fault of the Frontkämpfer who fired the shots, we should address the issue by beginning to demilitarize the paramilitaries.
-on-arrival: republicanism_stance -= 1; catholic_cs -= 5; new_middle_cs -= 3; old_middle_cs -= 3; new_middle_sdapo -=3; old_middle_sdapo -=4; new_middle_gdvp +=6; new_middle_gdvp +=7; workers_sdapo +=8; right_strength += 5; right_dissent += 25; center_dissent += 15; clerical_dissent += 25; labor_dissent += 10
+on-arrival: republicanism_stance -= 1; catholic_cs -= 5; new_middle_cs -= 3; old_middle_cs -= 3; new_middle_sdapo -=3; old_middle_sdapo -=4; new_middle_gdvp +=6; new_middle_gdvp +=7; workers_sdapo +=8; rural_sdapo -=10; rural_lb +=10; right_strength += 5; right_dissent += 25; center_dissent += 15; clerical_dissent += 25; labor_dissent += 10
 
 This decision has not satisfied everyone and has alienated the <span style="color: #2080AO;">Heimwehr</span>, party members are disappointed that the moment was not used to attack the <span style="color: #D00000;">Socialists</span>.
