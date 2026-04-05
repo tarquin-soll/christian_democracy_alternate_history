@@ -86,11 +86,12 @@ Economic growth: [+ economic_growth_2 +]%
 = Internal Party Positions
 
 
-Minority Stance: Anti-Semitism
+Minority Stance: [? minority_stance == 0 : Anti-Semitism ?]
 
 View on Socialism: <span style="color: #D00000;">Opposed</span>
 
-View on the Republic: [? If republicanism_stance == 0 : Opposed ?]
+View on the Republic: Opposed
+
 @paramilitaries
 on-arrival: {!
 if (Q.rs_strength) {
