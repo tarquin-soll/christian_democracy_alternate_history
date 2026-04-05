@@ -124,13 +124,14 @@ if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
 }
 
-Q.leverage = Q.spd_r;
+Q.leverage = Q.cs_r;
 
 Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
 Q.kpd_coalition_dissent = 0;
-Q.spd_in_government = 0;
+Q.cs_in_government = 0;
+Q.in_unity_coaltion = 0;
 Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
 Q.in_left_front = 0;
@@ -262,6 +263,7 @@ There are some potential coalition arrangements.
 
 @coalition_menu
 
+- @unity_coalition
 - @spd_majority
 - @weimar_coalition
 - @grand_coalition
@@ -276,6 +278,18 @@ There are some potential coalition arrangements.
 
 # TODO: black-brown coalition
 
+@unity_coalition
+title: Unity List Coalition
+subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%)
+unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?]
+choose-if: gdvp_relation >= 50
+
+We have enough votes to form a "Unity List" government consisting of the <span style="color: #000000;">CS</span> and <span style="color: #2080A0;">GDVP</span>! This has been our preferred governing coalition since 1920.
+
+Who should be chancellor?
+
+- @seipel
+- @no_govt
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
@@ -1074,10 +1088,17 @@ Who should be the chancellor?
 - @muller
 - @braun
 - @wels
+- @seipel
 - @z_chancellor
 - @z_chancellor_wirth
 - @no_govt
 
+@seipel
+title: Ignaz Seipel for Chancellor
+view-if: seipel_dead = 0
+subtitle: Seipel has been our go-to choice for the Chancellory, he is also the preferred candidate of other parties.
+on-arrival: cs_in_government = 1; chancellor = "Seipel"; chancellor_party = "CS"; in_unity_coalition = 1
+go-to: ministries
 
 @muller
 title: Hermann Müller for Chancellor
