@@ -98,8 +98,6 @@ Q.nationalization_adopted = 0;
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 
-// organizations
-
 // inter-party relations
 Q.sdapo_relation = 20;
 Q.gdvp_relation = 70;
@@ -125,7 +123,8 @@ Q.spd_prussia = 1;
 Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
+// Number of members in 1927 (in thousands)
+// https://de.wikipedia.org/wiki/Frontk%C3%A4mpfervereinigung_Deutsch-%C3%96sterreichs
 // Heimwehr and Republikanischer Schutzbund wikipedia says the Schutzbund peaked at 100,000 so its 90,000 here
 Q.rs_strength = 90;
 Q.rs_militancy = 0.7;
@@ -133,6 +132,9 @@ Q.rs_banned = 0;
 Q.hw_strength = 300;
 Q.hw_militancy = 0.8;
 Q.hw_banned = 0;
+Q.fdo_strength = 3;
+Q.fdo_militancy = 0.9;
+Q.fdo_banned = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
