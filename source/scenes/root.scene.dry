@@ -186,7 +186,7 @@ Q.budget = 4;
 // source: Ergebnisse der außerordentlichen Volkszählung vom 7. März 1923
 Q.workers = 35;
 Q.old_middle = 18;
-Q.new_middle = 9;
+Q.new_middle = 12;
 Q.rural = 35;
 Q.unemployed = 6.0;
 Q.catholics = 80;
@@ -228,14 +228,14 @@ Q.old_middle_cs = 85;
 Q.old_middle_gdvp = 5;
 Q.old_middle_lb = 1;
 
-Q.new_middle_sdapo = 55;
-Q.new_middle_cs = 15;
-Q.new_middle_gdvp = 30;
+Q.new_middle_sdapo = 88;
+Q.new_middle_cs = 2;
+Q.new_middle_gdvp = 10;
 Q.new_middle_lb = 0;
 
-Q.rural_sdapo = 5;
-Q.rural_cs = 50;
-Q.rural_gdvp = 10;
+Q.rural_sdapo = 30;
+Q.rural_cs = 30;
+Q.rural_gdvp = 5;
 Q.rural_lb = 35;
 
 Q.unemployed_sdapo = 91;
@@ -244,9 +244,9 @@ Q.unemployed_gdvp = 7;
 Q.unemployed_lb = 0;
 
 Q.catholics_sdapo = 3;
-Q.catholics_cs = 86;
-Q.catholics_gdvp = 7;
-Q.catholics_lb = 4;
+Q.catholics_cs = 89;
+Q.catholics_gdvp = 3;
+Q.catholics_lb = 5;
 
 
 // October 1923 National Council of Austria Composition
