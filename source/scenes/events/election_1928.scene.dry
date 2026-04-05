@@ -330,7 +330,7 @@ Who should be chancellor?
 - @seipel_majority_chancellor
 - @no_govt
 
-@muller_majority_chancellor
+@seipel_majority_chancellor
 view-if: seipel_dead = 0
 on-arrival: chancellor = "Seipel"
 
