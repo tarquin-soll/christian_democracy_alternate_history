@@ -1,6 +1,6 @@
 title: Schattendorf Murder
-subtitle: A violent political clash in schattendorf...
-view-if: year = 1927 and month = 2
+subtitle: A violent political clash in Schattendorf...
+view-if: year = 1927 and month = 1
 max-visits: 1
 new-page: true
 face-image: img/schattendorf.jpg
@@ -8,8 +8,8 @@ tags: event
 
 = Schattendorf Murder
 
-Lorem Ipsum
-  
+January 30, 1927, in the Austrian village of Schattendorf, Burgenland.
+
 - @continue
   
 @continue
