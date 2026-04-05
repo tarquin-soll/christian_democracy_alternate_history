@@ -13,6 +13,7 @@ Lorem Ipsum
 - @continue
   
 @continue
+title: Continue
 on-arrival: republicanism_stance -= 1
 
 Perhaps this will pass..
