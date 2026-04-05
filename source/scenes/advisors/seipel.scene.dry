@@ -21,7 +21,7 @@ Seipel is a consevative catholic priest. A former [? if chancellor = "Seipel": a
 title: Campaigning
 subtitle: Increase our standing on austrian catholics. (require 1 resources)
 choose-if: advisor_action_timer <= 0 and resources >= 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources < 1 : Not enough resources. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources == 0 : Not enough resources. ?]
 on-arrival: advisor_action_timer = 6; catholics_cs += 8*(1-dissent); resources -= 1
 
 We have increased our campaigning among Catholics.
