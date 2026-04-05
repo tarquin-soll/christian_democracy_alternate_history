@@ -330,6 +330,7 @@ Who should be chancellor?
 - @no_govt
 
 @seipel_majority_chancellor
+title: Ignaz Seipel for Chancellor.
 view-if: seipel_dead = 0
 on-arrival: chancellor = "Seipel"
 
