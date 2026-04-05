@@ -89,7 +89,7 @@ Minority Stance: Anti-Semitism
 
 View on Socialism: <span style="color: #D00000;">Opposed</span>
 
-View on the Republic: [? if republicanism_stance == 0: <span style="color: #E00000;"></span> ?][? if republicanism_stance == 1: <span style="color: #E51F1F;">Disillusioned</span> ?][? if republicanism_stance == 2: <span style="color: #F2A134;">Skeptical</span> ?][? if republicanism_stance == 3: <span style="color: #F7E379;">Neutral</span> ?][? if republicanism_stance == 4: <span style="color: #BBDB44;">Sympathetic</span> ?][? if republicanism_stance >= 5: <span style="color: #44CE1B;">Supportive</span> ?]
+View on the Republic: [? if republicanism_stance <= 0: <span style="color: #E00000;">Opposed</span> ?][? if republicanism_stance == 1: <span style="color: #E51F1F;">Disillusioned</span> ?][? if republicanism_stance == 2: <span style="color: #F2A134;">Skeptical</span> ?][? if republicanism_stance == 3: <span style="color: #F7E379;">Neutral</span> ?][? if republicanism_stance == 4: <span style="color: #BBDB44;">Sympathetic</span> ?][? if republicanism_stance >= 5: <span style="color: #44CE1B;">Supportive</span> ?]
 
 @paramilitaries
 on-arrival: {!
