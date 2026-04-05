@@ -101,7 +101,7 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 // coalitions
 Q.cs_majority = Q.cs_r;
 Q.unity_coalition = Q.cs_r + Q.gdvp_r;
-Q.socialchristian = Q.cs_r + Q.sdapo_r;
+Q.socialchristian_coalition = Q.cs_r + Q.sdapo_r;
 Q.rightwing_coalition = Q.cs_r + Q.gdvp_r + Q.lb_r;
 Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
 Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
@@ -248,11 +248,11 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Unity List Coalition (<span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span>): [+ unity_coalition +]%
+Unity List Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span>): [+ unity_coalition +]%
 
-Right-Wing Coalition (<span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> + <span style="color: #408040;">LB</span> ): [+ rightwing_coalition +]%
+Right-Wing Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span> + <span style="color: #408040;"><b>LB</b></span> ): [+ rightwing_coalition +]%
 
-Social-Christian Coalition (<span style="color: #000000;">CS</span> + <span style="color: #D00000;">SDAPÖ</span>): [+ socialchristian_coalition +]%
+Social-Christian Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #D00000;"><b>SDAPÖ</b></span>): [+ socialchristian_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
