@@ -10,11 +10,21 @@ view-if: seipel_advisor = 1
 
 Seipel is a consevative catholic priest. A former [? if chancellor = "Seipel": and current ?] Chancellor, and is a long-time <span style="color: #000000;">Christian Social Party</span> leader.
 
-- @coalition
+- @campaigning
 - @party_discipline
 - @republicanism
 - @snap_election
+- @coalition
 - @root: Return to main
+
+@campaigning
+title: Campaigning
+subtitle: Increase our standing on austrian catholics
+choose-if: advisor_action_timer <= 0 and resources >= 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not resources < 1 : Not enough resources. ?]
+on-arrival: catholics_cs += 8*(1-dissent); resources -= 1
+
+We have increased our campaigning among Catholics.
 
 @coalition
 title: Negotiating with the Coalition
@@ -29,7 +39,7 @@ We have improved our relations with the <span style="color: #2080A0;">GDVP</span
 @party_discipline
 title: Party Discipline
 subtitle: Reduce dissent across the party.
-choose-if: advisor_action_timer = 0
+choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; center_dissent -= 10; labor_dissent -= 10; right_dissent -= 10; clerical_dissent -= 10
 
