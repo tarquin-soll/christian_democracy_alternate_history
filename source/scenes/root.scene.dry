@@ -60,7 +60,7 @@ Q.clerical_dissent = 0;
 //internal party positions
 Q.minority_stance = 0;
 Q.socialism_stance = 0;
-Q.republicanism_stance = 0;
+Q.republicanism_stance = 1;
 
 // secret events...
 Q.unions_independent = 0;
