@@ -1,0 +1,48 @@
+title: Ignaz Seipel
+is-pinned-card: true 
+tags: advisor, clerical
+card-image: img/portraits/IgnazSeipel.jpg
+new-page: true
+view-if: seipel_advisor = 1
+
+= Ignaz Seipel
+
+
+Seipel is a consevative catholic priest. A former [? if chancellor = "Seipel": and current ?] Chancellor, and is a long-time <span style="color: #000000;">Christian Social Party</span> leader.
+
+- @coalition
+- @party_discipline
+- @republicanism
+- @snap_election
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Seipel can improve our relationships with our coalition partners.
+choose-if: advisor_action_timer <= 0 and spd_in_government = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The SPD is not in government. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; gdvp_relation += 5; lb_relation += 5
+
+We have improved our relations with the <span style="color: #2080A0;">GDVP</span>, and the <span style="color: #408040;">Landbunde</span>, and reduced tensions with the coalition.
+
+
+@party_discipline
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; center_dissent -= 10; labor_dissent -= 10; right_dissent -= 10; clerical_dissent -= 10
+
+We have enforced party discipline to reduce dissent across all factions.
+
+@republicanism
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if chancellor != "Seipel" : Seipel must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and chancellor == "Seipel"
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+  
