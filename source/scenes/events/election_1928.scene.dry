@@ -298,7 +298,7 @@ Who should be chancellor?
 title: We can form a <span style="color: #000000;">Bour</span<span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span> coalition.
 subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> + <span style="color: #408040;">LB</span> ([+ bourgeoisbloc_coalition +]%)
 unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?][? if lb_relation < 50 : We do not have adequate relations with the <span style="color: #408040;">LB</span>. ?]
-choose-if: gdvp_relation >= 50; lb_relation >= 50
+choose-if: gdvp_relation >= 50 and lb_relation >= 50
 on-arrival: in_bourgeoisbloc_coalition = 1; gdvp_relation += 10; lb_relation += 15; right_dissent -= 10; clerical_dissent -= 10; center_dissent -= 10; labor_dissent -= 10
 
 We have enough votes to form a <span style="color: #000000;">Bour</span<span style="color: #2080A0;">geois</span><span style="color: #408040;">Bloc</span>, this is a good approach to foster a good relations with the <span style="color: #408040;">Landbund</span>.
