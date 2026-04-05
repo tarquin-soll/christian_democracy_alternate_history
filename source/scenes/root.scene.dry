@@ -223,9 +223,9 @@ Q.workers_cs = 7;
 Q.workers_gdvp = 2;
 Q.workers_lb = 0;
 
-Q.old_middle_sdapo = 9;
-Q.old_middle_cs = 85;
-Q.old_middle_gdvp = 5;
+Q.old_middle_sdapo = 69;
+Q.old_middle_cs = 15;
+Q.old_middle_gdvp = 25;
 Q.old_middle_lb = 1;
 
 Q.new_middle_sdapo = 88;
@@ -233,8 +233,8 @@ Q.new_middle_cs = 2;
 Q.new_middle_gdvp = 10;
 Q.new_middle_lb = 0;
 
-Q.rural_sdapo = 30;
-Q.rural_cs = 30;
+Q.rural_sdapo = 10;
+Q.rural_cs = 50;
 Q.rural_gdvp = 5;
 Q.rural_lb = 35;
 
