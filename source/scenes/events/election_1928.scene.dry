@@ -294,7 +294,7 @@ Who should be chancellor?
 - @seipel
 - @no_govt
 
-@bourgeoisebloc_coalition
+@bourgeoisbloc_coalition
 title: We can form a <span style="color: #000000;">Bour</span<span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span> coalition.
 subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> + <span style="color: #408040;">LB</span> ([+ bourgeoisbloc_coalition +]%)
 unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?][? if lb_relation < 50 : We do not have adequate relations with the <span style="color: #408040;">LB</span>. ?]
