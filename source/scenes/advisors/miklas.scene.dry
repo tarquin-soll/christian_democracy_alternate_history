@@ -34,8 +34,8 @@ All items from our agenda have been cleared.
 @deradicalization
 title: Deradicalization
 subtitle: Address extremist position such as Anti-Semitism.
-choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0 and right_strength < 30
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if right_strength > 30: The right wing is too influential to drop the anti-semitic stance. ?]
 on-arrival: advisor_action_timer = 6; right_dissent += 15; clerical_dissent += 10; center_dissent += 5; labor_dissent += 5; right_strength -= 10; clerical_strength -= 5; center_strength += 10; labor_strength += 5
 
 The nationalist right member and clerical members of the party aren't pleased to hear this change in agenda.
