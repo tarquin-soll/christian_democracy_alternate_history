@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: National Council Elections
 new-page: true
 tags: event
 priority: -1
@@ -13,7 +13,7 @@ face-image: img/Rothe_Wahlen_1903.jpg
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+The National Council elections are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
@@ -99,6 +99,10 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 }
 
 // coalitions
+Q.cs_majority = Q.cs_r;
+Q.unity_coalition = Q.cs_r + Q.gdvp_r;
+Q.socialchristian = Q.cs_r + Q.sdapo_r;
+Q.rightwing_coalition = Q.cs_r + Q.gdvp_r + Q.lb_r;
 Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
 Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
@@ -244,15 +248,11 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Christian-Social Coalition (CS + SDAPÖ): Test
+Unity List Coalition (<span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span>): [+ unity_coalition +]%
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
+Right-Wing Coalition (<span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> + <span style="color: #408040;">LB</span> ): [+ rightwing_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
-
-Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
-
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
+Social-Christian Coalition (<span style="color: #000000;">CS</span> + <span style="color: #D00000;">SDAPÖ</span>): [+ socialchristian_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
