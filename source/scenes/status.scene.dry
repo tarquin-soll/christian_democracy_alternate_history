@@ -111,6 +111,10 @@ Republikanischer Schutzbund Militarization: [+ rs_militancy : militancy +]
 
 Heimwehr Militarization: [+ hw_militancy : militancy +]
 
+{! <span class="tooltip-text" title="The Frontkämpfervereinigung Deutsch-Österreichs is an Anti-Semitic Nationalist politically right Paramilitary.">Frontkämpfervereinigung Deutsch-Österreichs</span>!} Strength: [+ fdo_strength_2 +] thousand
+
+Frontkämpfervereinigung Deutsch-Österreichs Militarization: [+ fdo_militancy : militancy +]
+
 = Official military/paramilitaries
 
 Reichswehr: [+ reichswehr_strength +] thousand troops.
