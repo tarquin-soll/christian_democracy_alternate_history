@@ -110,5 +110,7 @@ hindenburg_election.jpg: UnknownUnknown. For Documentary Purposes the German Fed
 
 = Images (People)
 
+IgnazSeipel.jpg: Author Unknown, Österreichische Nationalbibliothek, Bildarchiv Austria, Inventarnr. 167.982 - D, Wikimedia Commons, https://en.wikipedia.org/wiki/File:Wenzl_Weis_-_Ignaz_Seipel.jpg. Public Domain
+
 WilhelmMiklas.jpg: Author
 Unknown, Bain News Service, publisher. Pre 1956, Wikimedia Commons, https://commons.wikimedia.org/wiki/File:WilhelmMiklas37840v.jpg. Public Domain
