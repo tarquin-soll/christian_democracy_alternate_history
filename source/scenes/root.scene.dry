@@ -228,15 +228,15 @@ Q.new_middle_cs = 2;
 Q.new_middle_gdvp = 10;
 Q.new_middle_lb = 0;
 
-Q.old_middle_sdapo = 64;
-Q.old_middle_cs = 15;
-Q.old_middle_gdvp = 30;
+Q.old_middle_sdapo = 69;
+Q.old_middle_cs = 25;
+Q.old_middle_gdvp = 15;
 Q.old_middle_lb = 1;
 
-Q.rural_sdapo = 28;
+Q.rural_sdapo = 35;
 Q.rural_cs = 46;
 Q.rural_gdvp = 1;
-Q.rural_lb = 25;
+Q.rural_lb = 18;
 
 Q.unemployed_sdapo = 91;
 Q.unemployed_cs = 2;
