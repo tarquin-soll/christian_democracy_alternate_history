@@ -85,8 +85,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Party Positions
 
-
-Minority Stance: [? minority_stance == 0 : Anti-Semitism ?]
+// this shit is fudging pissing me off, I'll do this shit later
+Minority Stance: Anti-Semitism
 
 View on Socialism: <span style="color: #D00000;">Opposed</span>
 
