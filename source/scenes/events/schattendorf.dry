@@ -1,0 +1,17 @@
+title: Schattendorf Murder
+subtitle: A violent political clash in schattendorf...
+view-if: year = 1927 and month = 1
+max-visits: 1
+new-page: true
+face-image: img/schattendorf.jpg
+tags: event
+
+= Schattendorf Murder
+
+Lorem Ipsum
+  
+- @continue
+  
+@continue
+subtitle: Interesting turn of events
+on-arrival: republicanism_stance -= 1
