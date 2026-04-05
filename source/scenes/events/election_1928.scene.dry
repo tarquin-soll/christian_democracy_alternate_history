@@ -250,11 +250,11 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Unity List Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span>): [+ unity_coalition +]%
+<b><span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span></b> Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span>): [+ unity_coalition +]%
 
-Bourgeois Bloc Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span> + <span style="color: #408040;"><b>LB</b></span>): [+ rightwing_coalition +]%
+<b><span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span></b> Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #2080A0;"><b>GDVP</b></span> + <span style="color: #408040;"><b>LB</b></span>): [+ bourgeoisbloc_coalition +]%
 
-Social-Christian Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #D00000;"><b>SDAPÖ</b></span>): [+ socialchristian_coalition +]%
+<b><span style="color: #D00000;">Social</span>-<span style="color: #000000;">Christian</span></b> Coalition (<span style="color: #000000;"><b>CS</b></span> + <span style="color: #D00000;"><b>SDAPÖ</b></span>): [+ socialchristian_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -295,13 +295,13 @@ Who should be chancellor?
 - @no_govt
 
 @bourgeoisbloc_coalition
-title: We can form a <span style="color: #000000;">Bour</span<span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span> coalition.
+title: We can form a <span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span> coalition.
 subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> + <span style="color: #408040;">LB</span> ([+ bourgeoisbloc_coalition +]%)
 unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?][? if lb_relation < 50 : We do not have adequate relations with the <span style="color: #408040;">LB</span>. ?]
 choose-if: gdvp_relation >= 50 and lb_relation >= 50
 on-arrival: in_bourgeoisbloc_coalition = 1; gdvp_relation += 10; lb_relation += 15; right_dissent -= 10; clerical_dissent -= 10; center_dissent -= 10; labor_dissent -= 10
 
-We have enough votes to form a <span style="color: #000000;">Bour</span<span style="color: #2080A0;">geois</span><span style="color: #408040;">Bloc</span>, this is a good approach to foster a good relations with the <span style="color: #408040;">Landbund</span>.
+We have enough votes to form a <b><span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span></b>, this is a good approach to foster a good relations with the <span style="color: #408040;">Landbund</span>.
 
 Who should be chancellor?
 
