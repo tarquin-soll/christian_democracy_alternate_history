@@ -238,14 +238,14 @@ Q.rural_cs = 46;
 Q.rural_gdvp = 1;
 Q.rural_lb = 13;
 
-Q.unemployed_sdapo = 94;
+Q.unemployed_sdapo = 96;
 Q.unemployed_cs = 2;
-Q.unemployed_gdvp = 4;
+Q.unemployed_gdvp = 2;
 Q.unemployed_lb = 0;
 
 Q.catholics_sdapo = 13;
-Q.catholics_cs = 82;
-Q.catholics_gdvp = 3;
+Q.catholics_cs = 83;
+Q.catholics_gdvp = 2;
 Q.catholics_lb = 2;
 
 
