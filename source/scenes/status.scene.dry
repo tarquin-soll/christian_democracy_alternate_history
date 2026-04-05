@@ -99,6 +99,9 @@ if (Q.rs_strength) {
 if (Q.hw_strength) {
     Q.hw_strength_2 = Q.hw_strength.toFixed(1);
 }
+if (Q.fdo_strength) {
+    Q.fdo_strength_2 = Q.fdo_strength.toFixed(1);
+}
 !}
 
 = Paramilitaries
