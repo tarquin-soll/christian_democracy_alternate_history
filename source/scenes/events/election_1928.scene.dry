@@ -284,7 +284,7 @@ subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;
 unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?]
 choose-if: gdvp_relation >= 50
 
-We have enough votes to form a "Unity List" government consisting of the <span style="color: #000000;">CS</span> and <span style="color: #2080A0;">GDVP</span>! This has been our preferred governing coalition since 1920.
+We have enough votes to form a "Unity List" government consisting of the <span style="color: #000000;"><b>CS</b></span> and <span style="color: #2080A0;"><b>GDVP</b></span>! This has been our preferred governing coalition since 1920.
 
 Who should be chancellor?
 
