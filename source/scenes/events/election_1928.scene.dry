@@ -266,6 +266,8 @@ There are some potential coalition arrangements.
 
 - @unity_coalition
 - @bourgeoisbloc_coalition
+- @cs_majority
+- @socialchristian_coalition
 - @spd_majority
 - @weimar_coalition
 - @grand_coalition
@@ -314,6 +316,25 @@ view-if: seipel_dead = 0
 subtitle: Seipel has been our go-to choice for the Chancellory, he is also the preferred candidate of other parties.
 on-arrival: leverage += 5; cs_in_government = 1; chancellor = "Seipel"; chancellor_party = "CS"; in_unity_coalition = 1 if in_bourgeoisbloc_coalition == 0
 go-to: ministries
+
+@cs_majority
+title: <b><span style="color: #000000;">CS</span></b> majority alone
+subtitle: <span style="color: #000000;">CS</span>: [+ cs_r +]%
+view-if: cs_r >= 51
+on-arrival: chancellor = "Empty"; chancellor_party = "CS"; ca_in_government = 1; in_cs_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
+
+Finally, the <span style="color: #000000;">CS</span> can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
+
+Who should be chancellor?
+
+- @seipel_majority_chancellor
+- @no_govt
+
+@muller_majority_chancellor
+view-if: seipel_dead = 0
+on-arrival: chancellor = "Seipel"
+
+Ignaz Seipel has become chancellor of the <span style="color: #000000;">CS</span> majority.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
