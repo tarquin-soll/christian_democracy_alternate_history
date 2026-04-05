@@ -476,7 +476,7 @@ Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
 
-// all the initial advisors are centrists.
+// centrist advisor
 Q.miklas_advisor = 1; //Wilhelm Miklas
 Q.wels_advisor = 0; // Otto Wels
 Q.muller_advisor = 1; // Hermann Müller
@@ -485,7 +485,7 @@ Q.muller_dead = 0;
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 0; // Rudolf Hilferding
 
-// left advisors
+// clerical advisors (temporary)
 Q.seipel_advisor = 1; //Ignaz Seipel
 Q.seipel_dead = 0;
 Q.sender_advisor = 0; // Toni Sender
