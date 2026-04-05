@@ -57,6 +57,11 @@ Q.labor_dissent = 15;
 Q.clerical_strength = 45;
 Q.clerical_dissent = 0;
 
+//internal party positions
+Q.minority_stance = 0;
+Q.socialism_stance = 0;
+Q.republicanism_stance = 0;
+
 // secret events...
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
