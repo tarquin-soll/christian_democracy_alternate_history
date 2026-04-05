@@ -90,6 +90,8 @@ Minority Stance: Anti-Semitism
 
 View on Socialism: <span style="color: #D00000;">Opposed</span>
 
+View on the Republic: [? republicanism_stance == 0 : Opposed ?][? republicanism_stance == 1 : Disillusioned ?][? republicanism_stance == 2 : Skeptical ?][? republicanism_stance == 3 : Neutral ?][? republicanism_stance == 4 : Sympathetic ?][? republicanism_stance >= 5 : Supportive ?]
+
 @paramilitaries
 on-arrival: {!
 if (Q.rs_strength) {
