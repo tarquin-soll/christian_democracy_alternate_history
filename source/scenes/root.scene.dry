@@ -223,15 +223,15 @@ Q.workers_cs = 7;
 Q.workers_gdvp = 2;
 Q.workers_lb = 0;
 
-Q.old_middle_sdapo = 64;
-Q.old_middle_cs = 15;
-Q.old_middle_gdvp = 30;
-Q.old_middle_lb = 1;
-
 Q.new_middle_sdapo = 85;
 Q.new_middle_cs = 2;
 Q.new_middle_gdvp = 13;
 Q.new_middle_lb = 0;
+
+Q.old_middle_sdapo = 64;
+Q.old_middle_cs = 15;
+Q.old_middle_gdvp = 30;
+Q.old_middle_lb = 1;
 
 Q.rural_sdapo = 8;
 Q.rural_cs = 46;
