@@ -189,7 +189,7 @@ Q.old_middle = 18;
 Q.new_middle = 12;
 Q.rural = 35;
 Q.unemployed = 6.0;
-Q.catholics = 80;
+Q.catholics = 65;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
@@ -233,18 +233,18 @@ Q.old_middle_cs = 15;
 Q.old_middle_gdvp = 30;
 Q.old_middle_lb = 1;
 
-Q.rural_sdapo = 8;
+Q.rural_sdapo = 28;
 Q.rural_cs = 46;
 Q.rural_gdvp = 1;
-Q.rural_lb = 45;
+Q.rural_lb = 25;
 
 Q.unemployed_sdapo = 91;
 Q.unemployed_cs = 2;
 Q.unemployed_gdvp = 7;
 Q.unemployed_lb = 0;
 
-Q.catholics_sdapo = 6;
-Q.catholics_cs = 89;
+Q.catholics_sdapo = 10;
+Q.catholics_cs = 85;
 Q.catholics_gdvp = 3;
 Q.catholics_lb = 2;
 
