@@ -281,8 +281,6 @@ There are some potential coalition arrangements.
 - @popular_front_coalition
 - @right_coalition
 
-# TODO: black-brown coalition
-
 @unity_coalition
 title: We can form a <span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span> coalition
 subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%)
@@ -338,6 +336,59 @@ on-arrival: chancellor = "Seipel"
 
 Ignaz Seipel has become chancellor of the <span style="color: #000000;">CS</span> majority.
 
+@no_majority
+title: No majority can be found
+view-if: Q.cs_majority < 50 or Q.bourgeoisbloc_coalition < 50 or Q.unity_coalition < 50
+on-arrival: no_majority_elections += 1
+
+W.I.P Because ts will never happen dude. This is unprecedented, the fact that the National Council is only composed of 4 parties with 2 major powers
+
+- @new_elections
+
+@new_elections
+on-arrival: {!
+Q.next_election_month = Q.month + 3;
+Q.next_election_time = Q.time + 3;
+if (Q.next_election_month > 12) {
+    Q.next_election_month -= 12;
+    Q.next_election_year = Q.year + 1;
+} else {
+    Q.next_election_year = Q.year;
+}
+if (Q.republicanism_stance <= 4) {
+Q.pro_republic -= 6;
+Q.republicanism_stance -= 1;
+Q.workers_sdapo += 5;
+Q.new_middle_sdapo += 2;
+Q.new_middle_gdvp += 2;
+Q.new_middle_cs -= 4;
+Q.old_middle_sdapo -= 3;
+Q.old_middle_cs += 2
+Q.old_middle_gdvp += 1;
+Q.rural_lb += 1;
+Q.workers_cs -= 5;
+Q.rural_cs += 2;
+Q.unemployed_sdapo += 2;
+}
+if (Q.republicanism_stance >= 5) {
+Q.pro_republic -= 2;
+Q.republicanism_stance -= 1;
+Q.workers_sdapo += 2;
+Q.new_middle_sdapo += 1;
+Q.new_middle_gdvp += 2;
+Q.new_middle_cs -= 1;
+Q.old_middle_sdapo -= 3;
+Q.old_middle_gdvp += 3;
+Q.rural_lb += 2;
+Q.workers_cs += 2;
+Q.rural_cs += 1;
+Q.unemployed_sdapo += 2;
+}
+!}
+
+There is no path to a workable National Council majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
+
+The people's faith in democracy is shaken by this ordeal. Of course, the Nazis are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
 
 @far_right_coalition
 title: Far-right coalition
