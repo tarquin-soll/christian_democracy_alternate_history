@@ -257,6 +257,7 @@ There are some potential coalition arrangements.
 - @far_right_coalition
 - @no_majority
 - @left_coalition
+- @no_govt
 
 @unity_coalition
 title: We can form a <span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span> coalition
@@ -454,7 +455,7 @@ go-to: beg_dvp_succeed; beg_dvp_fail
 We make the case that without the SPD, there is no parliamentary majority, given the DNVP and NSDAP's hostility to constitutional government.
 
 @beg_dvp_succeed
-go-to: join_bruning
+go-to: no_majority
 
 Somehow, we succeed in convincing them! We are now in a coalition.
 
@@ -539,8 +540,6 @@ view-if: z_party_leader == "Joos"
 subtitle: Wirth is on the left wing of the Center Party. This may give us a better position in negotiating for other cabinet positions.
 on-arrival: left_dissent += 2; z_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
 go-to: ministries
-
-
 
 
 @no_govt
