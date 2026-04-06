@@ -216,6 +216,8 @@ Q.new_middle_qol = 100;
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['sdapo', 'cs', 'gdvp', 'lb'];
 
+Q.npo_formed = 0;
+
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_sdapo = 81;
@@ -261,9 +263,9 @@ Q.old_cs_r = 49;
 Q.old_gdvp_r = 2;
 Q.old_lb_r = 5;
 
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
+// npo, but it may be formed
+Q.npo_r = 0;
+Q.npo_sapd_r = 0;
 
 // for changing the DDP's name to the DStP
 Q.ddp_name = "DDP";
