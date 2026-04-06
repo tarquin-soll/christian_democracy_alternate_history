@@ -20,8 +20,8 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-CS position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+CS position: [? if cs_toleration : toleration ?][? if cs_in_government : in government - ?][? if cs_toleration == 0 and cs_in_government == 0 and cs_caretaker == 0 : opposition ?][? if cs_caretaker : caretaker government ?]
+[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_cs_majority and cs_in_government: CS majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -68,6 +68,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 
 {!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria"><span style="color: #D00000;"><b>SDAPÖ</b></span></span>!}: [+ sdapo_relation : relationships +]
+
+{!<span class="tooltip-text" title="National Christian Party of Austria"><span style="color: #002050;"><b>NPÖ</b></span></span>!}: [+ npo_relation : relationships +]
 
 {!<span class="tooltip-text" title="Greater German People's Party"><span style="color: #2080A0;"><b>GDVP</b></span></span>!}: [+ gdvp_relation : relationships +]
 
@@ -145,22 +147,24 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #D00000;"><b>SDAPÖ</b></span>: [+ sdapo_votes +]%
 
+[? if npo_formed:<span style="color: #002050;">NPÖ</span> [+ npo_votes +]% ?]
+
 <span style="color: #2080A0;"><b>GDVP</b></span>: [+ gdvp_votes +]%
 
 <span style="color: #408040;"><b>LB</b></span>: [+ lb_votes +]%
 
 **Detailed results for each demographic**
 
-Catholics: CS: [+ catholics_cs_display +]%, SDAPÖ: [+ catholics_sdapo_display +]%, GDVP: [+ catholics_gdvp_display +]%, LB: [+ catholics_lb_display +]%
+Catholics: CS: [+ catholics_cs_display +]%, SDAPÖ: [+ catholics_sdapo_display +]%, GDVP: [+ catholics_gdvp_display +]%, LB: [+ catholics_lb_display +]%[? if npo_formed:, NPÖ:[+ catholics_npo_display +]% ?]
 
-Workers: CS: [+ workers_cs_display +]%, SDAPÖ: [+ workers_sdapo_display +]%, GDVP: [+ workers_gdvp_display +]%, LB: [+ workers_lb_display +]%
+Workers: CS: [+ workers_cs_display +]%, SDAPÖ: [+ workers_sdapo_display +]%, GDVP: [+ workers_gdvp_display +]%, LB: [+ workers_lb_display +]%[? if npo_formed:, NPÖ:[+ workers_npo_display +]% ?]
 
-New Middle Class: CS: [+ new_middle_cs_display +]%, SDAPÖ: [+ new_middle_sdapo_display +]%, GDVP: [+ new_middle_gdvp_display +]%, LB: [+ new_middle_lb_display +]%
+New Middle Class: CS: [+ new_middle_cs_display +]%, SDAPÖ: [+ new_middle_sdapo_display +]%, GDVP: [+ new_middle_gdvp_display +]%, LB: [+ new_middle_lb_display +]%[? if npo_formed:, NPÖ:[+ new_middle_npo_display +]% ?]
 
-Old Middle Class: CS: [+ old_middle_cs_display +]%, SDAPÖ: [+ old_middle_sdapo_display +]%, GDVP: [+ old_middle_gdvp_display +]%, LB: [+ old_middle_lb_display +]%
+Old Middle Class: CS: [+ old_middle_cs_display +]%, SDAPÖ: [+ old_middle_sdapo_display +]%, GDVP: [+ old_middle_gdvp_display +]%, LB: [+ old_middle_lb_display +]%[? if npo_formed:, NPÖ:[+ old_middle_npo_display +]% ?]
 
-Rural: CS: [+ rural_cs_display +]%, SDAPÖ: [+ rural_sdapo_display +]%, GDVP: [+ rural_gdvp_display +]%, LB: [+ rural_lb_display +]%
+Rural: CS: [+ rural_cs_display +]%, SDAPÖ: [+ rural_sdapo_display +]%, GDVP: [+ rural_gdvp_display +]%, LB: [+ rural_lb_display +]%[? if npo_formed:, NPÖ:[+ rural_npo_display +]% ?]
 
-Unemployed: CS: [+ unemployed_cs_display +]%, SDAPÖ: [+ unemployed_sdapo_display +]%, GDVP: [+ unemployed_gdvp_display +]%, LB: [+ unemployed_lb_display +]%
+Unemployed: CS: [+ unemployed_cs_display +]%, SDAPÖ: [+ unemployed_sdapo_display +]%, GDVP: [+ unemployed_gdvp_display +]%, LB: [+ unemployed_lb_display +]%[? if npo_formed:, NPÖ:[+ unemployed_npo_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
