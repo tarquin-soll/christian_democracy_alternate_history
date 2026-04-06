@@ -193,6 +193,7 @@ if (Q.npo_formed && Q.npo_r) {
             "name": "NPÖ",
             "seats": Math.round(Q.npo_r*1.65),
             });
+}
 data = [
     {
         "id": "sdapo",
