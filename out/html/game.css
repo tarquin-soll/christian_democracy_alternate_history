@@ -545,6 +545,9 @@ table {
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }
+.seat.npo {
+    fill: #002050;
+}
 .seat.gdvp {
     fill: #2080A0;
 }
