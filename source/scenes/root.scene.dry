@@ -103,6 +103,9 @@ Q.sdapo_relation = 20;
 Q.gdvp_relation = 70;
 Q.lb_relation = 65;
 
+// splinter relations
+Q.npo_relation = 0;
+
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.kpd_party_leader = "Thälmann";
