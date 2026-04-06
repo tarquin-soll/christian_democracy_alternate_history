@@ -338,7 +338,7 @@ Ignaz Seipel has become chancellor of the <span style="color: #000000;">CS</span
 
 @no_majority
 title: No majority can be found
-view-if: Q.cs_majority < 50 or Q.bourgeoisbloc_coalition < 50 or Q.unity_coalition < 50
+view-if: Q.cs_majority < 50 and Q.bourgeoisbloc_coalition < 50 and Q.unity_coalition < 50
 on-arrival: no_majority_elections += 1
 
 W.I.P Because ts will never happen dude. This is unprecedented, the fact that the National Council is only composed of 4 parties with 2 major powers
