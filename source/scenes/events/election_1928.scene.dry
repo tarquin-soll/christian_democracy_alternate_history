@@ -594,3 +594,29 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 
 - #mins_1928
 - #drop_mins_1928
+
+@labor
+title: Labor Ministry
+subtitle: Taking the Labor Ministry is expected of us.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: labor_minister_party != "SPD"
+on-arrival: leverage -= 5; labor_minister_party = "CS"; labor_minister = "Ignaz Seipel"
+go-to: ministries
+
+Ignaz Seipel of the SPD has been appointed labor minister.
+
+@no_more
+title: No more ministries.
+subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
+tags: mins_1928
+
+This coalition arrangement is tolerable to all.
+
+@drop_interior
+title: Drop the Interior Ministry.
+view-if: labor_minister_party = "CS"
+on-arrival: labor_minister_party = "GDVP"; labor_minister = "Felix Frank"; leverage += 5;
+tags: drop_mins_1928
+go-to: ministries
