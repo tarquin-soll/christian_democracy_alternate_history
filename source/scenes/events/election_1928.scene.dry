@@ -351,7 +351,7 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 
 @vicechancellor
 title: Vice Chancellor
-subtitle: [? if in_unity_coalition : The Vice chancellery is usually given to our <span style="color: #2080A0;">coalition partner</span>.][? if in_bourgeoisbloc_coalition : The Vice chancellery would be best given to <span style="color: #408040;">Karl Hartleb</span> to foster goodwill between the coalition.]
+subtitle: [? if in_unity_coalition : The Vice chancellery is usually given to our <span style="color: #2080A0;">coalition partner</span>.][? if in_bourgeoisbloc_coalition : The Vice chancellery would be best given to <span style="color: #408040;">Karl Hartleb</span> to foster goodwill between the coalition. ?]
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 20
