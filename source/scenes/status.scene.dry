@@ -93,6 +93,25 @@ View on Socialism: <span style="color: #D00000;">Opposed</span>
 
 View on the Republic: [? if republicanism_stance <= 0: <span style="color: #E00000;">Opposed</span> ?][? if republicanism_stance == 1: <span style="color: #E51F1F;">Disillusioned</span> ?][? if republicanism_stance == 2: <span style="color: #F2A134;">Skeptical</span> ?][? if republicanism_stance == 3: <span style="color: #F7E379;">Neutral</span> ?][? if republicanism_stance == 4: <span style="color: #BBDB44;">Sympathetic</span> ?][? if republicanism_stance >= 5: <span style="color: #44CE1B;">Supportive</span> ?]
 
+@cabinet
+
+= Cabinet
+
+President: [+ president +] ([+ president_party +])
+
+Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Vice Chancellor: w.i.p
+
+Minister of Foreign Affairs: w.i.p
+Minister of Defense: w.i.p
+Minister of Education: w.i.p
+Minister of Interior: [+ interior_minister +] ([+ interior_minister_party +])
+Minister of Finance: w.i.p
+Minister of Justice: w.i.p
+Minister of Agriculture: w.i.p
+Minister of Social Administration: w.i.p
+Minister of Trade, and Communications: w.i.p
+
 @paramilitaries
 on-arrival: {!
 if (Q.rs_strength) {
