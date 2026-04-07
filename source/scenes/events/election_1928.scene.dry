@@ -340,7 +340,7 @@ What are our goals here, exactly?
 go-to: no_govt_2
 
 @no_govt_2
-on-arrival: clerical_dissent += 20; center_dissent += 10; labor_dissent += 10; right_dissent += 25; in_unity_coalition = 0; in_cs_majority = 0; in_bourgeoisbloc_coalition = 0; chancellor = "Empty"; chancellor_party = "None"; cs_in_government = 0
+on-arrival: clerical_dissent += 20; center_dissent += 10; labor_dissent += 10; right_dissent += 25; in_unity_coalition = 0; in_cs_majority = 0; in_bourgeoisbloc_coalition = 0; chancellor = "Empty"; chancellor_party = "None"; cs_in_government = 0; next_election_month += 3; next_election_time += 3
 
 @ministries
 
