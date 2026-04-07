@@ -290,7 +290,7 @@ Q.cs_in_government = 1;
 Q.gdvp_in_government = 1;
 Q.lb_in_government = 0;
 
-Q.in_unity_coalition 1;
+Q.in_unity_coalition = 1;
 // cs+gdvp
 Q.in_bourgeoisbloc_coalition = 0;
 // unity+lb
