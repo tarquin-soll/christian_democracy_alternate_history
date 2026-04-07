@@ -401,7 +401,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10
 view-if: trade_minister_party != "CS"
-on-arrival: leverage -= 10; trade_minister_party = "CS"; trade_minister = "Schmidt"
+on-arrival: leverage -= 10; trade_minister_party = "CS"; trade_minister = "Grünberger"
 go-to: ministries
 
 Alfred Grünberger of the <span style="color: #000000;">CS</span> has been appointed Trade and Communications Minister.
@@ -412,7 +412,7 @@ subtitle: This is the usual domain of <span style="color: #2080A0;">Leopold Wabe
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15
-view-if: justice_minister_party != "SPD"
+view-if: justice_minister_party != "CS"
 on-arrival: leverage -= 15; justice_minister_party = "CS"; justice_minister =  "Seipel"; justice_minister = "Schuschnigg" if seipel_dead
 go-to: ministries
 
