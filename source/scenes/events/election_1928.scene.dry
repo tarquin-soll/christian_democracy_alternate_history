@@ -249,7 +249,7 @@ go-to: ministries
 title: <span style="color: #000000;">CS</span> majority alone
 subtitle: <span style="color: #000000;">CS</span> ([+ cs_r +]%)
 view-if: cs_r >= 51
-on-arrival: chancellor = "Empty"; chancellor_party = "CS"; ca_in_government = 1; in_cs_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
+on-arrival: chancellor = "Empty"; chancellor_party = "CS"; cs_in_government = 1; in_cs_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
 
 Finally, the <span style="color: #000000;">CS</span> can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
@@ -366,7 +366,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "CS"
-on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Seipel"; interior_minister = "Kerber” if seipel_dead
+on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Seipel"; interior_minister = "Kerber" if seipel_dead
 go-to: ministries
 
 [? if seipel_dead : Robert Kerber ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span> has been appointed Interior Minister.
@@ -377,7 +377,7 @@ subtitle: The Foreign Ministry manages international relations and treaties.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
-on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Seipel"; interior_minister = "Schober” if seipel_dead
+on-arrival: leverage -= 5; foreign_minister_party = "CS"; foreign_minister = "Seipel"; interior_minister = "Schober" if seipel_dead
 go-to: ministries
 
 [? if seipel_dead : Johann Schober ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span> has been appointed Foreign Minister.
@@ -400,7 +400,7 @@ subtitle: This has been held for 5 years by <span style="color: #2080A0;">Hans S
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10
-view-if: economic_minister_party != "CS"
+view-if: trade_minister_party != "CS"
 on-arrival: leverage -= 10; trade_minister_party = "CS"; trade_minister = "Schmidt"
 go-to: ministries
 
@@ -424,7 +424,7 @@ subtitle: The Agriculture Ministry manages rural subsidies, farming regulations,
 unavailable-subtitle: We do not have enough leverage.
 choose-if: leverage >= 5
 view-if: agriculture_minister_party != "CS"
-on-arrival: leverage -= 5;; agriculture_minister_party = "CS"; agriculture_minister = "Thaler"
+on-arrival: leverage -= 5; agriculture_minister_party = "CS"; agriculture_minister = "Thaler"
 go-to: ministries
 tags: mins_1928
 
@@ -436,7 +436,7 @@ subtitle: The Defense Ministry controls the Federal Army (Bundesheer) and nation
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 10
-view-if: reichswehr_minister_party != "CS"
+view-if: defense_minister_party != "CS"
 on-arrival: leverage -= 10; defense_minister_party = "CS"; defense_minister = "Vaugoin"
 go-to: ministries
 
@@ -461,7 +461,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: social_minister_party !=  "CS"
-on-arrival: leverage -= 5; social_minister_party = "CS"; social_minister = "Richard Schmitz”
+on-arrival: leverage -= 5; social_minister_party = "CS"; social_minister = "Richard Schmitz"
 go-to: ministries
 
 Richard Schmitz of the <span style="color: #000000;">CS</span>  has been appointed Social Administration Minister.
