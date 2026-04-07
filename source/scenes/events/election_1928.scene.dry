@@ -322,6 +322,7 @@ W.I.P Because ts will never happen dude. This is unprecedented, the fact that th
 - @new_elections
 
 @new_elections
+title: New elections are to be held.
 on-arrival: {!
 Q.next_election_month = Q.month + 3;
 Q.next_election_time = Q.time + 3;
