@@ -377,7 +377,7 @@ subtitle: The Foreign Ministry manages international relations and treaties.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
-view-if: foreign_minister_party !=
+view-if: foreign_minister_party != "CS"
 on-arrival: leverage -= 5; foreign_minister_party = "CS"; foreign_minister = "Seipel"; foreign_minister = "Schober" if seipel_dead
 go-to: ministries
 
@@ -481,9 +481,22 @@ on-arrival: vice_chancellor_party = "GDVP"; vice_chancellor = "Franz Dinghofer";
 tags: drop_mins_1928
 go-to: ministries
 
+@drop_foreign
+title: Drop the Agricultural Ministry.
+view-if: foreign_minister_party = "CS"
+on-arrival: foreign_minister_party = "GDVP"; foreign_minister = "Leopold Wabel"; leverage += 5
+go-to: ministries
+
 @drop_trade
 title: Drop the Trade and Communications Ministry.
 view-if: trade_minister_party = "CS"
 on-arrival: trade_minister_party = "GDVP"; trade_minister = "Hans Schürff"; leverage += 10
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_agriculture
+title: Drop the Agricultural Ministry.
+view-if: agriculture_minister_party = "CS"
+on-arrival: agriculture_minister_party = "GDVP"; agriculture_minister = "Franz Slama"; leverage += 5; agriculture_minister_party = "LB" if bourgeoisbloc_coalition; agriculture_minister = "Karl Hartleb" if bourgeoisbloc_coalition
 tags: drop_mins_1928
 go-to: ministries
