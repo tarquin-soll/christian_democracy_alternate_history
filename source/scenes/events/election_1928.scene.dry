@@ -418,81 +418,6 @@ go-to: ministries
 
 [? if seipel_dead : Kurt Schuschnigg ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span>  has been appointed Justice Minister.
 
-            
- ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
-
-- #mins_1928
-- #drop_mins_1928
-
-@vicechancellor
-title: Vice Chancellor
-subtitle: [? if in_unity_coalition : The Vice chancellery is usually given to our <span style="color: #2080A0;">coalition partner</span>.][? if in_bourgeoisbloc_coalition : The Vice chancellery would be best given to <span style="color: #408040;">Karl Hartleb</span> to foster goodwill between the coalition.]
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 20
-view-if: vice_chancellor_party !=  "CS"
-on-arrival: leverage -= 20; vice_chancellor_party = "CS"; vice_chancellor = "Miklas"
-go-to: ministries
-
-@interior
-title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 5
-view-if: interior_minister_party != "CS"
-on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Seipel"; interior_minister = "Kerber" if seipel_dead
-go-to: ministries
-
-[? if seipel_dead : Robert Kerber ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span> has been appointed Interior Minister.
-
-@foreign
-title: Foreign Ministry
-subtitle: The Foreign Ministry manages international relations and treaties.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 5
-on-arrival: leverage -= 5; foreign_minister_party = "CS"; foreign_minister = "Seipel"; interior_minister = "Schober" if seipel_dead
-go-to: ministries
-
-[? if seipel_dead : Johann Schober ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span> has been appointed Foreign Minister.
-
-@finance
-title: Finance Ministry
-subtitle: The Finance Ministry controls the government budget and taxes.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 5
-view-if: finance_minister_party != "CS"
-on-arrival: leverage -= 5; finance_minister_party = "CS"; finance_minister = "Kienböck"
-go-to: ministries
-
-Viktor Kienböck of the <span style="color: #000000;">CS</span> has been appointed Finance Minister.
-
-@trade
-title: Trade and Communications Ministry
-subtitle: This has been held for 5 years by <span style="color: #2080A0;">Hans Schürff</span> of the <span style="color: #2080A0;">GDVP</span>. The Trade and Communications Ministry manages industrial regulation, postal services, and the national transport infrastructure.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 10
-view-if: trade_minister_party != "CS"
-on-arrival: leverage -= 10; trade_minister_party = "CS"; trade_minister = "Schmidt"
-go-to: ministries
-
-Alfred Grünberger of the <span style="color: #000000;">CS</span> has been appointed Trade and Communications Minister.
-
-@justice
-title: Justice Ministry
-subtitle: This is the usual domain of <span style="color: #2080A0;">Leopold Waber</span> of the <span style="color: #2080A0;">GDVP</span>.  The Justice Ministry controls the courts.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 15
-view-if: justice_minister_party != "CS"
-on-arrival: leverage -= 15; justice_minister_party = "CS"; justice_minister =  "Seipel"; justice_minister = "Schuschnigg" if seipel_dead
-go-to: ministries
-
-[? if seipel_dead : Kurt Schuschnigg ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span>  has been appointed Justice Minister.
-
 @agriculture
 title: Agricultural Ministry
 subtitle: The Agriculture Ministry manages rural subsidies, farming regulations, and land policy
@@ -547,4 +472,3 @@ subtitle: [? if leverage >= 10 : We still have some more leverage to gain minist
 tags: mins_1928
 
 This coalition arrangement is tolerable to all.
-
