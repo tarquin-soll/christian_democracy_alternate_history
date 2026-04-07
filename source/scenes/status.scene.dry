@@ -20,12 +20,9 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-CS position: [? if cs_toleration : toleration ?][? if cs_in_government : in government - ?][? if cs_toleration == 0 and cs_in_government == 0 and cs_caretaker == 0 : opposition ?][? if cs_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_cs_majority and cs_in_government: CS majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
-
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
-
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+CS position: [? if cs_in_government : in government - ?][? if cs_toleration == 0 and cs_in_government == 0 and cs_caretaker == 0 : opposition ?]
+[? if in_unity_coalition and cs_in_government: <b><span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span></b> Coalition ?][? if in_bourgeoisbloc_coalition and cs_in_government: <b><span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span></b>Coalition ?][? if in_cs_majority and cs_in_government: <span style="color: #000000;">CS</span> majority ?]
+[? if cs_in_government and not in_cs_majority: Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -109,7 +106,7 @@ Minister of Interior: [+ interior_minister +] ([? if interior_minister_party == 
 
 Minister of Foreign Affairs: [+ foreign_minister +] ([? if foreign_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if foreign_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if foreign_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if foreign_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if foreign_minister_party == "Empty" : ?][? if foreign_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
 
-Minister of Finance: [+ finance_minister +] ([? if finance_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if finance_inister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if finance_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if finance_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if finance_minister_party == "Empty" : ?][? if finance_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
+Minister of Finance: [+ finance_minister +] ([? if finance_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if finance_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if finance_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if finance_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if finance_minister_party == "Empty" : ?][? if finance_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
 
 Minister of Trade, and Communications: [+ trade_minister +] ([? if trade_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if trade_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if trade_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if trade_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if trade_minister_party == "Empty" : ?][? if trade_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span> ?])
 
