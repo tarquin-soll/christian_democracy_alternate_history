@@ -283,61 +283,48 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Michael Hainisch";
-Q.chancellor = "Ignaz Seipel";
+Q.president_party = 'Independent';
+Q.chancellor = "Seipel";
 Q.chancellor_party = 'CS';
+Q.vice_chancellor = "Dinghofer";
+Q.vice_chancellor_party = 'GDVP';
 Q.sdapö_in_government = 0;
 Q.cs_in_government = 1;
 Q.gdvp_in_government = 1;
-Q.lb_in_government = 1;
+Q.lb_in_government = 0;
 
-Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
-Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
-Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
-Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
-Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
-Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
-Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
-Q.in_minority_government = 0;
-// national unity governmet
+Q.in_unity_coalition 1;
+// cs+gdvp
+Q.in_bourgeoisbloc_coalition = 0;
+// unity+lb
+Q.in_socialchristian_coalition = 0;
+Q.in_cs_majority = 0;
 
-// if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
-
-// does the SPD tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
-// is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+// starting with the Seipel cabinet https://rulers.org/autgovt.html
+Q.foreign_minister = 'Seipel';
+Q.foreign_minister_party = 'CS';
+Q.interior_minister = 'Seipel';
+Q.interior_minister_party = 'CS';
+Q.justice_minister = 'Dinghofer';
+Q.justice_minister_party = 'GDVP';
+Q.social_minister = 'Resch';
+Q.social_minister_party = 'CS';
+Q.defense_minister = 'Vaugoin';
+Q.defense_minister_party = 'CS';
+Q.trade_minister = 'Schürff';
+Q.trade_minister_party = 'GDVP';
+Q.finance_minister = 'Kienböck';
+Q.finance_minister_party = 'CS';
+Q.agriculture_minister = 'Thaler';
+Q.agriculture_minister_party = 'CS';
+Q.education_minister = 'Schmitz';
+Q.education_minister_party = 'CS';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
@@ -526,7 +513,7 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
-set-bg: img/map_2.jpg
+set-bg: img/Austria.jpg
 new-page: true
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
