@@ -46,6 +46,8 @@ National Council of Austria composition:
 # 1923: 3
 {!<span class="tooltip-text" title="Landbund"><span style="color: #408040;"><b>LB</b></span></span>!}: [+ lb_r +]%
 
+[? if npo_formed : {!<span class="tooltip-text" title="National Christian Party of Austria"><span style="color: #002050;"><b>NPÖ</b></span></span>!}: [+ npo_r +]% ?]
+
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
@@ -69,7 +71,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Socialist Democratic Worker's Party of Austria"><span style="color: #D00000;"><b>SDAPÖ</b></span></span>!}: [+ sdapo_relation : relationships +]
 
-{!<span class="tooltip-text" title="National Christian Party of Austria"><span style="color: #002050;"><b>NPÖ</b></span></span>!}: [+ npo_relation : relationships +]
+[? if npo_formed : {!<span class="tooltip-text" title="National Christian Party of Austria"><span style="color: #002050;"><b>NPÖ</b></span></span>!}: [+ npo_relation : relationships +] ?]
 
 {!<span class="tooltip-text" title="Greater German People's Party"><span style="color: #2080A0;"><b>GDVP</b></span></span>!}: [+ gdvp_relation : relationships +]
 
@@ -166,7 +168,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #D00000;"><b>SDAPÖ</b></span>: [+ sdapo_votes +]%
 
-[? if npo_formed == 1:<span style="color: #002050;">NPÖ</span> [+ npo_votes +]% ?]
+[? if npo_formed : <span style="color: #002050;">NPÖ</span> [+ npo_votes +]% ?]
 
 <span style="color: #2080A0;"><b>GDVP</b></span>: [+ gdvp_votes +]%
 
