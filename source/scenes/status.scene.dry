@@ -99,7 +99,7 @@ View on the Republic: [? if republicanism_stance <= 0: <span style="color: #E000
 
 = Cabinet
 
-President: [+ president +] ([? if president_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if president_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if president_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if president_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if president_party == "Empty" : ?][? if president_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
+President: [+ president +] ([? if president_party == "Independent" : Independent?][? if president_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if president_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if president_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if president_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if president_party == "Empty" : ?][? if president_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
 
 Chancellor: [+ chancellor +] ([? if chancellor_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if chancellor_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if chancellor_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if chancellor_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if chancellor_party == "Empty" : ?][? if chancellor_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
 
