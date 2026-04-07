@@ -3,28 +3,30 @@ new-page: true
 is-card: true
 tags: govt_affairs, cabinet
 on-arrival: shuffle_cabinet_timer = 6;
-view-if: spd_in_government == 1 and shuffle_cabinet_timer == 0 and chancellor_party == "SPD" and not in_spd_majority and not in_emergency_government and not in_left_front
+view-if: cs_in_government == 1 and shuffle_cabinet_timer == 0 and chancellor_party == "CS" and not in_cs_majority
 card-image: img/muller_cabinet.jpg
 
 Do we wish to shuffle our cabinet? This might upset our current coalition.
 
 Current cabinet:
 
-Labor: [+ labor_minister_party +]
+Interior: [? if interior_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if interior_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if interior_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if interior_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if interior_minister_party == "Empty" : ?][? if interior_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?]
 
-Interior: [+ interior_minister_party +]
+Foreign: [? if foreign_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if foreign_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if foreign_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if foreign_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if foreign_minister_party == "Empty" : ?][? if foreign_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?]
 
-Finance: [+ finance_minister_party +]
+Finance: [? if finance_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if finance_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if finance_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if finance_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if finance_minister_party == "Empty" : ?][? if finance_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?]
 
-Economic: [+ economic_minister_party +]
+Trade and Communications: [? if trade_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if trade_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if trade_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if trade_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if trade_minister_party == "Empty" : ?][? if trade_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span> ?]
 
-Justice: [+ justice_minister_party +]
+Justice:[? if justice_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if justice_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if justice_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if justice_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if justice_minister_party == "Empty" : ?][? if justice_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?]
 
-Foreign: [+ foreign_minister_party +]
+Education: [? if education_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if education_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if education_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if education_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if education_minister_party == "Empty" : ?][? if education_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?]
 
-Reichswehr: [+ reichswehr_minister_party +]
+Social Administration: [? if social_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if social_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if social_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if social_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if social_minister_party == "Empty" : ?][? if social_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span> ?]
 
-Agriculture: [+ agriculture_minister_party +]
+Agriculture: [? if agriculture_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if agriculture_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if agriculture_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if agriculture_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if agriculture_minister_party == "Empty" : ?][? if agriculture_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span> ?]
+
+Defense: [? if defense_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if defense_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if defense_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if defense_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if defense_minister_party == "Empty" : ?][? if defense_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?]
 
 - @shuffle: Yes, do it.
 - @root: No, there is no need.
