@@ -472,3 +472,17 @@ subtitle: [? if leverage >= 10 : We still have some more leverage to gain minist
 tags: mins_1928
 
 This coalition arrangement is tolerable to all.
+
+@drop_vicechancellor
+title: Drop the Vice Chancellery.
+view-if: vice_chancellor_party = "CS"
+on-arrival: vice_chancellor_party = "GDVP"; vice_chancellor = "Franz Dinghofer"; leverage += 20; vice_chancellor_party = "LB" if bourgeoisbloc_coalition; vice_chancellor = "Karl Hartleb" if bourgeoisbloc_coalition
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_trade
+title: Drop the Trade and Communications Ministry.
+view-if: trade_minister_party = "CS"
+on-arrival: trade_minister_party = "GDVP"; trade_minister = "Hans Schürff"; leverage += 10
+tags: drop_mins_1928
+go-to: ministries
