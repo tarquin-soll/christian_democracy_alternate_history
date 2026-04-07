@@ -96,16 +96,6 @@ Q.coalition_dissent = 0;
 Q.cs_in_government = 0;
 Q.in_unity_coalition = 0;
 Q.in_bourgeoisbloc_coalition = 0;
-Q.vice_chancellor_party = 'GDVP';
-Q.interior_minister_party = 'GDVP';
-Q.justice_minister_party = 'GDVP';
-Q.education_minister_party = 'GDVP';
-Q.defense_minister_party = 'GDVP';
-Q.foreign_minister_party = 'GDVP';
-Q.social_minister_party = 'GDVP';
-Q.trade_minister_party = 'GDVP';
-Q.finance_minister_party = 'GDVP';
-Q.agriculture_minister_party = 'GDVP';
 
 Q.strike_term_seen = 0;
 
