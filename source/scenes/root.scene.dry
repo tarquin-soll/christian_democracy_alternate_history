@@ -183,7 +183,7 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 4;
+Q.budget = 2;
 
 // Proportion of different social groups
 // source: Ergebnisse der außerordentlichen Volkszählung vom 7. März 1923
@@ -199,7 +199,7 @@ Q.catholics = 65;
 // income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
 
-Q.inflation = 2.1;
+Q.inflation = 2.9;
 
 Q.economic_growth = 4.4;
 
@@ -252,10 +252,10 @@ Q.catholics_lb = 2;
 
 
 // October 1923 National Council of Austria Composition
-Q.sdapo_r = 42;
-Q.cs_r = 49;
-Q.gdvp_r = 6;
-Q.lb_r = 3;
+Q.sdapo_r = 41.2;
+Q.cs_r = 49.7;
+Q.gdvp_r = 6.1;
+Q.lb_r = 3.0;
 
 // idk what this do
 Q.old_sdapo_r = 44;
