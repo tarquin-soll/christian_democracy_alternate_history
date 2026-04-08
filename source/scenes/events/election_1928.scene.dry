@@ -419,30 +419,6 @@ go-to: ministries
 
 [? if seipel_dead : Kurt Schuschnigg ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span>  has been appointed Justice Minister.
 
-@agriculture
-title: Agricultural Ministry
-subtitle: The Agriculture Ministry manages rural subsidies, farming regulations, and land policy
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 5
-view-if: agriculture_minister_party != "CS"
-on-arrival: leverage -= 5; agriculture_minister_party = "CS"; agriculture_minister = "Thaler"
-go-to: ministries
-
-Andreas Thaler of the <span style="color: #000000;">CS</span> has been appointed Agriculture Minister.
-
-@defense
-title: Defense Ministry
-subtitle: The Defense Ministry controls the Federal Army (Bundesheer) and national military policy.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 10
-view-if: defense_minister_party != "CS"
-on-arrival: leverage -= 10; defense_minister_party = "CS"; defense_minister = "Vaugoin"
-go-to: ministries
-
-Carl Vaugoin of the <span style="color: #000000;">CS</span>  has been appointed Defense Minister.
-
 @education
 title: Education Ministry
 subtitle: The Education Ministry manages the school system, universities, and the legal relationship between the State and religious institutions.
@@ -467,6 +443,30 @@ go-to: ministries
 
 Richard Schmitz of the <span style="color: #000000;">CS</span>  has been appointed Social Administration Minister.
 
+@agriculture
+title: Agricultural Ministry
+subtitle: The Agriculture Ministry manages rural subsidies, farming regulations, and land policy
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: agriculture_minister_party != "CS"
+on-arrival: leverage -= 5; agriculture_minister_party = "CS"; agriculture_minister = "Thaler"
+go-to: ministries
+
+Andreas Thaler of the <span style="color: #000000;">CS</span> has been appointed Agriculture Minister.
+
+@defense
+title: Defense Ministry
+subtitle: This is expected of us. The Defense Ministry controls the Federal Army (Bundesheer) and national military policy.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 10
+view-if: defense_minister_party != "CS"
+on-arrival: leverage -= 10; defense_minister_party = "CS"; defense_minister = "Vaugoin"
+go-to: ministries
+
+Carl Vaugoin of the <span style="color: #000000;">CS</span>  has been appointed Defense Minister.
+
 @no_more
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
@@ -481,16 +481,44 @@ on-arrival: vice_chancellor_party = "GDVP"; vice_chancellor = "Franz Dinghofer";
 tags: drop_mins_1928
 go-to: ministries
 
+@drop_interior
+title: Drop the Interior Ministry.
+view-if: interior_minister_party = "CS"
+on-arrival: interior_minister_party = "GDVP"; interior_minister = "Leopold Waber"; leverage += 5; interior_minister_party = "LB" if bourgeoisbloc_coalition; interior_minister = "Vinzenz Schumy" if bourgeoisbloc_coalition
+tags: drop_mins_1928
+go-to: ministries
+
 @drop_foreign
-title: Drop the Agricultural Ministry.
+title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "CS"
 on-arrival: foreign_minister_party = "GDVP"; foreign_minister = "Leopold Wabel"; leverage += 5
+go-to: ministries
+
+@drop_finance
+title: Drop the Finance Ministry.
+view-if: finance_minister_party = "CS"
+on-arrival: finance_minister_party = "GDVP"; finance_minister = "Hans Schürff"; leverage += 5
+tags: drop_mins_1928
 go-to: ministries
 
 @drop_trade
 title: Drop the Trade and Communications Ministry.
 view-if: trade_minister_party = "CS"
 on-arrival: trade_minister_party = "GDVP"; trade_minister = "Hans Schürff"; leverage += 10
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_justice
+title: Drop the Justice Ministry.
+view-if: justice_minister_party = "CS"
+on-arrival: justice_minister_party = "GDVP"; justice_minister = "Leopold Waber"; leverage += 15
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_education
+title: Drop the Education Ministry.
+view-if: education_minister_party = "CS"
+on-arrival: education_minister_party = "GDVP"; education_minister = "Leopold Waber"; leverage += 15
 tags: drop_mins_1928
 go-to: ministries
 
