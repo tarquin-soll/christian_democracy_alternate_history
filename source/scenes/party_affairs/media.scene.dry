@@ -15,6 +15,7 @@ The <span style="color: #000000;">CS</span> runs a veritable media empire, with 
 - @campaign
 - @ideological
 - @newspaper
+- @newspaper_2
 - @return: We should not do anything with media at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -45,7 +46,17 @@ title: Allocate funds for <span style="color: #000000;">Die Reichspost</span>, o
 subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-view-if: radio = 0
+view-if: radio == 0
 on-arrival: radio += 1; resources -= 2; new_middle_cs += 4*(1 - dissent); old_middle_cs += 3*(1 - dissent); workers_cs += 2*(1 - dissent); catholics_cs += 3*(1 - dissent); socialism -= 3*(1 - dissent) if socialism_stance < 3; pro_republic += 4*(1-dissent) if republicanism_stance > 4
+
+We continue to invest in Die Reichspost exposing the masses to what benefits the party.
+
+@newspaper_2
+title: Allocate funds for <span style="color: #000000;">Die Reichspost</span>, our recognized newspaper in Vienna.
+subtitle: -q resources
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources.
+view-if: radio == 1
+on-arrival: resources -= 1; new_middle_cs += 4*(1 - dissent); old_middle_cs += 3*(1 - dissent); workers_cs += 2*(1 - dissent); catholics_cs += 3*(1 - dissent); socialism -= 3*(1 - dissent) if socialism_stance < 3; pro_republic += 4*(1-dissent) if republicanism_stance > 4
 
 We continue to invest in Die Reichspost exposing the masses to what benefits the party.
