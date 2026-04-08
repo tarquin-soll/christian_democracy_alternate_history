@@ -105,7 +105,7 @@ Q.foreign_minister_party = 'GDVP';
 Q.social_minister_party = 'GDVP';
 Q.trade_minister_party = 'GDVP';
 Q.finance_minister_party = 'GDVP';
-Q.agriculture_minister_party = 'GDVP';
+Q.agriculture_minister_party = 'LB';
 
 Q.strike_term_seen = 0;
 
