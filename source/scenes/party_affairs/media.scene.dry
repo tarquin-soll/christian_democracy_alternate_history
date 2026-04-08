@@ -23,16 +23,16 @@ The <span style="color: #000000;">CS</span> runs a veritable media empire, with 
 @commercial
 title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
 subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to <span style="color: #000000;">catholic</span> views.
-on-arrival: resources += 2; commercialized_media += 1; new_middle_cs += 4*(1 - dissent); old_middle_cs += 3*(1 - dissent); right_dissent += 5; labor_dissent += 5
+on-arrival: resources += 2; commercialized_media += 1; new_middle_cs += 3*(1 - dissent); old_middle_cs += 3*(1 - dissent); right_dissent += 5; labor_dissent += 5
 
 Our commercialized newspapers are able to bring in more funds. However, the right and labor factions express their displeasure.
 
 @campaign
-title: The purpose of our media is to elect more Social Democrats.
+title: The purpose of our media is to elect more <span style="color: #000000;">Christian</span> Democrats.
 subtitle: Our newspapers will focus on the electoral campaign.
 on-arrival: campaign_media += 1; workers_cs += 2*(1 - dissent); catholics_cs += 4*(1-dissent);
 
-Our campaign media is mostly reaching the workers who are already saturated with Socialist propaganda, but it must be doing *something*, or at least that is what we hope.
+Our campaign media is mostly reaching the religious austrians who already supports us, but it must be doing *something*, or atleast that is what we hope.
 
 @ideological
 title: We will have vibrant ideological debate within our newspapers.
@@ -53,7 +53,7 @@ We continue to invest in Die Reichspost exposing the masses to what benefits the
 
 @newspaper_2
 title: Allocate funds for <span style="color: #000000;">Die Reichspost</span>, our recognized newspaper in Vienna.
-subtitle: -q resources
+subtitle: -1 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
 view-if: radio == 1
