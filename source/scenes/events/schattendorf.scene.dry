@@ -1,7 +1,7 @@
 title: Schattendorf Murder
 subtitle: A violent political clash in Schattendorf...
 view-if: year = 1927 and month = 1
-max-visits: 1
+max-visits: -1
 new-page: true
 face-image: img/schattendorf.jpg
 tags: event
