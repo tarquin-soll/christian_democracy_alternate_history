@@ -44,14 +44,14 @@ We try to remove the most obviously biased and corrupt jurists, while leaving mo
 
 @bribe
 subtitle: -1 budget
-unavailable-subtitle: [if budget < 1:Not enough budget. ?][? if judicial_reform > 1:We can't do this due to our reforms. ?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
+unavailable-subtitle: [] if budget < 1:Not enough budget. ?][? if judicial_reform > 1:We can't do this due to our reforms. ?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
 choose-if: budget >= 1 and judicial_reform < 1 and right_strength >= 30 and republicanism_stance <= 3
 on-arrival: budget -= 1; judicial_reform -= 2; judiciary_timer -= 6
 
 We have successfully secured some connections in the Judiciary.
 
 @corrupt_reform
-subtitle: corruption.
+subtitle: Corruption.
 unavailable-subtitle: [? if judicial_reform > 1:We can't do this due to our reforms.?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
 choose-if: judicial_reform < 1 and right_strength >= 30 and republicanism_stance <= 3
 on-arrival: judicial_reform -= 1; judiciary_timer -= 6; new_middle_cs += 3*(1-dissent) if democratization >= 3; pro_republic += 1*(1-dissent); gdvp_relation -= 15
