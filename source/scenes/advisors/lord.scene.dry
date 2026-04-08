@@ -28,15 +28,15 @@ if (Q.difficulty >= 0) {
 
 @endgame
 title: End the game
-subtitle: Bring about the rapture
+subtitle: Bring about the rapture.
 go-to: game_over_1934
 
 @noright
-title: Clear the agenda
-subtitle: Removes all cards from the hand.
+title: Purge the sins
+subtitle: Yep.
 on-arrival: right_strength -= 25
 
 @maxrepublican
-title: Adopt a Christian Stance.
-subtitle: Maximize the Republican.
+title: Adopt a Christian Stance
+subtitle: Maximize the Republicanism Stance.
 on-arrival: republicanism_stance += 5
