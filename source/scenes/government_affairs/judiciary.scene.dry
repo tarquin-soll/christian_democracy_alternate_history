@@ -8,7 +8,9 @@ tags: govt_affairs, cabinet
 
 = Judiciary Reform
 
-The Judiciary is one of the most reactionary components of the government, along with the military. Many jurists have held office since the days of the Emperor. They give violent fascists laughably light sentences, while ruthlessly persecuting leftists and pacifists for lesser crimes.
+The Judiciary is one of the most <span style="color: #BABABA;">reactionary</span> components of the government, along with the military.
+
+Many jurists have held office since the days of the Emperor. They give violent <span style="color: #623100;">facists</span> laughably light sentences, while ruthlessly persecuting leftists and pacifists for lesser crimes.
 
 [? if judicial_reform <= -3 : We have successfully controlled the judiciary, the courts now moves under our commands. ?]
 [? if judicial_reform == -2 : We have a considerable amount of influence in the judiciary, however there still remains some loyalist that should be purged, perhaps another corrupt reform could do? ?]
