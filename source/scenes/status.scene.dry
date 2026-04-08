@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-CS position: [? if cs_in_government : in government - ?][? if cs_toleration == 0 and cs_in_government == 0 and cs_caretaker == 0 : opposition ?][? if in_unity_coalition and cs_in_government: <b><span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span></b> Coalition ?][? if in_bourgeoisbloc_coalition and cs_in_government: <b><span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span></b>Coalition ?][? if in_cs_majority and cs_in_government: <span style="color: #000000;">CS</span> majority ?]
+CS position: [? if cs_in_government : in government - ?][? if cs_toleration == 0 and cs_in_government == 0 and cs_caretaker == 0 : opposition ?][? if in_unity_coalition and cs_in_government: <b><span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span></b> Coalition ?][? if in_bourgeoisbloc_coalition and cs_in_government: <b><span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span></b> Coalition ?][? if in_cs_majority and cs_in_government: <span style="color: #000000;">CS</span> majority ?]
 
 [? if cs_in_government and not in_cs_majority: Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
