@@ -1,0 +1,42 @@
+title: Jesus Christ
+is-pinned-card: true
+tags: advisor, centrist
+card-image: img/portraits/Lord.jpg
+view-if: lord_advisor = 1
+new-page: true
+
+= Jesus Christ of Nazareth
+
+The Way, The Truth and The Life
+  
+- @clear_agenda
+- @endgame
+- @noright
+- @maxrepublican
+- @root: Return to main
+
+@clear_agenda
+title: Clear the agenda
+subtitle: Removes all cards from the hand.
+on-arrival: {!
+if (Q.difficulty >= 0) {
+    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
+} else {
+    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
+}
+!}
+
+@endgame
+title: End the game
+subtitle: Bring about the rapture
+go-to: game_over_1934
+
+@noright
+title: Clear the agenda
+subtitle: Removes all cards from the hand.
+on-arrival: right_strength -= 25
+
+@maxrepublican
+title: Adopt a Christian Stance.
+subtitle: Maximize the Republican.
+on-arrival: republicanism_stance += 5
