@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 view-if: cs_in_government = 1 and justice_minister_party = "CS" and judiciary_timer = 0
 on-arrival: month_actions += 1; judiciary_timer += 6
-card-image: [? if seipel_dead : img/portraits/KurtSchuschnigg.jpg ?][? if not seipel_dead : img/portraits/IgnazSeipel.jpg ?]
+card-image: img/portraits/KurtSchuschnigg.jpg
 tags: govt_affairs, cabinet
 
 = Judiciary Reform
@@ -22,7 +22,7 @@ Many jurists have held office since the days of the Emperor. They give violent <
 - @reform: Carry out substantial judicial reforms.
 - @minor_reforms: Carry out minor judicial reforms.
 - @bribe: Bribe the judiciary to align with us.
-- @corrupt_reform: Carry out judicial reforms in our favor (corruption).
+- @corrupt_reform: Carry out judicial reforms in our favor.
 - @as_is: Leave the judiciary as it is.
 - @easy_discard
 - @cancel_advisor_action
@@ -51,6 +51,7 @@ on-arrival: budget -= 1; judicial_reform -= 2; judiciary_timer -= 6
 We have successfully secured some connections in the Judiciary.
 
 @corrupt_reform
+subtitle: corruption.
 unavailable-subtitle: [? if judicial_reform > 1:We can't do this due to our reforms.?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
 choose-if: judicial_reform < 1 and right_strength >= 30 and republicanism_stance <= 3
 on-arrival: judicial_reform -= 1; judiciary_timer -= 6; new_middle_cs += 3*(1-dissent) if democratization >= 3; pro_republic += 1*(1-dissent); gdvp_relation -= 15
