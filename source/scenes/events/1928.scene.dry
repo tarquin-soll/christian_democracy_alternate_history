@@ -1,7 +1,6 @@
 title: 1928
 subtitle: A new year
 on-arrival: {!
-Q.economic_growth += 0;
 Q.resources += Q.dues;
 Q.inflation -= 0.8;
 !}
