@@ -466,9 +466,10 @@ Q.march_on_berlin_timer = 0;
 
 
 // centrist advisor
-Q.miklas_advisor = 1; //Wilhelm Miklas
+Q.lord_advisor = 1; // Jesus Christ of Nazareth
+Q.miklas_advisor = 1; // Wilhelm Miklas
 Q.wels_advisor = 0; // Otto Wels
-Q.muller_advisor = 1; // Hermann Müller
+Q.muller_advisor = 0; // Hermann Müller
 Q.muller_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
