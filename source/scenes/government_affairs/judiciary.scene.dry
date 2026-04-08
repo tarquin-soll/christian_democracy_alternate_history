@@ -28,7 +28,7 @@ The Judiciary is one of the most reactionary components of the government, along
 @reform
 subtitle: -1 budget
 unavailable-subtitle: [if budget < 1:Not enough budget. ][? if judicial_reform < 0:We're affiliated with corrupt judges.?]
-choose-if: budget >= 1; judicial_reform >= 0
+choose-if: budget >= 1 and judicial_reform >= 0
 on-arrival: budget -= 1; democratization += 2; coalition_dissent += 2 if in_cs_majority == 0; new_middle_cs += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 5*(1-dissent); coup_progress += 1; gdvp_relation -= 20
 
 We investigate jurists who have shown themselves to have biased or corrupt behavior, and try to remove them, replacing them with more democratically-oriented jurists. This obviously raises quite a great deal of ire in conservative circles, the <span style="color: #2080A0;">GDVP</span> voices their disagreements with these reforms.
@@ -43,15 +43,15 @@ We try to remove the most obviously biased and corrupt jurists, while leaving mo
 @bribe
 subtitle: -1 budget
 unavailable-subtitle: [if budget < 1:Not enough budget. ?][? if judicial_reform > 1:We can't do this due to our reforms. ?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
-choose-if: budget >= 1; judicial_reform < 1; right_strength >= 30; republicanism_stance <= 3
+choose-if: budget >= 1 and judicial_reform < 1 and right_strength >= 30 and republicanism_stance <= 3
 on-arrival: budget -= 1; judicial_reform -= 2; judiciary_timer -= 6
 
 We have successfully secured some connections in the Judiciary.
 
 @corrupt_reform
 unavailable-subtitle: [? if judicial_reform > 1:We can't do this due to our reforms.?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
-choose-if: budget >= 1; judicial_reform < 1; right_strength >= 30; republicanism_stance <= 3
-on-arrival: budget -= 1; judicial_reform -= 1; judiciary_timer -= 6; new_middle_cs += 3*(1-dissent) if democratization >= 3; pro_republic += 1*(1-dissent); gdvp_relation -= 15
+choose-if: judicial_reform < 1 and right_strength >= 30 and republicanism_stance <= 3
+on-arrival: judicial_reform -= 1; judiciary_timer -= 6; new_middle_cs += 3*(1-dissent) if democratization >= 3; pro_republic += 1*(1-dissent); gdvp_relation -= 15
 
 We have pushed out judicial reforms disguised as depoliticisation and removing judicial biases, the GDVP grows suspicious of our actions.
 
