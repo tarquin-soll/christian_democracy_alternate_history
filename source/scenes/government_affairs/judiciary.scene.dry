@@ -29,7 +29,7 @@ Many jurists have held office since the days of the Emperor. They give violent <
 
 @reform
 subtitle: -1 budget
-unavailable-subtitle: [if budget < 1:Not enough budget. ][? if judicial_reform < 0:We're affiliated with corrupt judges.?]
+unavailable-subtitle: [? 8f budget < 1:Not enough budget. ][? if judicial_reform < 0:We're affiliated with corrupt judges.?]
 choose-if: budget >= 1 and judicial_reform >= 0
 on-arrival: budget -= 1; democratization += 2; coalition_dissent += 2 if in_cs_majority == 0; new_middle_cs += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 5*(1-dissent); coup_progress += 1; gdvp_relation -= 20
 
