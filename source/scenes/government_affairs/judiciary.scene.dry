@@ -1,37 +1,59 @@
 title: Judiciary Reform
 new-page: true
 is-card: true
-view-if: spd_in_government = 1 and justice_minister_party = "SPD" and judiciary_timer = 0
+view-if: cs_in_government = 1 and justice_minister_party = "CS" and judiciary_timer = 0
 on-arrival: month_actions += 1; judiciary_timer += 6
-card-image: img/portraits/RadbruchGustav.jpg
+card-image: [? if seipel_dead : img/portraits/KurtSchuschnigg.jpg ?][? if not seipel_dead : img/portraits/IgnazSeipel.jpg ?]
 tags: govt_affairs, cabinet
 
 = Judiciary Reform
 
-The Judiciary is one of the most reactionary components of the government, along with the military. Many jurists have held office since the days of the Emperor. They give violent fascists like Adolf Hitler laughably light sentences, while ruthlessly persecuting leftists and pacifists for lesser crimes.
+The Judiciary is one of the most reactionary components of the government, along with the military. Many jurists have held office since the days of the Emperor. They give violent fascists laughably light sentences, while ruthlessly persecuting leftists and pacifists for lesser crimes.
 
-[? if judicial_reform <= 0 : There is great demand in our membership for reforming the judiciary, although this may bring us into a collision course with our coalition allies. ?]
+[? if judicial_reform <= -3 : We have successfully controlled the judiciary, the courts now moves under our commands. ?]
+[? if judicial_reform == -2 : We have a considerable amount of influence in the judiciary, however there still remains some loyalist that should be purged, perhaps another corrupt reform could do? ?]
+[? if judicial_reform == -1 : We have started on the path to judicial control through bribery and corrupt reforms, while most judges has been swayed in our favor many still remains biased towards the GDVP, More should be done. ?]
+[? if judicial_reform == 0 : There is great demand in our membership for reforming the judiciary, although this may bring us into a collision course with our coalition allies. ?]
 [? if judicial_reform == 1 : We have started on the path to judicial reform. While some of the most antideluvian and biased justices have been replaced, many still remain. More should be done. ?]
-[? if judicial_reform >= 2 : We have successfully reformed the judiciary, to some extent. At the very least, the courts will not actively obstruct our attempts to prosecute crimes committed by the far-right. ?]
+[? if judicial_reform >= 2 : We have successfully reformed the judiciary, to some extent. At the very least, the courts will not actively obstruct our attempts to prosecute crimes committed by both the extreme-right and extreme-left. ?]
 
 - @reform: Carry out substantial judicial reforms.
 - @minor_reforms: Carry out minor judicial reforms.
+- @bribe: Bribe the judiciary to align with us.
+- @corrupt_reform: Carry out judicial reforms in our favor (corruption).
 - @as_is: Leave the judiciary as it is.
 - @easy_discard
 - @cancel_advisor_action
 
 @reform
 subtitle: -1 budget
-unavailable-subtitle: Not enough budget.
-choose-if: budget >= 1
-on-arrival: budget -= 1; democratization += 2; coalition_dissent += 1 if in_grand_coalition == 1; workers_spd += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 5*(1-dissent); coup_progress += 1; coalition_dissent += 1 if historical_mode
+unavailable-subtitle: [if budget < 1:Not enough budget. ][? if judicial_reform < 0:We're affiliated with corrupt judges.?]
+choose-if: budget >= 1; judicial_reform >= 0
+on-arrival: budget -= 1; democratization += 2; coalition_dissent += 2 if in_cs_majority == 0; new_middle_cs += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 5*(1-dissent); coup_progress += 1; gdvp_relation -= 20
 
-We investigate jurists who have shown themselves to have biased or corrupt behavior, and try to remove them, replacing them with more democratically-oriented jurists. This obviously raises quite a great deal of ire in conservative circles, including within our coalition. 
+We investigate jurists who have shown themselves to have biased or corrupt behavior, and try to remove them, replacing them with more democratically-oriented jurists. This obviously raises quite a great deal of ire in conservative circles, the <span style="color: #2080A0;">GDVP</span> voices their disagreements with these reforms.
 
 @minor_reforms
-on-arrival: democratization += 1; workers_spd += 3*(1-dissent) if democratization >= 3; judicial_reform += 1; pro_republic += 3*(1-dissent); judiciary_timer += 6
+unavailable-subtitle: We're affiliated with corrupt judges.
+choose-if: judicial_reform >= 0
+on-arrival: democratization += 1; new_middle_cs += 3*(1-dissent) if democratization >= 3; judicial_reform += 1; pro_republic += 3*(1-dissent); judiciary_timer += 6; gdvp_relation -= 10
 
 We try to remove the most obviously biased and corrupt jurists, while leaving most of the system intact. It is slow work reforming the judiciary.
+
+@bribe
+subtitle: -1 budget
+unavailable-subtitle: [if budget < 1:Not enough budget. ?][? if judicial_reform > 1:We can't do this due to our reforms. ?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
+choose-if: budget >= 1; judicial_reform < 1; right_strength >= 30; republicanism_stance <= 3
+on-arrival: budget -= 1; judicial_reform -= 2; judiciary_timer -= 6
+
+We have successfully secured some connections in the Judiciary.
+
+@corrupt_reform
+unavailable-subtitle: [? if judicial_reform > 1:We can't do this due to our reforms.?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
+choose-if: budget >= 1; judicial_reform < 1; right_strength >= 30; republicanism_stance <= 3
+on-arrival: budget -= 1; judicial_reform -= 1; judiciary_timer -= 6; new_middle_cs += 3*(1-dissent) if democratization >= 3; pro_republic += 1*(1-dissent); gdvp_relation -= 15
+
+We have pushed out judicial reforms disguised as depoliticisation and removing judicial biases, the GDVP grows suspicious of our actions.
 
 @as_is
 go-to: root
