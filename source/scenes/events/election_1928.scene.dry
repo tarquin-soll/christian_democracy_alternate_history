@@ -54,7 +54,7 @@ for (var party of Q.parties) {
     }
     // if we use decimals, then we might want to truncate the numbers
     if (Q.use_decimals) {
-        Q[party + '_r_disp'] = Q[party+'_r'].toFixed(1);
+        Q[party + '_r_disp'] = Q[party+'_r'].toFixed(2);
     }  else {
             Q[party + '_r_disp'] = Q[party+'_r'];
     }
