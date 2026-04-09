@@ -34,6 +34,10 @@ Budget Revenue W.I.P
 
 @taxation
 
+Upper-income tax rates: [+ upper_tax_rates : taxation +]
+
+Lower-income tax rates: [+ lower_tax_rates : taxation +]
+
 - @raise_rich: Increase taxes on the rich.
 - @raise_poor
 - @raise_overall: Increase overall taxes.
