@@ -3,9 +3,9 @@ new-page: true
 is-card: true
 tags: govt_affairs, cabinet
 on-arrival: fiscal_policy_timer += 6; month_actions += 1
-view-if: spd_in_government = 1 and finance_minister_party = "SPD" and fiscal_policy_timer = 0
-card-image: img/portraits/HilferdingRudolf.jpg
-go-to: fiscal_menu
+view-if: cs_in_government = 1 and finance_minister_party = "CS" and fiscal_policy_timer = 0
+card-image: img/portraits/ViktorKienböck.jpg
+go-to: fiscal_overview
 #subtitle: Issues of taxation, budget, and tariffs.
 
 = Fiscal Policy
@@ -13,7 +13,24 @@ go-to: fiscal_menu
 Fiscal policy involves issues of taxation and budget.
 
 
-@fiscal_menu
+@fiscal_overview
+
+Current tariff level: [+ tariffs : taxation +]
+
+Upper-income tax rates: [+ upper_tax_rates : taxation +]
+
+Lower-income tax rates: [+ lower_tax_rates : taxation +]
+
+Foreign debt: W.I.P
+
+- @reparation: Overview of reparations.
+- @foreign: Overview of foreign debt.
+- @taxes: Change domestic taxes.
+- @tariffs: Change international tariffs.
+- @root: Do not change tariffs or taxes.
+- @easy_discard
+
+@taxes
 
 Upper-income tax rates: [+ upper_tax_rates : taxation +]
 
@@ -28,6 +45,7 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @raise_progressive: Make the tax system more progressive by raising taxes on the rich and cutting them for the poor.
 - @regressive
 - @tariffs
+- @fiscal_overview
 - @root: Do not change the tax system.
 - @easy_discard
 - @cancel_advisor_action
