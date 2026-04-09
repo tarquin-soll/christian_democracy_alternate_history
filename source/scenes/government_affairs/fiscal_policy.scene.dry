@@ -12,21 +12,7 @@ go-to: fiscal_overview
 
 Fiscal policy involves issues of taxation and budget.
 
-- @fiscal_overview
-
 @fiscal_overview
-
-Current tariff level: [+ tariffs : taxation +]
-
-Upper-income tax rates: [+ upper_tax_rates : taxation +]
-
-Lower-income tax rates: [+ lower_tax_rates : taxation +]
-
-Foreign Debt: W.I.P
-
-Reparations: W.I.P
-
-Budget Revenue W.I.P
 
 - @foreign: Overview of foreign debt.
 - @reparation: Overview of reparations.
