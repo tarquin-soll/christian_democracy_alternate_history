@@ -5,15 +5,14 @@ tags: govt_affairs, cabinet
 on-arrival: fiscal_policy_timer += 6; month_actions += 1
 view-if: cs_in_government = 1 and finance_minister_party = "CS" and fiscal_policy_timer = 0
 card-image: img/portraits/ViktorKienböck.jpg
-go-to: fiscal_menu
+go-to: taxation
 #subtitle: Issues of taxation, budget, and tariffs.
 
 = Fiscal Policy
 
 Fiscal policy involves issues of taxation and budget.
 
-@fiscal_menu
-title:
+@fiscal_overview
 
 Current tariff level: [+ tariffs : taxation +]
 
@@ -38,13 +37,13 @@ Budget Revenue W.I.P
 
 W.I.P
 
-- @fiscal_menu: Leave the foreign debt at status quo.
+- @fiscal_overview: Leave the foreign debt at status quo.
 
 @reparation
 
 W.I.P
 
-- @fiscal_menu: Leave the reparations at status quo.
+- @fiscal_overview: Leave the reparations at status quo.
 
 @taxes
 
@@ -61,7 +60,7 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @raise_progressive: Make the tax system more progressive by raising taxes on the rich and cutting them for the poor.
 - @regressive
 - @tariffs
-- @fiscal_menu
+- @fiscal_overview
 - @root: Do not change the tax system.
 
 @raise_progressive
@@ -146,7 +145,7 @@ Current tariff level: [+ tariffs : taxation +]
 
 - @raise_tariffs
 - @lower_tariffs
-- @fiscal_menu
+- @fiscal_overview
 - @root: Do not change international tariffs.
 
 @raise_tariffs
