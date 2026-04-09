@@ -5,7 +5,7 @@ tags: govt_affairs, cabinet
 on-arrival: fiscal_policy_timer += 6; month_actions += 1
 view-if: cs_in_government = 1 and finance_minister_party = "CS" and fiscal_policy_timer = 0
 card-image: img/portraits/ViktorKienböck.jpg
-go-to: fiscal_menu
+go-to: fiscal_overview
 #subtitle: Issues of taxation, budget, and tariffs.
 
 = Fiscal Policy
@@ -13,7 +13,7 @@ go-to: fiscal_menu
 Fiscal policy involves issues of taxation and budget.
 
 
-@fiscal_menu
+@fiscal_overview
 
 Upper-income tax rates: [+ upper_tax_rates : taxation +]
 
@@ -114,7 +114,7 @@ Current tariff level: [+ tariffs : taxation +]
 
 - @raise_tariffs
 - @lower_tariffs
-- @fiscal_menu: Change domestic taxes instead of tariffs.
+- @fiscal_overview: Change domestic taxes instead of tariffs.
 - @root: Do not change tariffs or taxes.
 - @easy_discard
 
