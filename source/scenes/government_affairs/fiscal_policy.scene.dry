@@ -5,12 +5,14 @@ tags: govt_affairs, cabinet
 on-arrival: fiscal_policy_timer += 6; month_actions += 1
 view-if: cs_in_government = 1 and finance_minister_party = "CS" and fiscal_policy_timer = 0
 card-image: img/portraits/ViktorKienböck.jpg
-go-to: taxation
+go-to: fiscal_overview
 #subtitle: Issues of taxation, budget, and tariffs.
 
 = Fiscal Policy
 
 Fiscal policy involves issues of taxation and budget.
+
+- @fiscal_overview
 
 @fiscal_overview
 
