@@ -21,14 +21,30 @@ Upper-income tax rates: [+ upper_tax_rates : taxation +]
 
 Lower-income tax rates: [+ lower_tax_rates : taxation +]
 
-Foreign debt: W.I.P
+Foreign Debt: W.I.P
 
-- @reparation: Overview of reparations.
+Reparations: W.I.P
+
+Budget Revenue W.I.P
+
 - @foreign: Overview of foreign debt.
+- @reparation: Overview of reparations.
 - @taxes: Change domestic taxes.
 - @tariffs: Change international tariffs.
 - @root: Do not change tariffs or taxes.
 - @easy_discard
+
+@foreign
+
+W.I.P
+
+- @fiscal_overview: Leave the foreign debt at status quo.
+
+@reparation:
+
+W.I.P
+
+- @fiscal_overview: Leave the reparations at status quo.
 
 @taxes
 
@@ -47,8 +63,6 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @tariffs
 - @fiscal_overview
 - @root: Do not change the tax system.
-- @easy_discard
-- @cancel_advisor_action
 
 @raise_progressive
 subtitle: This does not change overall revenue. [? if lower_tax_rates < -5 : Lower-class tax rates are too low to cut anymore. ?] [? if upper_tax_rates > 5 : Upper-class tax rates are too high to increase. ?]
@@ -58,7 +72,7 @@ on-arrival: workers_spd += 6*(1-dissent); old_middle_spd -= 4; new_middle_spd -=
 Making the tax system more progressive is popular among our base, but it upsets our bourgeois coalition partners, as well as our minimal number of bourgeois voters.
 
 @raise_rich
-subtitle: +2 budget
+subtitle: +2 budget per year.
 unavailable-subtitle: Tax rates are already too high.
 choose-if: upper_tax_rates <= 5
 on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_spd += 4*(1-dissent); old_middle_spd -= 4; new_middle_spd -= 4; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; dvp_relation -= 4; unemployed += 1; finance_goal_completed += 1; inflation -= 0.6; economic_growth -= 0.4; new_middle_spd -= 2 if upper_tax_rates > 1; old_middle_spd -= 2 if upper_tax_rates > 1; left_dissent -= 3; labor_dissent -= 3
@@ -68,7 +82,7 @@ Raising taxes on the rich is popular among our base, but it alienates the bourge
 
 @raise_poor
 title: Raise consumption taxes, which disproportionately affect the poor.
-subtitle: +2 budget
+subtitle: +2 budget per year.
 unavailable-subtitle: Tax rates are already too high.
 choose-if: lower_tax_rates <= 5
 on-arrival: budget += 2; workers_spd -= 4; kpd_coalition_dissent += 1; lower_tax_rates += 1; workers_spd -= 5 if lower_tax_rates >= 2; labor_dissent += 3; left_dissent += 3
@@ -77,7 +91,7 @@ We have raised taxes for the poor and working class. This hurts our support amon
 
 
 @cut_overall
-subtitle: -3 budget
+subtitle: -3 budget per year.
 unavailable-subtitle: -3 budget - [? if upper_tax_rates < -5 or lower_tax_rates < -5 : Tax rates are already too low. ?]
 choose-if: budget >= 3 and upper_tax_rates >= -5 and lower_tax_rates >= -5
 on-arrival: budget -= 3; upper_tax_rates -= 1; lower_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); dvp_relation += 5*(1-dissent); z_relation += 5*(1-dissent); unemployed -= 1.5 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 1; economic_growth += 0.6;
@@ -86,7 +100,7 @@ Cutting taxes benefits most the rich and middle-class, who pay more taxes than t
 
 @cut_poor
 title: Cut consumption taxes for the poor.
-subtitle: -2 budget
+subtitle: -2 budget per year.
 unavailable-subtitle: -2 budget - [? if lower_tax_rates < -5: Tax rates are already too low. ?]
 choose-if: budget >= 2 and lower_tax_rates >= -5
 on-arrival: budget -= 2; lower_tax_rates -= 1; workers_spd += 5*(1-dissent); unemployed -= 0.7 if unemployed >= 5; inflation += 0.6; economic_growth += 0.4; finance_goal_completed += 1; labor_dissent -= 3; left_dissent -= 3;
@@ -96,7 +110,7 @@ Our tax cuts disproportionately benefit the poor and working class.
 
 @cut_rich
 title: Cut income taxes for the rich.
-subtitle: -2 budget
+subtitle: -2 budget per year.
 unavailable-subtitle: -2 budget - [? if upper_tax_rates < -5: Tax rates are already too low. ?]
 choose-if: budget >= 2 and upper_tax_rates >= -5
 on-arrival: budget -= 2; upper_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); dvp_relation += 4*(1-dissent); z_relation += 4*(1-dissent); unemployed -= 0.7 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.6; economic_growth += 0.4; labor_dissent += 3; left_dissent += 3
@@ -105,7 +119,7 @@ We have reduced income and property taxes for the rich and middle class. The bou
 
 
 @raise_overall
-subtitle: +3 budget
+subtitle: +3 budget per year.
 unavailable-subtitle: Tax rates are already too high.
 choose-if: upper_tax_rates <= 5 and lower_tax_rates <= 5
 on-arrival: budget += 3; new_middle_spd -= 4; old_middle_spd -= 4; workers_spd -= 4; unemployed += 2; kpd_coalition_dissent += 1; lower_tax_rates += 1; upper_tax_rates += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 2; workers_spd -= 5 if lower_tax_rates > 1; inflation -= 1.1; economic_growth -= 0.6; new_middle_spd -= 2 if upper_tax_rates > 1; old_middle_spd -= 2 if upper_tax_rates > 1;
@@ -133,8 +147,7 @@ Current tariff level: [+ tariffs : taxation +]
 - @raise_tariffs
 - @lower_tariffs
 - @fiscal_menu: Change domestic taxes instead of tariffs.
-- @root: Do not change tariffs or taxes.
-- @easy_discard
+- @root: Do not change international tariffs.
 
 @raise_tariffs
 title: Raise tariffs on imports.
