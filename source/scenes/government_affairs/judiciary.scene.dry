@@ -28,7 +28,7 @@ Many jurists have held office since the days of the Emperor. They give violent <
 - @cancel_advisor_action
 
 @reform
-subtitle: -2 budget
+subtitle: -1 budget
 unavailable-subtitle: [? if budget < 1:Not enough budget. ?][? if judicial_reform < 0:We're affiliated with corrupt judges.?]
 choose-if: budget >= 1 and judicial_reform >= 0
 on-arrival: budget -= 1; democratization += 2; coalition_dissent += 2 if in_cs_majority == 0; new_middle_cs += 5*(1-dissent) if democratization >= 3; judicial_reform += 2; pro_republic += 5*(1-dissent); coup_progress += 1; gdvp_relation -= 20
@@ -43,7 +43,7 @@ on-arrival: democratization += 1; new_middle_cs += 3*(1-dissent) if democratizat
 We try to remove the most obviously biased and corrupt jurists, while leaving most of the system intact. It is slow work reforming the judiciary.
 
 @bribe
-subtitle: -3 budget. Corruption. It’s probably best not to do this on a regular basis.
+subtitle: -1 budget. Corruption. It’s probably best not to do this on a regular basis.
 unavailable-subtitle: [? if budget < 1:Not enough budget. ?][? if judicial_reform > 1:We can't do this due to our reforms. ?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
 choose-if: budget >= 1 and judicial_reform < 1 and right_strength >= 30 and republicanism_stance <= 3
 on-arrival: budget -= 1; judicial_reform -= 2; judiciary_timer -= 6
