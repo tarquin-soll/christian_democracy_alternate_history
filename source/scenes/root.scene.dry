@@ -183,7 +183,7 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 2;
+Q.budget = 3;
 
 // Proportion of different social groups
 // source: Ergebnisse der außerordentlichen Volkszählung vom 7. März 1923
@@ -530,7 +530,7 @@ The creator of the mods does not endorse the extremist ideology in this mod, it'
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 2; budget = 3;
 go-to: 1928_main
 
 @1928_hard
