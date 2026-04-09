@@ -54,7 +54,7 @@ We have successfully secured some connections in the Judiciary.
 subtitle: Corruption. It’s probably best not to do this on a regular basis.
 unavailable-subtitle: [? if judicial_reform > 1:We can't do this due to our reforms.?][? if right_strength < 30:The party won't pursue this direction in the judiciary. ?][? if republicanism_stance >= 4:The party remains committed to preserving and strengthening the republic.?]
 choose-if: judicial_reform < 1 and right_strength >= 30 and republicanism_stance <= 3
-on-arrival: judicial_reform -= 1; judiciary_timer -= 6; new_middle_cs += 3*(1-dissent) if democratization >= 3; pro_republic += 1*(1-dissent); gdvp_relation -= 15
+on-arrival: judicial_reform -= 1; new_middle_cs += 3*(1-dissent) if democratization >= 3; pro_republic += 1*(1-dissent); gdvp_relation -= 15
 
 We have pushed out judicial reforms disguised as depoliticisation and removing judicial biases, the GDVP grows suspicious of our actions.
 
