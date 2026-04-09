@@ -146,7 +146,7 @@ Current tariff level: [+ tariffs : taxation +]
 
 - @raise_tariffs
 - @lower_tariffs
-- @fiscal_menu: Change domestic taxes instead of tariffs.
+- @fiscal_overview
 - @root: Do not change international tariffs.
 
 @raise_tariffs
