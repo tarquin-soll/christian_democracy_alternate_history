@@ -27,11 +27,31 @@ Reparations: W.I.P
 
 Budget Revenue W.I.P
 
+- @foreign
+- @reparation
 - @taxation
 - @tariffs
 - @root: Do not change domestic taxation and international tariffs.
 - @easy_discard
 - @cancel_advisor_action
+
+@foreign
+title: HEAVILY W.I.P
+
+W.I.P
+
+- @fiscal_overview: Fiscal overview
+- @root: Do not change the tax system.
+- @easy_discard
+
+@reparation
+title: HEAVILY W.I.P
+
+W.I.P
+
+- @fiscal_overview: Fiscal overview
+- @root: Do not change the tax system.
+- @easy_discard
 
 @taxation
 title: Change or Adjust domestic taxation.
