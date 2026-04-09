@@ -27,6 +27,13 @@ Reparations: W.I.P
 
 Budget Revenue W.I.P
 
+- @taxation
+- @root: Do not change the tax system.
+- @easy_discard
+- @cancel_advisor_action
+
+@taxation
+
 - @raise_rich: Increase taxes on the rich.
 - @raise_poor
 - @raise_overall: Increase overall taxes.
@@ -38,7 +45,6 @@ Budget Revenue W.I.P
 - @tariffs
 - @root: Do not change the tax system.
 - @easy_discard
-- @cancel_advisor_action
 
 @raise_progressive
 subtitle: This does not change overall revenue. [? if lower_tax_rates < -5 : Lower-class tax rates are too low to cut anymore. ?] [? if upper_tax_rates > 5 : Upper-class tax rates are too high to increase. ?]
