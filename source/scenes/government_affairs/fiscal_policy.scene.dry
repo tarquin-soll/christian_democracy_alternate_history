@@ -35,6 +35,7 @@ Budget Revenue W.I.P
 
 @taxation
 title: Change or Adjust domestic taxation.
+
 Upper-income tax rates: [+ upper_tax_rates : taxation +]
 
 Lower-income tax rates: [+ lower_tax_rates : taxation +]
