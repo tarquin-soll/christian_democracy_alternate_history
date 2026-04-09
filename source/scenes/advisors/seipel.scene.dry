@@ -13,8 +13,9 @@ Seipel is a consevative catholic priest. A former [? if chancellor = "Seipel": a
 - @campaigning
 - @party_discipline
 - @republicanism
-- @snap_election
 - @coalition
+- @foreign
+- @snap_election
 - @root: Return to main
 
 @campaigning
@@ -22,19 +23,9 @@ title: Campaigning
 subtitle: Increase our standing on austrian catholics. (require 1 resources)
 choose-if: advisor_action_timer <= 0 and resources >= 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources == 0 : Not enough resources. ?]
-on-arrival: advisor_action_timer = 2; catholics_cs += 8*(1-dissent); resources -= 1
+on-arrival: advisor_action_timer = 6; catholics_cs += 8*(1-dissent); resources -= 1
 
 We have increased our campaigning among Catholics.
-
-@coalition
-title: Negotiating with the Coalition
-subtitle: Seipel can improve our relationships with our coalition partners.
-choose-if: advisor_action_timer <= 0 and spd_in_government = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The SPD is not in government. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; gdvp_relation += 5; lb_relation += 5
-
-We have improved our relations with the <span style="color: #2080A0;">GDVP</span>, and the <span style="color: #408040;">Landbunde</span>, and reduced tensions with the coalition.
-
 
 @party_discipline
 title: Party Discipline
@@ -62,4 +53,23 @@ choose-if: advisor_action_timer == 0 and chancellor == "Seipel"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
 We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
-  
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Seipel can improve our relationships with our coalition partners.
+choose-if: advisor_action_timer <= 0 and cs_in_government = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not cs_in_government: The <span style="color: #000000;">CS</span> is not in government. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if cs_in_government = 1 and coalition_dissent > 0; gdvp_relation += 5; lb_relation += 5
+
+We have improved our relations with the <span style="color: #2080A0;">GDVP</span>, and the <span style="color: #408040;">Landbunde</span>, and reduced tensions with the coalition.
+
+@foreign
+title: Foreign Policy
+subtitle: As Foreign Minister, Breitscheid can set our foreign policy.
+unavailable-subtitle: [? if not spd_in_government: The @breitscheid_foreign
+title: Foreign Policy
+subtitle: As Foreign Minister, Breitscheid can set our foreign policy.
+unavailable-subtitle: [? if not spd_in_government: The SPD is not in government. ?] [? if foreign_minister_party != "SPD" : The SPD does not control the Foreign Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and cs_in_government and foreign_minister_party == "CS"
+on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
+go-to: foreign_policy
