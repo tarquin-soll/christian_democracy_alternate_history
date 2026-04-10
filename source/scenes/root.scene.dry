@@ -183,8 +183,6 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 1;
-
 // Proportion of different social groups
 // source: Ergebnisse der außerordentlichen Volkszählung vom 7. März 1923
 Q.workers = 35;
@@ -379,13 +377,22 @@ Q.german_relation = 0;
 Q.west_relation = 0;
 Q.papal_relation = 0;
 
-Q.foreign_debt = 3
-Q.reparations = 4
-// Tax rates relative to 1928 baseline
+// Tax rates relative to 1927 baseline
 Q.lower_tax_rates = -2;
 Q.middle_tax_rates = 0;
-Q.upper_tax_rates = 3;
+Q.upper_tax_rates = 2;
 Q.tariffs = 1;
+Q.budget = 1;
+
+Q.income_from_taxes = (Q.lower_tax_rates + 1) + (Q.middle_tax_rates + 1) + (Q.upper_tax_rates + 1)
+Q.income_from_tariffs = tariffs + 1
+Q.revenue = Q.income_from_taxes + Q.income_from tariffs
+
+Q.reparation = 3
+Q.foreign_debt = 2
+Q.expenses = Q.reparation + Q.foreign_debt
+
+Q.income = Q.revenue - Q.expenses
 
 Q.electoral_threshold = 0;
 
