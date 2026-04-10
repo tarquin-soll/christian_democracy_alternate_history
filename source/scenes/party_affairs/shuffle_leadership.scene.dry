@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: center_advisor, clerical_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -40,6 +40,15 @@ tags: remove_advisor
 go-to: rm_main
 
 Miklas has been removed as an advisor. The Centrist faction disapproves.
+
+# clericals
+
+@remove_miklas
+title: Remove Seipel
+view-if: seipel_advisor = 1
+on-arrival: seipel_advisor = 0; clerical_dissent += 5; n_advisors -= 1
+tags: remove_advisor
+go-to: rm_main
 
 @remove_hilferding
 title: Remove Hilferding
@@ -68,7 +77,6 @@ go-to: rm_main
 
 Müller has been removed as an advisor. The Centrist faction disapproves.
 
-
 @remove_breitscheid
 title: Remove Breitscheid
 view-if: breitscheid_advisor = 1
@@ -79,7 +87,6 @@ go-to: rm_main
 Breitscheid has been removed as an advisor. The Centrist faction disapproves.
 
 # reformists
-
 
 @remove_severing
 title: Remove Severing
@@ -116,7 +123,6 @@ on-arrival: pfulf_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Pfülf has been removed as an advisor. The Reformist faction disapproves.
-
 
 # labor
 
@@ -300,7 +306,7 @@ frequency: 1
 
 - @centrist: Add Centrists
 - @left: Add Leftists
-- @reformist: Add Reformists
+- @clerical: Add Clericals
 - @labor: Add Labor
 - @neorev: Add Neorevisionists
 - @nonfactional: Add non-factional advisors
@@ -312,10 +318,10 @@ view-if: n_advisors < 3
 
 - #center_advisor
 
-@reformist
+@clerical
 view-if: n_advisors < 3
 
-- #reformist_advisor
+- #clerical_advisor
 
 @left
 view-if: n_advisors < 3
@@ -341,7 +347,7 @@ view-if: n_advisors < 3
 title: Wilhelm Miklas
 subtitle: Wilhelm Miklas is a staunch legalist and devout Catholic who serves as a bridge between our center and the religious heart of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
-card-image: 0
+card-image: img/portraits/WilhelmMiklas.jpg
 tags: center_advisor
 view-if: miklas_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: miklas_advisor = 1; n_advisors += 1
@@ -395,8 +401,17 @@ tags: center_advisor
 
 Rudolf Breitscheid is now an advisor.
 
-# reformist
+# clerical
 
+@add_miklas
+title: Wilhelm Miklas
+subtitle: Wilhelm Miklas is a staunch legalist and devout Catholic who serves as a bridge between our center and the religious heart of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+is-card: true
+card-image: img/portraits/IgnazSeipel.jpg
+tags: clerical_advisor
+view-if: seipel_advisor = 0 and n_advisors < 3
+on-arrival: seipel_advisor = 1; n_advisors += 1; clerical_strength
+go-to: advisor_menu
 
 @add_severing
 title: Carl Severing
