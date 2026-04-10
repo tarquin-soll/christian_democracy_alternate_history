@@ -263,10 +263,7 @@ Q.old_lb_r = 5;
 
 // npo, but it may be formed
 Q.npo_r = 0;
-Q.npo_sapd_r = 0;
-
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
+Q.npo_r = 0;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -384,15 +381,15 @@ Q.upper_tax_rates = 2;
 Q.tariffs = 1;
 Q.budget = 1;
 
-Q.income_from_taxes = (Q.lower_tax_rates + 1) + (Q.middle_tax_rates + 1) + (Q.upper_tax_rates + 1)
-Q.income_from_tariffs = tariffs + 1
-Q.revenue = Q.income_from_taxes + Q.income_from tariffs
+Q.income_from_taxes = (Q.lower_tax_rates + 1) + (Q.middle_tax_rates + 1) + (Q.upper_tax_rates + 1);
+Q.income_from_tariffs = tariffs + 1;
+Q.revenue = Q.income_from_taxes + Q.income_from tariffs;
 
-Q.reparation = 3
-Q.foreign_debt = 2
-Q.expenses = Q.reparation + Q.foreign_debt
+Q.reparation = 3;
+Q.foreign_debt = 2;
+Q.expenses = Q.reparation + Q.foreign_debt;
 
-Q.income = Q.revenue - Q.expenses
+Q.income = Q.revenue - Q.expenses;
 
 Q.electoral_threshold = 0;
 
