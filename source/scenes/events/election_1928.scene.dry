@@ -83,11 +83,12 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
     }
 }
 
-// coalitions
-Q.cs_majority = Q.cs_r;
-Q.bourgeoisbloc_coalition = Q.cs_r + Q.gdvp_r + Q.lb_r;
-Q.unity_coalition = Q.cs_r + Q.gdvp_r;
-Q.socialchristian_coalition = Q.cs_r + Q.sdapo_r;
+// coalition
+
+Q.cs_majority = parseFloat(Q.cs_r.toFixed(1));
+Q.bourgeoisbloc_coalition = parseFloat((Q.cs_r+Q.gdvp_r).toFixed(1));
+Q.unity_coalition = parseFloat((Q.cs_r+Q.gdvp_r+Q.lb_r).toFixed(1));
+Q.socialchristian_coalition = parseFloat((Q.cs_r+Q.sdapo_r).toFixed(1));
 
 Q.leverage = Q.cs_r;
 
