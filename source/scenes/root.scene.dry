@@ -314,6 +314,7 @@ Q.education_minister = 'Schmitz';
 Q.education_minister_party = 'CS';
 
 // Events: what has occurred?
+Q.july_revolt = 0;
 Q.panzerkreuzer_seen = 0;
 Q.panzerkreuzer_funded = 0;
 Q.panzerkreuzer_failed = 0;
