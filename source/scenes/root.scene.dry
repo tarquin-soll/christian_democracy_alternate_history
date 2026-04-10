@@ -192,11 +192,6 @@ Q.rural = 35;
 Q.unemployed = 6.0;
 Q.catholics = 65;
 
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
-
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
-Q.income = 1600;
-
 Q.inflation = 2.9;
 
 Q.economic_growth = 4.4;
