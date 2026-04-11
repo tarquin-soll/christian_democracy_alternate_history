@@ -258,7 +258,6 @@ Q.old_lb_r = 5;
 
 // npo, but it may be formed
 Q.npo_r = 0;
-Q.npo_r = 0;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -378,7 +377,7 @@ Q.tariffs = 1;
 Q.budget = 1;
 
 Q.income_from_taxes = (Q.lower_tax_rates + 1) + (Q.middle_tax_rates + 1) + (Q.upper_tax_rates + 1);
-Q.income_from_tariffs = tariffs + 1;
+Q.income_from_tariffs = Q.tariffs + 1;
 Q.revenue = Q.income_from_taxes + Q.income_from tariffs;
 
 Q.reparation = 3;
