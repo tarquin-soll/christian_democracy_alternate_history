@@ -31,7 +31,7 @@ W.I.P
 
 @jewish
 unavailable-subtitle: [? if minority_stance <= 3 :No, we will not do this. ?]
-choose-if: minority_stance <= 3
+choose-if: minority_stance >= 4
 on-arrival: enemies = "Jewish elements"
 
 W.I.P
