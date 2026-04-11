@@ -226,6 +226,7 @@ Who should be chancellor?
 
 - @seipel
 - @no_govt
+- @coalition_menu: Let's try other governing arrangements.
 
 @bourgeoisbloc_coalition
 title: We can form a <span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span> coalition.
@@ -240,6 +241,7 @@ Who should be chancellor?
 
 - @seipel
 - @no_govt
+- @coalition_menu: Let's try other governing arrangements.
 
 @seipel
 title: Ignaz Seipel for Chancellor
