@@ -2,7 +2,7 @@ title: Choosing Our Enemies
 new-page: true
 view-if: year <= 1930 and enemies_timer <= 0
 on-arrival: month_actions += 1; enemies_timer = 18
-max-visits: 3
+max-visits: 4
 is-card: true
 card-image: img/poster_4.jpg
 tags: party_affairs
@@ -30,8 +30,8 @@ on-arrival: enemies = "paramilitaries"
 W.I.P
 
 @jewish
-unavailable-subtitle: [? if minority_stance <= 4 :No, we will not do this. ?]
-choose-if: minority_stance <= 4
+unavailable-subtitle: [? if minority_stance <= 3 :No, we will not do this. ?]
+choose-if: minority_stance <= 3
 on-arrival: enemies = "Jewish elements"
 
 W.I.P
