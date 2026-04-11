@@ -254,8 +254,7 @@ go-to: ministries
 title: <span style="color: #000000;">CS</span> majority alone
 subtitle: <span style="color: #000000;">CS</span> ([+ cs_r +]%)
 view-if: cs_r >= 50
-on-arrival: chancellor = "Empty"; chancellor_party = "CS"; cs_in_government = 1; in_cs_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
-
+on-arrival: chancellor = "Empty"; chancellor_party = "CS"; vice_chancellor = "Miklas"; vice_chancellor_party = "CS"; cs_in_government = 1; in_cs_majority = 1; pro_republic += 5; foreign_minister_party = "CS"; foreign_minister = "Seipel"; foreign_minister = "Buresch" if seipel_dead; interior_minister_party = "CS"; interior_minister = "Seipel"; interior_minister_party = "Kerber" if seipel_dead; justice_minister_party = "CS"; justice_minister = "Seipel"; justice_minister = "Schuschnigg" if seipel_dead; social_minister_party = "CS"; social_minister = "Schmitz"; defense_minister_party = "CS"; cs_minister = "Vaugoin"; trade_minister_party = "CS"; trade_minister = "Kienböck"; finance_minister_party = "CS"; finance_minister = "Grünberger"; agriculture_minister_party = "CS"; agriculture_minister = "Thaler"; education_minister_party = "CS"; education_minister = "Resch"
 Finally, the <span style="color: #000000;">CS</span> can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
 Who should be chancellor?
@@ -489,7 +488,7 @@ go-to: ministries
 @drop_interior
 title: Drop the Interior Ministry.
 view-if: interior_minister_party = "CS"
-on-arrival: interior_minister_party = "GDVP"; interior_minister = "Leopold Waber"; leverage += 5; interior_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 7; interior_minister = "Vinzenz Schumy" if bourgeoisbloc_coalition and lb_r > 7
+on-arrival: interior_minister_party = "GDVP"; interior_minister = "Felix Frank"; leverage += 5; interior_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 7; interior_minister = "Vinzenz Schumy" if bourgeoisbloc_coalition and lb_r > 7
 tags: drop_mins_1928
 go-to: ministries
 
