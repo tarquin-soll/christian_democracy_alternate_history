@@ -553,31 +553,33 @@ go-to: defense_discussion
 @defense_discussion
 title: Question of defense minister.
 
-W.I.P We obviously won't lend the defense minister to either the <span style="color: #2080A0;">GDVP</span> or <span style="color: #408040;">LB</span>, the question is which independent politician to appoint?
+W.I.P We obviously won't lend the defense minister to either the GDVP or LB, the question is which independent politician to appoint?
+// Johannes Schober, Carl Schneller, Alois Zeidler-Daublebsky?
 
 - @thatguy
 - @thisguy
 - @thoseguys
 
-// Johannes Schober, Carl Schneller, Alois Zeidler-Daublebsky?
-
 @thatguy
 title: That guy.
 on-arrival: defense_minister_party = "Independent"; defense_minister = "That guy"
-go-to ministries
 
 That guy has been appointed Defense Minister.
+
+go-to: ministries
 
 @thisguy
 title: This guy.
 on-arrival: defense_minister_party = "Independent"; defense_minister = "This guy"
-go-to ministries
 
-That guy has been appointed Defense Minister.
+This guy has been appointed Defense Minister.
+
+go-to: ministries
 
 @thoseguys
 title: Those guys
 on-arrival: defense_minister_party = "Independent"; defense_minister = "Those guys"
-go-to ministries
 
-Those guys has been appointed Defense Minister.
+Those guys have been appointed Defense Minister.
+
+go-to: ministries
