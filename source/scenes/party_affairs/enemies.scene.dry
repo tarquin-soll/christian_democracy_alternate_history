@@ -25,7 +25,7 @@ on-arrival: enemies = "Austromarxists"; center_dissent -= 5; right_dissent -= 8;
 Our anti-Socialist rhetoric is popular among all but the most radical elements of the working class, and it wins us a measure of approval among our coalition partners. However, if we are to reconcile with the <span style="color: #D00000;">SDAPÖ</span>, this may not be the best choice.
 
 @paramilitaries
-on-arrival: enemies = "paramilitaries"; fdo_militancy -= 0.1; hw_militancy -= 0.1; rs_militancy -= 0.1; hw_loyalty -= 0.1; right_strength -= 5; right_dissent -= 5; center_dissent
+on-arrival: enemies = "paramilitaries"; fdo_militancy -= 0.1; hw_militancy -= 0.1; rs_militancy -= 0.1; hw_loyalty -= 0.1; right_strength -= 5; right_dissent -= 5; center_dissent -= 5
 
 This is unpopular to our heimwehr but it results in the reduced militancy of these paramilitaries, this however is opposed by the right and the center of our party who see at as a necessity to defend the republic against the socialists.
 
