@@ -87,7 +87,7 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 Q.cs_majority = parseFloat(Q.cs_r.toFixed(1));
 Q.bourgeoisbloc_coalition = parseFloat((Q.cs_r+Q.gdvp_r+Q.lb_r).toFixed(1));
-Q.unity_coalition = parseFloat((Q.cs_r+Q.gdvp_r+Q).toFixed(1));
+Q.unity_coalition = parseFloat((Q.cs_r+Q.gdvp_r).toFixed(1));
 Q.socialchristian_coalition = parseFloat((Q.cs_r+Q.sdapo_r).toFixed(1));
 
 Q.leverage = Q.cs_r;
@@ -255,6 +255,7 @@ title: <span style="color: #000000;">CS</span> majority alone
 subtitle: <span style="color: #000000;">CS</span> ([+ cs_r +]%)
 view-if: cs_r >= 50
 on-arrival: chancellor = "Empty"; chancellor_party = "CS"; vice_chancellor = "Miklas"; vice_chancellor_party = "CS"; cs_in_government = 1; in_cs_majority = 1; pro_republic += 5; foreign_minister_party = "CS"; foreign_minister = "Seipel"; foreign_minister = "Buresch" if seipel_dead; interior_minister_party = "CS"; interior_minister = "Seipel"; interior_minister_party = "Kerber" if seipel_dead; justice_minister_party = "CS"; justice_minister = "Seipel"; justice_minister = "Schuschnigg" if seipel_dead; social_minister_party = "CS"; social_minister = "Schmitz"; defense_minister_party = "CS"; cs_minister = "Vaugoin"; trade_minister_party = "CS"; trade_minister = "Kienböck"; finance_minister_party = "CS"; finance_minister = "Grünberger"; agriculture_minister_party = "CS"; agriculture_minister = "Thaler"; education_minister_party = "CS"; education_minister = "Resch"
+
 Finally, the <span style="color: #000000;">CS</span> can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
 Who should be chancellor?
