@@ -557,6 +557,8 @@ W.I.P We obviously won't lend the defense minister to either the <span style="co
 - @thisguy
 - @thoseguys
 
+// Johannes Schober, Carl Schneller, Alois Zeidler-Daublebsky?
+
 @thatguy
 title: That guy.
 on-arrival: defense_minister_party = "Independent"; defense_minister = "That guy"
