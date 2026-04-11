@@ -378,7 +378,7 @@ Q.budget = 1;
 
 Q.income_from_taxes = (Q.lower_tax_rates + 1) + (Q.middle_tax_rates + 1) + (Q.upper_tax_rates + 1);
 Q.income_from_tariffs = Q.tariffs + 1;
-Q.revenue = Q.income_from_taxes + Q.income_from tariffs;
+Q.revenue = Q.income_from_taxes + Q.income_from_tariffs;
 
 Q.reparation = 3;
 Q.foreign_debt = 2;
