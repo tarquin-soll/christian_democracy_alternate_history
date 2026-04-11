@@ -20,7 +20,7 @@ go-to: start_menu_2
 on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
-Q.time = 1;
+Q.time = 12;
 Q.year = 1926;
 Q.month = 12;
 // how many actions have been taken this month?
@@ -56,6 +56,12 @@ Q.labor_strength = 10;
 Q.labor_dissent = 15;
 Q.clerical_strength = 45;
 Q.clerical_dissent = 0;
+
+Q.goals_true = 0;
+Q.right_goal = 0;
+Q.center_goal = 0;
+Q.labor_goal = 0;
+Q.clerical_goal = 0;
 
 //internal party positions
 Q.minority_stance = 6;
