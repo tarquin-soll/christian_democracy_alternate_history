@@ -134,6 +134,7 @@ Q.rs_militancy = 0.7;
 Q.rs_banned = 0;
 Q.hw_strength = 300;
 Q.hw_militancy = 0.8;
+Q.hw_loyalty = 0.8;
 Q.hw_banned = 0;
 Q.fdo_strength = 3;
 Q.fdo_militancy = 0.9;
