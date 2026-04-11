@@ -57,12 +57,6 @@ Q.labor_dissent = 15;
 Q.clerical_strength = 45;
 Q.clerical_dissent = 0;
 
-Q.goals_true = 0;
-Q.right_goal = 0;
-Q.center_goal = 0;
-Q.labor_goal = 0;
-Q.clerical_goal = 0;
-
 //internal party positions
 Q.minority_stance = 6;
 Q.socialism_stance = -1;
