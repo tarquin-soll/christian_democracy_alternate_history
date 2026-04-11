@@ -45,10 +45,14 @@ Miklas has been removed as an advisor. The Centrist faction disapproves.
 
 @remove_seipel
 title: Remove Seipel
+unavailable subtitle: [? if clerical_strength >= 40:No we won't do this, he's too influential. ?]
+choose-if: clerical_strength < 40
 view-if: seipel_advisor = 1
 on-arrival: seipel_advisor = 0; clerical_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
+
+Seipel has been removed as an advisor. The Clerical faction disapproves.
 
 @remove_hilferding
 title: Remove Hilferding
@@ -345,7 +349,7 @@ view-if: n_advisors < 3
 
 @add_miklas
 title: Wilhelm Miklas
-subtitle: Wilhelm Miklas is a staunch legalist and devout Catholic who serves as a bridge between our center and the religious heart of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+subtitle: Wilhelm Miklas is a staunch legalist and devout Catholic who serves as a bridge between our center and the religious heart of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Clear the agenda, Deradicalization, Party Discipline, Snap Election?]
 is-card: true
 card-image: img/portraits/WilhelmMiklas.jpg
 tags: center_advisor
@@ -403,9 +407,9 @@ Rudolf Breitscheid is now an advisor.
 
 # clerical
 
-@add_miklas
-title: Wilhelm Miklas
-subtitle: Wilhelm Miklas is a staunch legalist and devout Catholic who serves as a bridge between our center and the religious heart of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+@add_seipel
+title: Ignaz Seipel
+subtitle: Seipel is a consevative catholic priest. A former and current Chancellor, and is a long-time <span style="color: #000000;">Christian Social Party</span> leader. {!<br><br>!}[? if difficulty < 0 : Actions - Campaigning, Party Discipline, Republicanism, Negotiating with the Coalition, Foreign Policy, Snap Election ?]
 is-card: true
 card-image: img/portraits/IgnazSeipel.jpg
 tags: clerical_advisor
