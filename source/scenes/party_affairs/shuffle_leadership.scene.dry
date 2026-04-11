@@ -43,7 +43,7 @@ Miklas has been removed as an advisor. The Centrist faction disapproves.
 
 # clericals
 
-@remove_miklas
+@remove_seipel
 title: Remove Seipel
 view-if: seipel_advisor = 1
 on-arrival: seipel_advisor = 0; clerical_dissent += 5; n_advisors -= 1
