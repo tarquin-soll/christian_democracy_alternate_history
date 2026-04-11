@@ -488,14 +488,14 @@ go-to: ministries
 @drop_interior
 title: Drop the Interior Ministry.
 view-if: interior_minister_party = "CS"
-on-arrival: interior_minister_party = "GDVP"; interior_minister = "Felix Frank"; leverage += 5; interior_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 7; interior_minister = "Vinzenz Schumy" if bourgeoisbloc_coalition and lb_r > 7
+on-arrival: interior_minister_party = "GDVP"; interior_minister = "Franz Slama"; leverage += 5; interior_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 7; interior_minister = "Vinzenz Schumy" if bourgeoisbloc_coalition and lb_r > 7
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "CS"
-on-arrival: foreign_minister_party = "GDVP"; foreign_minister = "Leopold Wabel"; leverage += 5
+on-arrival: foreign_minister_party = "GDVP"; foreign_minister = "Felix Frank"; leverage += 5
 go-to: ministries
 
 @drop_finance
@@ -522,7 +522,7 @@ go-to: ministries
 @drop_education
 title: Drop the Education Ministry.
 view-if: education_minister_party = "CS"
-on-arrival: education_minister_party = "GDVP"; education_minister = "Leopold Waber"; leverage += 5
+on-arrival: education_minister_party = "GDVP"; education_minister = "August Wotawa"; leverage += 5
 tags: drop_mins_1928
 go-to: ministries
 
@@ -536,9 +536,11 @@ go-to: ministries
 @drop_agriculture
 title: Drop the Agricultural Ministry.
 view-if: agriculture_minister_party = "CS"
-on-arrival: agriculture_minister_party = "GDVP"; agriculture_minister = "Franz Slama"; leverage += 5; agriculture_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 4; agriculture_minister = "Karl Hartleb" if bourgeoisbloc_coalition and lb_r > 4
+on-arrival: agriculture_minister_party = "GDVP"; agriculture_minister = "Hans Angerer"; leverage += 5; agriculture_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 4; agriculture_minister = "Karl Hartleb" if bourgeoisbloc_coalition and lb_r > 4
 tags: drop_mins_1928
 go-to: ministries
+
+// just because he's a geologist ☝️ 
 
 @drop_defense
 title: Drop the Defense Ministry.
