@@ -20,7 +20,7 @@ Our survival depends on who we stand against. In our media, sermons, and campaig
 - @easy_discard
 
 @austromarxists
-on-arrival: enemies = "Austromarxists";
+on-arrival: enemies = "Austromarxists"; center_dissent -= 5; right_dissent -= 8; clerical_dissent -= 5; kpd_sdapo -= 15; gdvp_relation += 3; lb_relation += 3; workers_sdapo -= 5;
 
 W.I.P
 
