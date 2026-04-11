@@ -414,7 +414,7 @@ is-card: true
 card-image: img/portraits/IgnazSeipel.jpg
 tags: clerical_advisor
 view-if: seipel_advisor = 0 and n_advisors < 3
-on-arrival: seipel_advisor = 1; n_advisors += 1; clerical_strength
+on-arrival: seipel_advisor = 1; n_advisors += 1; clerical_strength += 5
 go-to: advisor_menu
 
 @add_severing
