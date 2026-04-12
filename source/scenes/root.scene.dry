@@ -574,7 +574,7 @@ new-page: true
 set-bg: img/Austria.jpg
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= December 1926
+= October 1926
 
 It is a calm season for Austrian democracy. After a period of struggle with post-war inflation, it is finally under control, and the economy has stabilized thanks to Ignaz Seipel. In foreign policy, we have reached agreements with the Western powers that we won't attempt to approach a unification with Germany.
 
