@@ -535,13 +535,12 @@ tags: drop_mins_1928
 go-to: ministries
 
 @drop_agriculture
+// just because he's a geologist ☝️. Hans Angerer
 title: Drop the Agricultural Ministry.
 view-if: agriculture_minister_party = "CS"
 on-arrival: agriculture_minister_party = "GDVP"; agriculture_minister = "Hans Angerer"; leverage += 5; agriculture_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 4; agriculture_minister = "Karl Hartleb" if bourgeoisbloc_coalition and lb_r > 4
 tags: drop_mins_1928
 go-to: ministries
-
-// just because he's a geologist ☝️ 
 
 @drop_defense
 title: Drop the Defense Ministry.
