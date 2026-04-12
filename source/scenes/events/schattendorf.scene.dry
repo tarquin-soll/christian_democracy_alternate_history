@@ -52,7 +52,7 @@ The coalition is discussing when they should be trialed, the <span style="color:
 @month2
 title: February
 unavailable-subtitle: We don't control the Justice Ministry the GDVP will never do this.
-choose-if: justice_minister_party "CS"
+choose-if: justice_minister_party == "CS"
 on-arrival: gdvp_relation -= 20; coalition_dissent += 4
 
 W.I.P
