@@ -25,7 +25,7 @@ W.I.P
 
 @neutral
 title: Take a neutral stance and call to give a fair trial.
-on-arrival: republicanism_stance += 1; gdvp_relation -= 20; lb_relation -= 25; sdapo_relation += 5; center_strength += 5; right_strength -= 5; right_dissent += 25; center_dissent += 5; clerical_dissent += 15; labor_dissent -= 10; catholics_cs -= 6; catholics_gdvp += 6; old_middle_cs -= 3; new_middle_cs -= 3; rural_cs -= 5
+on-arrival: coalition_dissent += 1; republicanism_stance += 1; gdvp_relation -= 20; lb_relation -= 25; sdapo_relation += 5; center_strength += 5; right_strength -= 5; right_dissent += 25; center_dissent += 5; clerical_dissent += 15; labor_dissent -= 10; catholics_cs -= 6; catholics_gdvp += 6; old_middle_cs -= 3; new_middle_cs -= 3; rural_cs -= 5
 
 We have decided not to put a blame on anyone and instead have called that they be trialed justly.
 
@@ -34,7 +34,7 @@ We have decided not to put a blame on anyone and instead have called that they b
 @demilitarize
 title: Demilitarize
 subtitle: It is the fault of the Frontkämpfer who fired the shots, we should address the issue by beginning to demilitarize the paramilitaries.
-on-arrival: gdvp_relation -= 30; lb_relation -= 35; sdapo_relation += 15; republicanism_stance -= 1; catholics_sdapo -= 2; catholics_cs -= 8; catholics_gdvp += 10; new_middle_cs -= 3; old_middle_cs -= 3; new_middle_sdapo -=3; old_middle_sdapo -=4; new_middle_gdvp +=6; new_middle_gdvp +=7; workers_sdapo +=8; rural_sdapo -=10; rural_lb +=10; right_strength += 5; right_dissent += 25; center_dissent += 15; clerical_dissent += 25; labor_dissent += 10
+on-arrival: coalition_dissent += 2; gdvp_relation -= 30; lb_relation -= 35; sdapo_relation += 15; republicanism_stance -= 1; catholics_sdapo -= 2; catholics_cs -= 8; catholics_gdvp += 10; new_middle_cs -= 3; old_middle_cs -= 3; new_middle_sdapo -=3; old_middle_sdapo -=4; new_middle_gdvp +=6; new_middle_gdvp +=7; workers_sdapo +=8; rural_sdapo -=10; rural_lb +=10; right_strength += 5; right_dissent += 25; center_dissent += 15; clerical_dissent += 25; labor_dissent += 10
 
 This decision has not satisfied everyone and has alienated the <span style="color: #2080AO;">Heimwehr</span>, party members are disappointed that the moment was not used to attack the <span style="color: #D00000;">Socialists</span>.
 
@@ -53,7 +53,7 @@ The coalition is discussing when they should be trialed, the <span style="color:
 title: February
 unavailable-subtitle: We don't control the Justice Ministry the GDVP will never do this.
 choose-if: justice_minister_party "CS"
-on-arrival: gdvp_relation -= 20; coalition_dissent += 5
+on-arrival: gdvp_relation -= 20; coalition_dissent += 4
 
 W.I.P
 
