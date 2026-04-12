@@ -107,8 +107,7 @@ if (Q.month_actions >= 1) {
         Q.month = 1;
         Q.year += 1;
         Q.resources += Q.dues;
-        Q.budget += Q.income;
-        }
+        Q.budget += Q.income;}
     }
     // decrement timers
     for (timer of Q.timers) {
@@ -468,8 +467,7 @@ var choices = this._compileChoices(scene);
 if (choices && choices[0].title != "Continue...") {
     Q.has_event = 1;
 } else {
-    Q.has_event = 0;
-}
+    Q.has_event = 0;}
 // pre-load all of the event images
 if (this.ui && this.ui.show_portraits) {
     for (var choice of choices) {
