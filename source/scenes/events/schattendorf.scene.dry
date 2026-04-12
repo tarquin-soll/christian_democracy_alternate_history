@@ -51,24 +51,18 @@ The coalition is discussing when they should be trialed, the <span style="color:
 
 @month2
 title: February
-unavailable-subtitle:
-choose-if:
-on-arrival:
+unavailable-subtitle: We don't control the Justice Ministry the GDVP will never do this.
+choose-if: justice_minister_party "CS"
+on-arrival: gdvp_relation -= 20; coalition_dissent += 5
 
 W.I.P
 
 @month4
 title: April
-unavailable-subtitle:
-choose-if:
-on-arrival:
 
 W.I.P
 
 @month7
 title: July
-unavailable-subtitle:
-choose-if:
-on-arrival:
 
 W.I.P
