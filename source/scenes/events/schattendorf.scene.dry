@@ -42,6 +42,7 @@ This decision has not satisfied everyone and has alienated the <span style="colo
 
 @question
 title: When should they recieve the trials?
+
 The coalition is discussing when they should be trialed, the <span style="color: #2080A0;">GDVP</span> is looking to postpone their trials for as long as possible. [? if justice_minister_party = "GDVP":This is unfortunate since they control the Justice Ministry.?][? if justice_minister_party != "GDVP":It is fortunate that the Justice Ministry is under the <span style="color: #000000;">CS</span>, we have leverage.?]
 
 - @month2
