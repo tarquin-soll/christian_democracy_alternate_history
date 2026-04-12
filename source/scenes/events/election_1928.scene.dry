@@ -116,7 +116,7 @@ Q.social_minister_party = 'GDVP';
 Q.trade_minister_party = 'GDVP';
 Q.finance_minister_party = 'GDVP';
 // ministers
-Q.vice_chancellor = 'Dinghofer;
+Q.vice_chancellor = 'Dinghofer';
 Q.justice_minister = 'Slama';
 Q.education_minister = 'Wotawa';
 Q.foreign_minister = 'Frank';
