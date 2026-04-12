@@ -324,67 +324,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
 
-[? if game_achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
-
-[? if game_achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
-
-[? if game_achievement_einigkeit_und_recht : **Einigkeit und Recht** - reach the end of the game without a civil war on normal. ?]
-
-[? if game_achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of the game without a civil war on hard. ?]
-
-[? if game_achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of the game without a civil war on historical mode. ?]
-
-[? if game_achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
-
-[? if game_achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
-
-[? if game_achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
-
-[? if game_achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
-
-[? if game_achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
-
-[? if game_achievement_volksfront: **Volksfront** - Form a government consisting of the SPD, KPD, Z, and DDP. ?]
-
-[? if game_achievement_grosse_volksfront: **Große Volksfront** - With Joos leading the Center Party and the Conciliators leading the KPD, form a government consisting of the SPD, KPD, Z, and DDP. ?]
-
-[? if game_achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
-
-[? if game_achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
-
-[? if game_achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
-
-[? if game_achievement_majority_party: **Mehrheitspartei** - form an SPD-only majority government. ?]
-
-[? if game_achievement_minderheitsregierung: **Minderheitsregierung** - form an SPD minority government. ?]
-
-[? if game_achievement_volkspartei: **Volkspartei** - the SPD is a People's Party. ?]
-
-[? if game_achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
-
-[? if game_achievement_rote_millionar: **Der rote Millionär** - Willi Münzenberg is president. ?]
-
-[? if game_achievement_versohnler: **Versöhnler** - the Conciliators lead the KPD. ?]
-
-[? if game_achievement_deport_hitler : **Der österreichische Gefreite** - deported Hitler ?]
-
-[? if game_achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
-
-[? if game_achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
-
-[? if game_achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
-
-[? if game_achievement_freie_marktwirtschaft: **Freie Marktwirtschaft** - survive to the end of the game without adopting an economic plan. ?]
-
-[? if game_achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
-
-[? if game_achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
-
-[? if game_achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
-
-[? if game_achievement_anders_als_die_andern: **Anders als die Andern** - sexual minorities will defend the Republic. ?]
-
-
+[? if game_achievement_exkommuniziert : **Exkommuniziert** - remove Ignaz Seipel as advisor. ?]
 
 
 = Completed Achievements Overall
@@ -392,12 +332,14 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
 
+[? if achievement_exkommuniziert : **Exkommuniziert** - remove Ignaz Seipel as advisor. ?]
 
 = Incomplete Achievements
 
 
 [? if not achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
 
+[? if not achievement_exkommuniziert : **Exkommuniziert** - remove Ignaz Seipel as advisor. ?]
 
 @end_game
 game-over: true
