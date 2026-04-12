@@ -1,0 +1,13 @@
+title: Antisemitism
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: antisemitism_timer <= 0 and minority_stance <= 2
+on-arrival: month_actions += 1; antisemitism_timer += 68
+card-image: img/KarlLueger.jpg
+#subtitle: Attacking the semites.
+
+W.I.P
+
+- @easy_discard
+- @root: skibidi
