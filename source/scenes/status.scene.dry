@@ -118,7 +118,7 @@ Minister of Social Administration: [+ social_minister +] ([? if social_minister_
 
 Minister of Agriculture: [+ agriculture_minister +] ([? if agriculture_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if agriculture_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if agriculture_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if agriculture_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if agriculture_minister_party == "Empty" : ?][? if agriculture_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span> ?])
 
-Minister of Defense: [+ defense_minister +] ([? if defense_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if defense_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if defense_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if defense_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if defense_minister_party == "Empty" : ?][? if defense_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
+Minister of Defense: ([? if defense_minister_party == "Independent" : Independent?][+ defense_minister +] ([? if defense_minister_party == "SDAPÖ" : <span style="color: #D00000;"><b>SDAPÖ</b></span>?][? if defense_minister_party == "CS" : <span style="color: #000000;"><b>CS</b></span>?][? if defense_minister_party == "GDVP" : <span style="color: #2080A0;"><b>GDVP</b></span>?][? if defense_minister_party == "LB" : <span style="color: #408040;"><b>LB</b></span>?][? if defense_minister_party == "Empty" : ?][? if defense_minister_party == "NPÖ" : <span style="color: #002050;"><b>NPÖ</b></span>?])
 
 @paramilitaries
 on-arrival: {!
@@ -144,6 +144,7 @@ Republikanischer Schutzbund Militarization: [+ rs_militancy : militancy +]
 Heimwehr Militarization: [+ hw_militancy : militancy +]
 
 Heimwehr Loyalty: [+ hw_loyalty : loyalty +]
+
 {! <span class="tooltip-text" title="The Frontkämpfervereinigung Deutsh-Österreichs is an Anti-Semitic Nationalist politically right Paramilitary.">Frontkämpfervereinigung Deutsch-Österreichs</span>!} Strength: [+ fdo_strength_2 +] thousand
 
 Frontkämpfervereinigung Deutsch-Österreichs Militarization: [+ fdo_militancy : militancy +]
