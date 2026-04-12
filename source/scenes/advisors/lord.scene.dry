@@ -13,6 +13,7 @@ The Way, The Truth and The Life
 - @endgame
 - @noright
 - @maxrepublican
+- @hwloyalty
 - @root: Return to main
 
 @clear_agenda
@@ -40,3 +41,8 @@ on-arrival: right_strength -= 25
 title: Adopt a Christian Stance
 subtitle: Maximize the Republicanism Stance.
 on-arrival: republicanism_stance += 5
+
+@hwloyalty
+title: Take all the Loyal Heimwehr
+subtitle: What's left will be disloyal
+on-arrival: hw_loyalty -= .5
