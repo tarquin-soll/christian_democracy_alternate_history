@@ -93,6 +93,15 @@ Q.socialchristian_coalition = parseFloat((Q.cs_r+Q.sdapo_r).toFixed(1));
 Q.leverage = Q.cs_r;
 
 // Reset government and ministers... Based on Seipel's 1923 govt
+// just because he's a geologist ☝️. Hans Angerer for agri
+// Franz Dinghofer/Karl Hartleb
+// Franz Slama/Vinzens Schumy
+// Felix Frank
+// Hans Schürff
+// Hans Schürff
+// Leopold Waber
+// Wotawa August
+// Hans Angerer/Karl Hartleb
 Q.coalition_dissent = 0;
 Q.cs_in_government = 0;
 Q.in_unity_coalition = 0;
@@ -101,14 +110,21 @@ Q.vice_chancellor_party = 'GDVP';
 Q.interior_minister_party = 'GDVP';
 Q.justice_minister_party = 'GDVP';
 Q.education_minister_party = 'GDVP';
-Q.defense_minister_party = 'GDVP';
+Q.defense_minister_party = 'CS';
 Q.foreign_minister_party = 'GDVP';
 Q.social_minister_party = 'GDVP';
 Q.trade_minister_party = 'GDVP';
 Q.finance_minister_party = 'GDVP';
 // ministers
-Q.justice_minister = 'Dinghofer';
+Q.vice_chancellor = 'Dinghofer;
+Q.justice_minister = 'Slama';
+Q.education_minister = 'Wotawa';
+Q.foreign_minister = 'Frank';
+Q.defense_minister = 'Vaugoin'
 Q.trade_minister = 'Schürff';
+Q.social_minister = 'Bro idk I ran out of names';
+Q.finance_minister = 'Schürff';
+
 
 Q.strike_term_seen = 0;
 
@@ -218,7 +234,7 @@ title: We can form a <span style="color: #000000;">Unity</span> <span style="col
 subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%)
 unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?]
 choose-if: gdvp_relation >= 50
-on-arrival: in_unity_coalition = 1; gdvp_relation += 10; right_dissent -= 5; clerical_dissent -= 5; center_dissent -= 5; labor_dissent -= 5
+on-arrival: in_unity_coalition = 1; gdvp_relation += 10; right_dissent -= 5; clerical_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; leverage -= 10
 
 We have enough votes to form a "<span style="color: #000000;">Unity</span> <span style="color: #2080A0;">List</span>" government consisting of the <span style="color: #000000;"><b>CS</b></span> and <span style="color: #2080A0;"><b>GDVP</b></span>! This has been our preferred governing coalition since 1920.
 
@@ -233,7 +249,7 @@ title: We can form a <span style="color: #000000;">Bour</span><span style="color
 subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> + <span style="color: #408040;">LB</span> ([+ bourgeoisbloc_coalition +]%)
 unavailable-subtitle: <span style="color: #000000;">CS</span> + <span style="color: #2080A0;">GDVP</span> ([+ unity_coalition +]%) - [? if gdvp_relation < 50 : We do not have adequate relations with the <span style="color: #2080A0;">GDVP</span>. ?][? if lb_relation < 50 : We do not have adequate relations with the <span style="color: #408040;">LB</span>. ?]
 choose-if: gdvp_relation >= 50 and lb_relation >= 50
-on-arrival: in_bourgeoisbloc_coalition = 1; gdvp_relation += 10; lb_relation += 15; right_dissent -= 5; clerical_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; agriculture_minister_party = "LB"; agriculture_minister = "Karl Hartleb"
+on-arrival: in_bourgeoisbloc_coalition = 1; gdvp_relation += 10; lb_relation += 15; right_dissent -= 5; clerical_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; agriculture_minister_party = "LB" if lb_r > 4; agriculture_minister = "Karl Hartleb" > 4; vice_chancellor_party = "LB"; vice_chancellor = "Karl Hartleb"; interior_minister_party = "LB" if lb_r > 7; interior_minister = "Schumy" if lb_r > 7; leverage -= 10
 
 We have enough votes to form a <b><span style="color: #000000;">Bour</span><span style="color: #2080A0;">geois</span> <span style="color: #408040;">Bloc</span></b>, this is a good approach to foster a good relations with the <span style="color: #408040;">Landbund</span>.
 
@@ -482,48 +498,49 @@ This coalition arrangement is tolerable to all.
 @drop_vicechancellor
 title: Drop the Vice Chancellery.
 view-if: vice_chancellor_party = "CS"
-on-arrival: vice_chancellor_party = "GDVP"; vice_chancellor = "Franz Dinghofer"; leverage += 20; vice_chancellor_party = "LB" if bourgeoisbloc_coalition; vice_chancellor = "Karl Hartleb" if bourgeoisbloc_coalition
+on-arrival: vice_chancellor_party = "GDVP"; vice_chancellor = "Dinghofer"; leverage += 20; vice_chancellor_party = "LB" if bourgeoisbloc_coalition; vice_chancellor = "Hartleb" if bourgeoisbloc_coalition
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_interior
 title: Drop the Interior Ministry.
 view-if: interior_minister_party = "CS"
-on-arrival: interior_minister_party = "GDVP"; interior_minister = "Franz Slama"; leverage += 5; interior_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 7; interior_minister = "Vinzenz Schumy" if bourgeoisbloc_coalition and lb_r > 7
+on-arrival: interior_minister_party = "GDVP"; interior_minister = "Slama"; leverage += 5; interior_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 7; interior_minister = "Schumy" if bourgeoisbloc_coalition and lb_r > 7
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "CS"
-on-arrival: foreign_minister_party = "GDVP"; foreign_minister = "Felix Frank"; leverage += 5
+on-arrival: foreign_minister_party = "GDVP"; foreign_minister = "Frank"; leverage += 5
+tags: drop_mins_1928
 go-to: ministries
 
 @drop_finance
 title: Drop the Finance Ministry.
 view-if: finance_minister_party = "CS"
-on-arrival: finance_minister_party = "GDVP"; finance_minister = "Hans Schürff"; leverage += 5
+on-arrival: finance_minister_party = "GDVP"; finance_minister = "Schürff"; leverage += 5
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_trade
 title: Drop the Trade and Communications Ministry.
 view-if: trade_minister_party = "CS"
-on-arrival: trade_minister_party = "GDVP"; trade_minister = "Hans Schürff"; leverage += 10
+on-arrival: trade_minister_party = "GDVP"; trade_minister = "Schürff"; leverage += 10
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_justice
 title: Drop the Justice Ministry.
 view-if: justice_minister_party = "CS"
-on-arrival: justice_minister_party = "GDVP"; justice_minister = "Leopold Waber"; leverage += 15
+on-arrival: justice_minister_party = "GDVP"; justice_minister = "Waber"; leverage += 15
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_education
 title: Drop the Education Ministry.
 view-if: education_minister_party = "CS"
-on-arrival: education_minister_party = "GDVP"; education_minister = "August Wotawa"; leverage += 5
+on-arrival: education_minister_party = "GDVP"; education_minister = "Wotawa"; leverage += 5
 tags: drop_mins_1928
 go-to: ministries
 
@@ -535,10 +552,9 @@ tags: drop_mins_1928
 go-to: ministries
 
 @drop_agriculture
-// just because he's a geologist ☝️. Hans Angerer
 title: Drop the Agricultural Ministry.
 view-if: agriculture_minister_party = "CS"
-on-arrival: agriculture_minister_party = "GDVP"; agriculture_minister = "Hans Angerer"; leverage += 5; agriculture_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 4; agriculture_minister = "Karl Hartleb" if bourgeoisbloc_coalition and lb_r > 4
+on-arrival: agriculture_minister_party = "GDVP"; agriculture_minister = "Angerer"; leverage += 5; agriculture_minister_party = "LB" if bourgeoisbloc_coalition and lb_r > 4; agriculture_minister = "Hartleb" if bourgeoisbloc_coalition and lb_r > 4
 tags: drop_mins_1928
 go-to: ministries
 
