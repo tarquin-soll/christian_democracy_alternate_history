@@ -10,11 +10,11 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The Christliche Sozialpartei cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the "Unity List" Coalition of the CS, GDVP, and LB. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The <span style="color: #000000;">Christlichsoziale Partei</span> cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the "Unity List" Coalition of the <span style="color: #000000;">CS</span>, <span style="color: #2080A0;">GDVP</span>, and <span style="color: #408040;">LB</span>. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
-- @right: Strengthen our bonds with the Greater German People's Party and the Landbund.
-- @sdapo: Work towards repairing relationships with the Social Democratic Worker's Party of Austria.
-- @cs_alone: The CS can stand alone for now.
+- @right: Strengthen our bonds with the <span style="color: #2080A0;">Greater German People's Party</span> and the <span style="color: #408040;">Landbund</span>.
+- @sdapo: Work towards repairing relationships with the <span style="color: #D00000;">Social Democratic Worker's Party of Austria</span>.
+- @cs_alone: The <span style="color: #000000;">CS</span> can stand alone for now.
 - @easy_discard
 
 
@@ -22,7 +22,7 @@ The Christliche Sozialpartei cannot govern by itself yet. Because we do not have
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 10*(1 - dissent)
+on-arrival: resources -= 1; gdvp_relation += 10*(1 - dissent); lb_relation += 10*(1-dissent)
 
 We are currently coalition partners with them, so improving relations comes naturally.
 
@@ -30,8 +30,9 @@ We are currently coalition partners with them, so improving relations comes natu
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (kpd_relation < 40 or kpd_rectified_history = 1); kpd_rectification_of_history if kpd_relation >= 40 and kpd_rectified_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1
+on-arrival: resources -= 1; sdapo_relation += 10*(1 -dissent)
+
+W.I.P dw it gives +10 useless sdapo relation
 
 @kpd_1
 on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; dvp_relation -= 3
