@@ -51,6 +51,7 @@ view-if: seipel_advisor = 1
 on-arrival: seipel_advisor = 0; clerical_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
+achievement: exkommuniziert
 
 Seipel has been removed as an advisor. The Clerical faction disapproves.
 
