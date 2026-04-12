@@ -1,7 +1,6 @@
 title: 1927
 subtitle: A new year
 on-arrival: {!
-Q.resources += Q.dues;
 Q.inflation -= 0.8;
 !}
 tags: event
@@ -10,3 +9,5 @@ priority: 2
 max-visits: 1
 
 A new year begins. The economy appears to be stabilizing. people seems to be doing well.
+
+We have earned [+ dues +] resources in our coffers, budget has increased by [+ income +] due to yearly tax.
