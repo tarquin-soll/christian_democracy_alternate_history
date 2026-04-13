@@ -1,5 +1,5 @@
 title: Coup in Vienna
-subtitle: The Chancellor attempts to overthrow the Prussian government.
+subtitle: The Heimwehr attempts to overthrow the Austrian government.
 view-if: hw_strength > 50 and hw_loyalty < 20
 new-page: true
 tags: event
