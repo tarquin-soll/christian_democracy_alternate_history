@@ -1,6 +1,6 @@
 title: Coup in Vienna
 subtitle: The Heimwehr attempts to overthrow the Austrian government.
-view-if: hw_strength > 50 and hw_loyalty < 20
+view-if: hw_strength > 50 and hw_loyalty < .2
 new-page: true
 tags: event
 max-visits: 1
