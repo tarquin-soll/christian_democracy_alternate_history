@@ -76,16 +76,15 @@ if (Q.unemployed <= 1) {
 }
 
 // re-calculate dissent.
-var total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.reformist_strength + Q.neorevisionist_strength;
+var total_strength = Q.right_strength + Q.center_strength + Q.labor_strength + Q.clerical_strength;
 
 // normalize strength for the different factions
-Q.left_strength = 100*Q.left_strength/total_strength;
+Q.right_strength = 100*Q.right_strength/total_strength;
 Q.center_strength = 100*Q.center_strength/total_strength;
 Q.labor_strength = 100*Q.labor_strength/total_strength;
-Q.reformist_strength = 100*Q.reformist_strength/total_strength;
-Q.neorevisionist_strength = 100*Q.neorevisionist_strength/total_strength;
+Q.clerical_strength = 100*Q.clerical_strength/total_strength;
 
-var total_dissent = Q.left_strength*Q.left_dissent + Q.center_strength*Q.center_dissent + Q.labor_strength*Q.labor_dissent + Q.reformist_strength*Q.reformist_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
+var total_dissent = Q.right_strength*Q.right_dissent + Q.center_strength*Q.center_dissent + Q.labor_strength*Q.labor_dissent + Q.clerical_strength*Q.clerical_dissent;
 
 
 Q.dissent = 0.01*total_dissent/total_strength;
@@ -294,6 +293,17 @@ if (Q.month_actions >= 1) {
     }
 
     ////////////////////////// annual support changes
+    if (Q.year == 1927) {
+        Q.unemployed += 2/12;
+        Q.inflation -= 1/12;
+        Q.new_middle_sdapo += 5/12;
+        Q.old_middle_gdvp += 5/12;
+        Q.new_middle_gdvp -= 5/12;
+        Q.workers_sdapo += 10/12;
+        Q.hw_strength += 10/12;
+        Q.hw_loyalty -= 20/12;
+        Q.rural_lb += 5/12;
+    }
     if (Q.year == 1929) {
         Q.unemployed += 3/12;
         Q.inflation -= 1/12;
