@@ -41,7 +41,7 @@ W.I.P, Seipel Wins wowie
 subtitle: This will cost us 2 resources.
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 2; president = "Raab"; president_party = "CS"; socialism_stance += 2; republicanism_stance += 1; labor_strength += 25; right_strength 15; clerical_strength -= 10; right_dissent += 20
+on-arrival: resources -= 2; president = "Raab"; president_party = "CS"; socialism_stance += 2; republicanism_stance += 1; labor_strength += 25; right_strength += 15; clerical_strength -= 10; right_dissent += 20
 
 W.I.P
 
@@ -49,6 +49,8 @@ W.I.P
 subtitle: Johann Schober would be our only realistic choice
 view-if: resources < 2
 on-arrival: [faction]_dissent += 50; President == "Schober"
+
+ruh roh raggy
 
 @braun_campaign
 
