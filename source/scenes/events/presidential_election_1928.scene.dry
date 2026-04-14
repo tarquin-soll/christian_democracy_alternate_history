@@ -41,7 +41,7 @@ W.I.P, Seipel Wins wowie
 subtitle: This will cost us 2 resources.
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 2; president = "Raab"; president_party = "CS"; socialism_stance += 2; republicanism_stance += 1; labor strength += 25; right_strength 15; clerical_strength -= 10; right_dissent += 20
+on-arrival: resources -= 2; president = "Raab"; president_party = "CS"; socialism_stance += 2; republicanism_stance += 1; labor_strength += 25; right_strength 15; clerical_strength -= 10; right_dissent += 20
 
 W.I.P
 
