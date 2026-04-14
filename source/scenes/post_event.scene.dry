@@ -301,7 +301,7 @@ if (Q.month_actions >= 1) {
         Q.new_middle_gdvp -= 5/12;
         Q.workers_sdapo += 10/12;
         Q.hw_strength += 10/12;
-        Q.hw_loyalty -= 20/12;
+        Q.hw_loyalty -= 0.2/12;
         Q.rural_lb += 5/12;
     }
     if (Q.year == 1929) {
