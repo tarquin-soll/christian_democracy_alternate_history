@@ -12,25 +12,23 @@ face-image: img/hindenburg_election.jpg
 
 @pres_election
 
-The presidential election is coming up soon. [? if spd_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the KPD will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the KPD will run Ernst Thälmann. ?]
-[? if sapd_formed: The SAPD, our former leftists, are supporting Thälmann of the KPD, and will likely share an endorsement with the Communists. ?]
+The presidential election is coming up soon. [? if cs_in_government == 0 :While the office is largely ceremonial, we can't allow the SDAPÖ to have this position so we must run against them.?]
 
-# if hitler is deported, who would nsdap run? Duesterberg? or Goering?
-# Goering runs, essentially as a proxy for Hitler, who is now stateless.
+What candidate should we field?
 
-Many are calling for us to support the incumbent Hindenburg, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Otto Braun to run again, but he is reluctant.
+- @support_miklas: Run Wilhelm Miklas of the CS.
+- @support_seipel: Run Ignaz Seipel of the CS.
+- @support_raab: Run Julius Raab of the CS.
+- @no_resources: No resources.
 
-[? if kpd_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
+@support_miklas
+subtitle: This is the default option, This will cost us 2 resources.
+choose-if: resources >= 2
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 2; miklas_campaign = 1
+go-to: miklas_campaign
 
-
-- @support_hindenburg: Support Hindenburg.
-- @support_braun: Run Otto Braun of the SPD.
-- @support_thalmann: Support Ernst Thälmann of the KPD.
-
-@support_hindenburg
-subtitle: This is the default option.
-
-Despite his known reactionary nature, Hindenburg has at least been keeping the Nazis at bay. Thus, we must support him.
+Idk what to put here
 
 - @final_election: The final vote...
 
