@@ -45,7 +45,7 @@ on-arrival: resources -= 2; president = "Raab"; president_party = "CS"; socialis
 
 W.I.P
 
-@no_resource
+@no_resources
 subtitle: Johann Schober would be our only realistic choice
 view-if: resources < 2
 on-arrival: right_dissent += 20; center_dissent += 10; clerical_dissent += 10; hw_loyalty -= 0.2; President = "Schober"
