@@ -11,4 +11,19 @@ card-image: img/KarlLueger.jpg
 
 W.I.P
 
+- @attack
+- @deradicalise
 - @easy_discard
+
+@attack
+title: Attack the Jews
+subtitle: Through rhetorics in our campaigns.
+
+W.I.P We have historically attacked Jews using antisemitic rhetorics.
+
+@deradicalise
+title: Deradicalize
+view-if: center_strength >= 35
+on-arrival: right_strength -= 5; right_dissent += 10; minority_stance -= 1
+
+W.I.P (there's effects though)
