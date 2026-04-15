@@ -6,6 +6,7 @@ priority: -1
 new-page: true
 face-image: img/schattendorf.jpg
 tags: event
+on_arrival: schattendorf_seen += 1
 
 = Schattendorf Murder
 
@@ -53,16 +54,23 @@ The coalition is discussing when they should be trialed, the <span style="color:
 title: February
 unavailable-subtitle: We don't control the Justice Ministry the GDVP will never do this.
 choose-if: justice_minister_party == "CS"
-on-arrival: gdvp_relation -= 20; coalition_dissent += 4
+on-arrival: gdvp_relation -= 20; coalition_dissent += 4; hw_loyalty -= .2; catholic_cs -= 5; july_revolt_countdown = 1
 
 W.I.P
 
 @month4
 title: April
 
-W.I.P
+Are we sure about this? we might anger our coalition partner.
+
+- @question: On second thought...
+- @month4confirm: Yes, we're sure.
+
+@month4confirm
+on-arrival: gdvp_relation -= 10; coalition_dissent += 3; hw_loyalty -= .1; catholic_cs -= 3; july_revolt_countdown = 3
 
 @month7
 title: July
+on-arrival: gdvp_relation += 15; coalition_dissent -= 1; hw_loyalty += .1; catholic_cs -= 3; july_revolt_countdown = 6
 
-W.I.P
+Our coalition partners are pleased with our actions.
