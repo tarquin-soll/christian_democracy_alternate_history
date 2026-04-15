@@ -488,6 +488,7 @@ if (this.ui && this.ui.show_portraits) {
             im.url = cc.faceImage;
         }
     }
+}
 
 
 if (Q.schattendorf_seen == 1 and july_revolt_countdown >= 1) {
