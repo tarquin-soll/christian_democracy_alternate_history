@@ -488,6 +488,11 @@ if (this.ui && this.ui.show_portraits) {
             im.url = cc.faceImage;
         }
     }
+
+
+if (Q.schattendorf_seen == 1 and july_revolt_countdown >= 1) {
+    Q.july_revolt_countdown -= 1
+    Q.workers_sdapo += 1
 }
 
 if (typeof window !== "undefined" && window.generateBar) {
