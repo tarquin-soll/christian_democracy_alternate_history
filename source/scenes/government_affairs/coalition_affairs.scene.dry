@@ -20,13 +20,13 @@ How do we reduce tensions with the coalition?
 - @no_change: Take none of these actions.
 - @easy_discard
 
-@secular:
+@secular
 unavailable_subtitle: W.I.P
 choose-if: budget >= 10
 
 W.I.P
 
-@agri:
+@agri
 unavailable_subtitle: W.I.P
 choose-if: budget >= 10
 
