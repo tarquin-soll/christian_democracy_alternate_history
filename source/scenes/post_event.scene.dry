@@ -109,6 +109,7 @@ if (Q.month_actions >= 1) {
         Q.year += 1;
         Q.resources += Q.dues;
         Q.budget += Q.income;
+        Q.in_sipdic_countdown -= 1;
     }
     // decrement timers
     for (timer of Q.timers) {
