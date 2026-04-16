@@ -1,7 +1,8 @@
 title: Hungarian Diet Elections
 new-page: true
 tags: event
-priority: -1
+priority: 1
+max-visits: 1
 view-if: year = 1926 and month = 12
 
 = Elections, [+ month : month +] [+ year +]
