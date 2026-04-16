@@ -382,7 +382,7 @@ Q.education_science = 0;
 
 // foreign
 Q.in_sipdic = 0;
-Q.in_sipdic_countdown = 0;
+Q.in_sipdic_countdown = 6;
 Q.hungary_relation = 0;
 Q.german_relation = 0;
 // france/uk
