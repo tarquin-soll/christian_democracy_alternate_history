@@ -120,10 +120,22 @@ Q.hindenburg_relation = 25;
 Q.hindenburg_enabled = 0;
 
 
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
+// W.I.P
+// Viennese Variables (https://hdgoe.at/wahlen/wahlergebnis_wien_en.html?year=1923#)
+Q.cs_vienna = 0;
+Q.sdapo_r_v = (Q.sdapo_r * Q.adjustmentsdapocs)
+Q.cs_r_v = (Q.cs_r * Q.adjustmentFactorcs)
+Q.gdvp_r_v = (Q.gdvp_r * Q.adjustmentFactorgdvp)
+Q.other_r_v = (Q.old_other_r_v * Q.adjustmentFactorother)
+Q.old_sdapo_r_v = 55.5;
+Q.old_cs_r_g = 32.8;
+Q.old_gdvp_r_v = 5.2;
+Q.old_other_r_v = 6.4;
+
+Q.adjustmentFactorcs =  0;
+Q.adjustmentFactorsdapo = 0;
+Q.adjustmentFactorgdvp = 0;
+Q.adjustmentFactorother = 0.625;
 
 // The array of forces - paramilitary groups
 // Number of members in 1927 (in thousands)
@@ -369,6 +381,8 @@ Q.science = 0;
 Q.education_science = 0;
 
 // foreign
+Q.in_sipdic = 0;
+Q.in_sipdic_countdown = 0;
 Q.hungary_relation = 0;
 Q.german_relation = 0;
 // france/uk
