@@ -14,6 +14,7 @@ The Way, The Truth and The Life
 - @noright
 - @maxrepublican
 - @hwloyalty
+- @dissent
 - @root: Return to main
 
 @clear_agenda
@@ -46,3 +47,8 @@ on-arrival: republicanism_stance += 5
 title: Take all the Loyal Heimwehr
 subtitle: What's left will be disloyal
 on-arrival: hw_loyalty -= .5
+
+@dissent
+title: Dissent
+subtitle: Increase dissent by 1
+on-arrival: coaltion_dissent += 1
