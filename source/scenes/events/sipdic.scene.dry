@@ -6,10 +6,12 @@ priority: 2
 new-page: true
 tags: event
 on_arrival: in_sipdic = 1
-on-departure: go-to: international_relations
 
 = White International
 
 We have been admitted as an official member of the White International! we can finally contact and improve relationships with other Christian parties alike.
 
-- @root: Let's take the initiative to contact members.
+- @continue: Continue...
+
+@continue
+go-to: international_relations
