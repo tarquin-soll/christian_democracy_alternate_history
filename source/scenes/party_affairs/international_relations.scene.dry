@@ -2,32 +2,57 @@ title: International Relations
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: international_relations_timer <= 0
-on-arrival: month_actions += 1; international_relations_timer += 12;
+view-if: international_relations_timer
+on-arrival: month_actions += 1; international_relations_timer += 8;
 card-image: img/international.jpg
-max-visits: 4
+max-visits: 6
 #subtitle: Building ties with our fraternal socialist parties.
 
-At the Labor and Socialist International, we can forge contacts with our fraternal socialist parties in Europe and across the world.
+[? if not in_sipdic:We're currently not affiliated with any Political International, however we may attempt in joining the White International, a Christian democratic political international.?][? if in_sipdic:At the White International, we can forge contacts with our Christian parties in Europe and across the world.?]
 
-- @fr_uk: Build relationships with the French FR and British Conservative Party to move their governments in Austria's favor.
+- @sipdic: Attempt to join the White International.
+- @france: Contact Conservative or Christian parties.
 - @germany: Contact the Zentrumspartei
 - @papacy: Establish embassies in the papacy to improve relations.
-- @hungary: Contact the Socialist party of America.
+- @hungary: Contact the Christian parties of Hungary.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
 
-@fr_uk
+@sipdic
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; west_relation += 1; centrer_strength += 5; pacifism += 1
+on-arrival: resources -= 1; in_sipdic_countdown -= 2
 
-The religious members of French FR and British Conservative Party can influence their governments and parties to be friendlier towards Austria. Hopefully they will reduce our reparations burden.
+Negotiations are going smoothly we're set to join in [? if in_sipdic_countdown == 1:[+ year + 1 +]?][? if in_sipdic_countdown == 2:[+ year + 2 +]?][? if in_sipdic_countdown == 3:[+ year + 3 +]?][? if in_sipdic_countdown == 4:[+ year + 4 +]?]
+
+@france
+view-if: in_sipdic == 0
+
+- @fr_pdp: Build relationships with the French PDP to move their governments in Austria's favor
+- @fr_fr: Build relationships with the French FR to move their governments in Austria's favor.
+- @root: Return.
+
+@fr_pdp
+subtitle: The catholic party of france, they're underrepresented in the parliament. -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; center_strength += 5
+
+The PDP is underrepresented in the French parliament, perhaps our efforts are best spent somewhers.
+
+@fr_fr
+subtitle: A major party in france, though not a "catholic" party, it's members are conservatives and religious. -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; west_relation += 1; center_strength += 5; pacifism += 1
+
+The religious members of French FR influence their governments and party to be friendlier towards Austria. Hopefully they will reduce our reparations burden.
 
 @germany
 subtitle: -1 resources
+view-if: in_sipdic == 1
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: clerical_strength += 3; center_strength += 5; resources -= 1
@@ -42,13 +67,13 @@ on-arrival: clerical_dissent -= 10; clerical_strength += 5; resources -= 1; papa
 
 We have increased our relationship with the Papacy through our embassies.
 
-@austria
+@hungary
 subtitle: -1 resources
+view-if: in_sipdic == 0
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; hungary_relation += 1
-
-I have no text for this rn
+We contact many catholic and christian parties in germany, however they are currently underrepresented in the parliament, but through them we gain contacts with the Unity Party in Hungary which is the ruling party currently.
 
 @return
 
