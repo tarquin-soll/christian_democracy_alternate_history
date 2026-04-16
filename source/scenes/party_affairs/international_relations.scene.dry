@@ -13,8 +13,8 @@ max-visits: 6
 - @sipdic: Attempt to join the White International.
 - @france: Contact Conservative or Christian parties.
 - @germany: Contact the Zentrumspartei
-- @papacy: Establish embassies in the papacy to improve relations.
 - @hungary: Contact the Christian parties of Hungary.
+- @papacy: Establish embassies in the papacy to improve relations.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -29,7 +29,7 @@ on-arrival: resources -= 1; in_sipdic_countdown -= 2
 Negotiations are going smoothly we're set to join in [? if in_sipdic_countdown == 1:[+ year + 1 +]?][? if in_sipdic_countdown == 2:[+ year + 2 +]?][? if in_sipdic_countdown == 3:[+ year + 3 +]?][? if in_sipdic_countdown == 4:[+ year + 4 +]?]
 
 @france
-view-if: in_sipdic == 0
+view-if: in_sipdic == 1
 
 - @fr_pdp: Build relationships with the French PDP to move their governments in Austria's favor
 - @fr_fr: Build relationships with the French FR to move their governments in Austria's favor.
@@ -60,6 +60,15 @@ on-arrival: clerical_strength += 3; center_strength += 5; resources -= 1
 
 We have increased our contacts with the Zentrumspartei, perhaps through them we can influence German politics.
 
+@hungary
+subtitle: -1 resources
+view-if: in_sipdic == 1
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; hungary_relation += 1
+
+We contact many catholic and christian parties in hungary, however they are currently underrepresented in the parliament, but through them we gain contacts with the Unity Party in Hungary which is the ruling party currently.
+
 @papacy
 subtitle: -1 resources
 choose-if: resources >= 1
@@ -67,15 +76,6 @@ unavailable-subtitle: Not enough resources.
 on-arrival: clerical_dissent -= 10; clerical_strength += 5; resources -= 1; papal_relation += 1
 
 We have increased our relationship with the Papacy through our embassies.
-
-@hungary
-subtitle: -1 resources
-view-if: in_sipdic == 0
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; hungary_relation += 1
-
-We contact many catholic and christian parties in hungary, however they are currently underrepresented in the parliament, but through them we gain contacts with the Unity Party in Hungary which is the ruling party currently.
 
 @return
 
