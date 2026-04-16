@@ -73,7 +73,8 @@ view-if: in_sipdic == 0
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; hungary_relation += 1
-We contact many catholic and christian parties in germany, however they are currently underrepresented in the parliament, but through them we gain contacts with the Unity Party in Hungary which is the ruling party currently.
+
+We contact many catholic and christian parties in hungary, however they are currently underrepresented in the parliament, but through them we gain contacts with the Unity Party in Hungary which is the ruling party currently.
 
 @return
 
