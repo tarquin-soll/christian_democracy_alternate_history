@@ -51,4 +51,4 @@ on-arrival: hw_loyalty -= .5
 @dissent
 title: Dissent
 subtitle: Increase dissent by 1
-on-arrival: coaltion_dissent += 1
+on-arrival: coalition_dissent += 1
