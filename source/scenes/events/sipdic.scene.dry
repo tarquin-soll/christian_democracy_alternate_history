@@ -5,7 +5,7 @@ max-visits: 1
 priority: 2
 new-page: true
 tags: event
-on_arrival: in_sipdic == 1
+on_arrival: in_sipdic = 1
 on-departure: go-to: international_relations
 
 = White International
