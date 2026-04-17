@@ -122,11 +122,14 @@ Minister of Defense: ([? if defense_minister_party == "Independent" : Independen
 
 @paramilitaries
 on-arrival: {!
-if (Q.rs_strength) {
-    Q.rs_strength_2 = Q.rs_strength.toFixed(1);
-}
 if (Q.hw_strength) {
     Q.hw_strength_2 = Q.hw_strength.toFixed(1);
+}
+if (Q.fb_strength) {
+    Q.fb_strength_2 = Q.fb_strength.toFixed(1);
+}
+if (Q.rs_strength) {
+    Q.rs_strength_2 = Q.rs_strength.toFixed(1);
 }
 if (Q.fdo_strength) {
     Q.fdo_strength_2 = Q.fdo_strength.toFixed(1);
@@ -134,18 +137,23 @@ if (Q.fdo_strength) {
 !}
 
 = Paramilitaries
-
-{!<span class="tooltip-text" title="The The Republikanischer Schutzbund is a paramilitary organization defending democracy, affiliated with the SDAPÖ.">Republikanischer Schutzbund</span>!} Strength: [+ rs_strength_2 +] thousand
-
-Republikanischer Schutzbund Militarization: [+ rs_militancy : militancy +]
-
 {!<span class="tooltip-text" title="The Heimwehr is an anti-democratic nationalist paramilitary associated with the CS.">Heimwehr</span>!} Strength: [+ hw_strength_2 +] thousand
 
 Heimwehr Militarization: [+ hw_militancy : militancy +]
 
 Heimwehr Loyalty: [+ hw_loyalty : loyalty +]
 
-{! <span class="tooltip-text" title="The Frontkämpfervereinigung Deutsh-Österreichs is an Anti-Semitic Nationalist politically right Paramilitary.">Frontkämpfervereinigung Deutsch-Österreichs</span>!} Strength: [+ fdo_strength_2 +] thousand
+if (Q.fb_formed = 1) {{!<span class="tooltip-text" title="The Heimwehr is a paramilitary organization of the Christian wing of the Austrian trade union movement, associated with CS.">Freiheitsbund</span>!} Strength: [+ fb_strength_2 +] thousand
+
+Freiheitsbund Militarization: [+ fb_militancy : militancy +]
+
+Freiheitsbund Loyalty: [+ fb_loyalty : loyalty +]}
+
+{!<span class="tooltip-text" title="The The Republikanischer Schutzbund is a paramilitary organization defending democracy, affiliated with the SDAPÖ.">Republikanischer Schutzbund</span>!} Strength: [+ rs_strength_2 +] thousand
+
+Republikanischer Schutzbund Militarization: [+ rs_militancy : militancy +]
+
+{! <span class="tooltip-text" title="The Frontkämpfervereinigung Deuts-Österreichs is an Anti-Semitic Nationalist politically right Paramilitary.">Frontkämpfervereinigung Deutsch-Österreichs</span>!} Strength: [+ fdo_strength_2 +] thousand
 
 Frontkämpfervereinigung Deutsch-Österreichs Militarization: [+ fdo_militancy : militancy +]
 
