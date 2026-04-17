@@ -141,13 +141,17 @@ Q.adjustmentFactorother = 0.625;
 // Number of members in 1927 (in thousands)
 // https://de.wikipedia.org/wiki/Frontk%C3%A4mpfervereinigung_Deutsch-%C3%96sterreichs
 // Heimwehr and Republikanischer Schutzbund wikipedia says the Schutzbund peaked at 100,000 so its 90,000 here
-Q.rs_strength = 90;
-Q.rs_militancy = 0.7;
-Q.rs_banned = 0;
 Q.hw_strength = 300;
 Q.hw_militancy = 0.8;
 Q.hw_loyalty = 0.8;
 Q.hw_banned = 0;
+Q.fb_strength = 2;
+Q.fb_militancy = 0;
+Q.fb_loyalty = 0.80;
+Q.fb_formed = 0;
+Q.rs_strength = 90;
+Q.rs_militancy = 0.7;
+Q.rs_banned = 0;
 Q.fdo_strength = 3;
 Q.fdo_militancy = 0.9;
 Q.fdo_banned = 0;
@@ -556,20 +560,25 @@ The creator of the mods does not endorse the extremist ideology in this mod, it'
 
 However this is will be kept to a minimum to prevent extremist from fully experiencing what they want to achieve in game.
 
+- @1927_true Begin (testing)
 - @1928_easy: Begin (easy difficulty)
 - @1928_main: Begin (normal difficulty)
 - @1928_hard: Begin (hard difficulty)
 - @1928_historical: Begin (historical mode)
 
-@1928_easy
+@1926_true
+on-arrival: difficulty = -1
+go-to: 1926_main
+
+@1926_easy
 on-arrival: difficulty = -1; resources = 4; dues = 2; budget = 3;
-go-to: 1928_main
+go-to: 1926_main
 
-@1928_hard
+@1926_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
-go-to: 1928_main
+go-to: 1926_main
 
-@1928_historical
+@1926_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
@@ -587,9 +596,9 @@ Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
-go-to: 1928_main
+go-to: 1926_main
 
-@1928_main
+@1926_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
 new-page: true
 set-bg: img/Austria.jpg
