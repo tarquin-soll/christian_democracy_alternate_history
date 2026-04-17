@@ -143,11 +143,11 @@ Heimwehr Militarization: [+ hw_militancy : militancy +]
 
 Heimwehr Loyalty: [+ hw_loyalty : loyalty +]
 
-if (Q.fb_formed = 1) {{!<span class="tooltip-text" title="The Heimwehr is a paramilitary organization of the Christian wing of the Austrian trade union movement, associated with CS.">Freiheitsbund</span>!} Strength: [+ fb_strength_2 +] thousand
+[? if fb_formed == 1:{!<span class="tooltip-text" title="The Heimwehr is a paramilitary organization of the Christian wing of the Austrian trade union movement, associated with CS.">Freiheitsbund</span>!} Strength: [+ fb_strength_2 +] thousand
 
 Freiheitsbund Militarization: [+ fb_militancy : militancy +]
 
-Freiheitsbund Loyalty: [+ fb_loyalty : loyalty +]}
+Freiheitsbund Loyalty: [+ fb_loyalty : loyalty +]?]
 
 {!<span class="tooltip-text" title="The The Republikanischer Schutzbund is a paramilitary organization defending democracy, affiliated with the SDAPÖ.">Republikanischer Schutzbund</span>!} Strength: [+ rs_strength_2 +] thousand
 
