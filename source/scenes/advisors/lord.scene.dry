@@ -55,7 +55,7 @@ title: Dissent
 subtitle: Increase dissent by 1
 on-arrival: coalition_dissent += 1
 
-@nocleric
+@noclerical
 title: Ascend the Clerists
 subtitle: Yep.
 on-arrival: clerical_strength -= 25
