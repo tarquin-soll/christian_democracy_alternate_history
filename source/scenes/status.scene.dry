@@ -137,6 +137,7 @@ if (Q.fdo_strength) {
 !}
 
 = Paramilitaries
+
 {!<span class="tooltip-text" title="The Heimwehr is an anti-democratic nationalist paramilitary associated with the CS.">Heimwehr</span>!} Strength: [+ hw_strength_2 +] thousand
 
 Heimwehr Militarization: [+ hw_militancy : militancy +]
