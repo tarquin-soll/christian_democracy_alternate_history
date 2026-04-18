@@ -15,6 +15,8 @@ The Way, The Truth and The Life
 - @maxrepublican
 - @hwloyalty
 - @dissent
+- @noclerical
+- @fb
 - @root: Return to main
 
 @clear_agenda
@@ -52,3 +54,13 @@ on-arrival: hw_loyalty -= .5
 title: Dissent
 subtitle: Increase dissent by 1
 on-arrival: coalition_dissent += 1
+
+@nocleric
+title: Ascend the Clerists
+subtitle: Yep.
+on-arrival: clerical_strength -= 25
+
+@fb
+title: Freiheitsbund
+subtitle: Form the Freiheitsbund.
+on-arrival: fb_formed = 1
