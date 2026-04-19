@@ -1,0 +1,11 @@
+title: Freiheitsbund Formed
+view-if: schattendorf_seen == 1
+max-visits: 1
+priority: 2
+new-page: true
+tags: event
+on_arrival: fb_formed = 1; labor_strength += 5
+
+= Freiheitsbund Formed
+
+The Freiheitsbund has been formed by Leopold Kunschack of the Christian Social Party, the paramilitary organization composed of blue collar workers was founded to protect christian workers from potential attacks by the social democrats after the schattendorf incident.
