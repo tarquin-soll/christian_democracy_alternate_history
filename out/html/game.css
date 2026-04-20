@@ -558,3 +558,17 @@ table {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
+
+/* Styles for factions */
+.seat.labor {
+    fill: #800000;
+}
+.seat.center {
+    fill: #707070;
+}
+.seat.clerical {
+    fill: #333333;
+}
+.seat.right {
+    fill: #000080;
+}
