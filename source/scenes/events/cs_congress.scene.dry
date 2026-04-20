@@ -34,7 +34,7 @@ for (var faction of Q.factions) {
     Q['str_change_' + faction] = sign + Q['change_' + faction + '_strength_r'].toFixed(1);
 }
 // leadership viability
-Right: [+ right_strength_r_disp +]%
+Q.seipel = clerical_strength + right_strength;
 !}
 on-display: {!
 data = [
