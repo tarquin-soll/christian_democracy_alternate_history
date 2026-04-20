@@ -18,26 +18,24 @@ on-arrival: {!
 // set old results
 for (var faction of Q.factions) {
     Q['old_' + faction + '_strength_r'] = Q[faction + '_strength_r'];
-    Q[faction + 'strength_r'] = Q[faction + '_strength'];
+    Q[faction + '_strength_r'] = Q[faction + '_strength'];
     // if we use decimals, then we might want to truncate the numbers
     if (Q.use_decimals) {
-        Q[faction + 'strength_r_disp'] = Q[faction + 'strength_r'].toFixed(1);
+        Q[faction + '_strength_r_disp'] = Q[faction + '_strength_r'].toFixed(1);
     }  else {
-            Q[faction + 'strength_r_disp'] = Q[faction + 'strength_r'].toFixed(1);
+            Q[faction + '_strength_r_disp'] = Q[faction + '_strength_r'].toFixed(1);
     }
-    Q['change_' + faction + 'strength_r'] = Q[faction + 'strength_r'] - Q['old_' + faction + 'strength_r'];
-    var sign = Q['change_' + faction + 'strength_r'] > 0 
+    Q['change_' + faction + '_strength_r'] = Q[faction + '_strength_r'] - Q['old_' + faction + '_strength_r'];
+    var sign = Q['change_' + faction + '_strength_r'] > 0 
                    ? '<img src="img/arrowup.png"> ' 
-                   : Q['change_' + faction + 'strength_r'] < 0 
+                   : Q['change_' + faction + '_strength_r'] < 0 
                      ? '<img src="img/arrowdown.png"> ' 
                      : '<img src="img/steady.png"> ';
-    Q['str_change_' + faction] = sign + Q['change_' + faction + 'strength_r'].toFixed(1);
+    Q['str_change_' + faction] = sign + Q['change_' + faction + '_strength_r'].toFixed(1);
 }
-
 // leadership viability
-
+Right: [+ right_strength_r_disp +]%
 !}
-
 on-display: {!
 data = [
     {
@@ -83,7 +81,6 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
-
 go-to: leadership_menu
 
 = Election results
