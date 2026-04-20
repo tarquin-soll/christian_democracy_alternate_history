@@ -19,13 +19,8 @@ on-arrival: {!
 for (var faction of Q.factions) {
     Q['old_' + faction + '_strength_r'] = Q[faction + '_strength_r'];
     Q[faction + '_strength_r'] = Q[faction + '_strength'];
-    Q[faction + '_seats'] = Math.round(Q[faction + '_strength_r'] * 2);
-    // if we use decimals, then we might want to truncate the numbers
-    if (Q.use_decimals) {
-        Q[faction + '_strength_r_disp'] = Q[faction + '_strength_r'].toFixed(1);
-    }  else {
-            Q[faction + '_strength_r_disp'] = Q[faction + '_strength_r'].toFixed(1);
-    }
+    Q[faction + '_seats'] = Math.round(Q[faction + '_strength_r'] * 2;
+    Q[faction + '_strength_r_disp'] = Q[faction + '_strength_r'].toFixed(1);
     Q['change_' + faction + '_strength_r'] = Q[faction + '_strength_r'] - Q['old_' + faction + '_strength_r'];
     var sign = Q['change_' + faction + '_strength_r'] > 0 
                    ? '<img src="img/arrowup.png"> ' 
