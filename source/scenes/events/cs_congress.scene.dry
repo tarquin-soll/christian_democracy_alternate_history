@@ -87,11 +87,18 @@ go-to: leadership_menu
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
-W.I.P
+{!<table>!} 
+{!<tr><td>Faction</td><td>Seat share</td><td>% Change</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#300000'> </div> !} Labor: {!</td><td>!} [+ labor_strength_r_disp +]% {!</td><td>!} [+ str_change_labor +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#707070'> </div> !} Center: {!</td><td>!} [+ center_strength_r_disp +]% {!</td><td>!} [+ str_change_center +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#333333'> </div> !} Clerical: {!</td><td>!} [+ clerical_strength_r_disp +]% {!</td><td>!} [+ str_change_clerical +] {!</td></tr>!}
+ 
+{!<tr><td><div class="box" style='background-color:#000030'> </div> !} Right: {!</td><td>!} [+ right_strength_r_disp +] % {!</td><td>!} [+ str_change_right +] {!</td></tr>!}
+{!</table>!}
 
 **Candidate of each party:**
-
-W.I.P
 
 @leadership_menu
 
