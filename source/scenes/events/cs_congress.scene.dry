@@ -2,7 +2,7 @@ title: CS Party Congress
 new-page: true
 tags: event
 priority: -1
-view-if: month == 12
+view-if: month == 11
 on-departure: cs_congress += 12
 set-jump: post_congress_1927
 face-image: img/Rothe_Wahlen_1903.jpg
@@ -83,6 +83,7 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
+
 go-to: leadership_menu
 
 = Election results
