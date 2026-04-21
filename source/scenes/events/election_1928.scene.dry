@@ -52,12 +52,7 @@ for (var party of Q.parties) {
     } else {
         Q[party + '_r'] = Q[party + '_votes'];
     }
-    // if we use decimals, then we might want to truncate the numbers
-    if (Q.use_decimals) {
-        Q[party + '_r_disp'] = Q[party + '_r'].toFixed(1);
-    }  else {
-            Q[party + '_r_disp'] = Q[party+'_r'].toFixed(1);
-    }
+    Q[party + '_r_disp'] = Q[party + '_r'].toFixed(1);
     Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
     var sign = Q['change_' + party + '_r'] > 0 
                    ? '<img src="img/arrowup.png"> ' 
@@ -205,13 +200,13 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#000000; outline: 2px; outline-style: solid;'> </div> !} **CS:** {!</td><td>!} **[+ cs_r +]%** {!</td><td>!} **[+ str_change_cs +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000; outline: 2px; outline-style: solid;'> </div> !} **CS:** {!</td><td>!} **[+ cs_r_disp +]%** {!</td><td>!} **[+ str_change_cs +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E30000'> </div> !} SDAPÖ: {!</td><td>!} [+ sdapo_r +]% {!</td><td>!} [+ str_change_sdapo +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E30000'> </div> !} SDAPÖ: {!</td><td>!} [+ sdapo_r_disp +]% {!</td><td>!} [+ str_change_sdapo +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#006090'> </div> !} GDVP: {!</td><td>!} [+ gdvp_r +]% {!</td><td>!} [+ str_change_gdvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#006090'> </div> !} GDVP: {!</td><td>!} [+ gdvp_r_disp +]% {!</td><td>!} [+ str_change_gdvp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#408040'> </div> !} LB: {!</td><td>!} [+ lb_r +] % {!</td><td>!} [+ str_change_lb +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#408040'> </div> !} LB: {!</td><td>!} [+ lb_r_disp +] % {!</td><td>!} [+ str_change_lb +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
