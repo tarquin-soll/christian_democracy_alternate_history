@@ -2,7 +2,7 @@ title: CS Party Congress
 new-page: true
 tags: event
 priority: -1
-view-if: month == 11
+view-if: cs_congress == 0
 on-departure: cs_congress += 12
 set-jump: post_congress_1927
 face-image: img/Rothe_Wahlen_1903.jpg
