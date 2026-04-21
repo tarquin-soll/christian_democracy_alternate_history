@@ -4,14 +4,13 @@ is-card: true
 tags: party_affairs
 view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 8
-card-image: img/international.jpg
+card-image: img/yellowcross.png
 max-visits: 6
-#subtitle: Building ties with our fraternal socialist parties.
 
 [? if not in_sipdic:We're currently not affiliated with any Political International, however we may attempt in joining the White International, a Christian democratic political international.?][? if in_sipdic:At the White International, we can forge contacts with our Christian parties in Europe and across the world.?]
 
 - @sipdic: Attempt to join the White International.
-- @france: Contact Conservative or Christian parties.
+- @france: Contact Conservative or Christian parties in France.
 - @germany: Contact the Zentrumspartei
 - @hungary: Contact the Christian parties of Hungary.
 - @papacy: Establish embassies in the papacy to improve relations.
