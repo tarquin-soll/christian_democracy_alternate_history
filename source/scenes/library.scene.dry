@@ -335,73 +335,33 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Q.kpd_r*5,
-    }];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
-            });
-}
-data = data.concat([
-    {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Q.spd_r*5,
+        "id": "sdapo",
+        "legend": "SDAPO",
+        "name": "SDAPÖ",
+        "seats": Q.sdapo_r*1.65,
     },
     {
-        "id": "ddp",
-        "legend": "DDP",
-        "name": "DDP",
-        "seats": Q.ddp_r*5,
+        "id": "cs",
+        "legend": "CS",
+        "name": "CS",
+        "seats": Q.cs_r*1.65,
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": (Q.z_r - 3)*5,
+        "id": "gdvp",
+        "legend": "GDVP",
+        "name": "GDVP",
+        "seats": Q.gdvp_r*1.65,
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": 3*5,
+        "id": "lb",
+        "legend": "LB",
+        "name": "LB",
+        "seats": Q.lb_r*1.65,
     },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Q.other_r*5,
-    },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Q.dnvp_r*5,
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Q.nsdap_r*5,
-    },
-]);
+];
 if (d3 && window) {
     // get screen width
     var width = 500;
@@ -479,7 +439,7 @@ if (d3 && window) {
 
 = Election history
 
-[? if year = 1928 and month < 5 : No new elections yet. ?]
+[? if year <= 1927 and month < 4 : No new elections yet. ?]
 
 {!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!}
 
