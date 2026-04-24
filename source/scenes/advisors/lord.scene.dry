@@ -70,9 +70,9 @@ on-arrival: fb_formed = 1
 @budget
 title: Fish and Bread
 subtitle: Make them appear
-on-arrival budget += 10
+on-arrival: budget += 10
 
 @minbudget
 title: Fish and Bread
 subtitle: Make them disappear
-on-arrival budget -= 10
+on-arrival: budget -= 10
