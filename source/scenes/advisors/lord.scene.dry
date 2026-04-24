@@ -17,6 +17,8 @@ The Way, The Truth and The Life
 - @dissent
 - @noclerical
 - @fb
+- @budget
+- @minbudget
 - @root: Return to main
 
 @clear_agenda
@@ -64,3 +66,13 @@ on-arrival: clerical_strength -= 25
 title: Freiheitsbund
 subtitle: Form the Freiheitsbund.
 on-arrival: fb_formed = 1
+
+@budget
+title: Fish and Bread
+subtitle: Make them appear
+on-arrival budget += 10
+
+@minbudget
+title: Fish and Bread
+subtitle: Make them disappear
+on-arrival budget -= 10
