@@ -26,7 +26,7 @@ title: Party Affairs
 @ministry
 title: Ministrial Affairs
 unavailable-subtitle: [? if cs_in_government == 0;We're currently not in government.?]
-view-if: cs_in_government == 1
+choose-if: cs_in_government == 1
 
 - @snap_election
 - @interior
