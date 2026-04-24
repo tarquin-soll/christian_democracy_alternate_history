@@ -10,22 +10,40 @@ view-if: seipel_advisor = 1
 
 Seipel is a consevative catholic priest. A former [? if chancellor = "Seipel": and current ?] Chancellor, and is a long-time <span style="color: #000000;">Christian Social Party</span> leader.
 
-- @campaigning
+- @ministry
+- @party
+
+@party
+title: Party Affairs
+
+- @emergency_fundraising
 - @party_discipline
 - @republicanism
 - @coalition
-- @foreign
-- @snap_election
+- @ministry: How about ministrial affairs?
 - @root: Return to main
 
-@campaigning
-title: Campaigning
-subtitle: Increase our standing on austrian catholics. (require 1 resources)
-choose-if: advisor_action_timer <= 0 and resources >= 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if resources == 0 : Not enough resources. ?]
-on-arrival: advisor_action_timer = 6; catholics_cs += 8*(1-dissent); resources -= 1
+@ministry
+title: Ministrial Affairs
+unavailable-subtitle: [? cs_in_government == 1;We're currently not in government.?]
+view-if: cs_in_government == 1
 
-We have increased our campaigning among Catholics.
+- @snap_election
+- @interior
+- @foreign
+- @justice
+- @party: How about party affairs?
+- @root: Return to main
+
+@emergency_fundraising
+title: Emergency Fundraising
+view-if: difficulty < 1
+subtitle: An emergency infusion of resources.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; resources += dues
+
+We have gained +[+ dues +] resources.
 
 @party_discipline
 title: Party Discipline
@@ -70,3 +88,20 @@ unavailable-subtitle: [? if not cs_in_government: The <span style="color: #00000
 choose-if: advisor_action_timer == 0 and cs_in_government and foreign_minister_party == "CS"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
+
+@justice
+title: Judiciary Reform
+subtitle: As Justice Minister, Seipel can reform our Judiciary.
+unavailable-subtitle: [? if not cs_in_government: The <span style="color: #000000;">CS</span> is not in government. ?] [? if justice_minister_party != "CS" : The <span style="color: #000000;">CS</span> does not control the Justice Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and cs_in_government and justice_minister_party == "CS"
+on-arrival: advisor_action_timer = 6; judiciary_timer -= 6; last_advisor_action = 1
+go-to: judiciary
+
+@interior
+title: Internal Security
+subtitle: As Interior Minister, Seipel can perform special investigations.
+unavailable-subtitle: [? if not cs_in_government: The <span style="color: #000000;">CS</span> is not in government. ?] [? if interior_minister_party != "CS" : The <span style="color: #000000;">CS</span> does not control the Interior Ministry. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and cs_in_government and interior_minister_party == "CS"
+on-arrival: advisor_action_timer = 6; police_timer -= 6; last_advisor_action = 1
+go-to: police
+
