@@ -242,7 +242,7 @@ Who should be chancellor?
 title: Ignaz Seipel for Chancellor
 view-if: seipel_dead = 0
 subtitle: Seipel has been our go-to choice for the Chancellory, he is also the preferred candidate of other parties.
-on-arrival: leverage += 5; cs_in_government = 1; chancellor = "Seipel"; chancellor_party = "CS"; in_unity_coalition = 1 if in_bourgeoisbloc_coalition == 0
+on-arrival: cs_in_government = 1; chancellor = "Seipel"; chancellor_party = "CS"; in_unity_coalition = 1 if in_bourgeoisbloc_coalition == 0
 go-to: ministries
 
 @cs_majority
@@ -359,17 +359,45 @@ view-if: vice_chancellor_party !=  "CS"
 on-arrival: leverage -= 20; vice_chancellor_party = "CS"; vice_chancellor = "Miklas"
 go-to: ministries
 
+@interior_kerber
+title: Interior Ministry
+subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: interior_minister_party != "CS" and seipel_dead
+on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Kerber"
+go-to: ministries
+
 @interior
 title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
-view-if: interior_minister_party != "CS"
+view-if: interior_minister_party != "CS" and not seipel_dead
 on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Seipel"; interior_minister = "Kerber" if seipel_dead
-go-to: ministries
+go-to: interior_discussion
 
-[? if seipel_dead : Robert Kerber ?][? if not seipel_dead : Ignaz Seipel ?] of the <span style="color: #000000;">CS</span> has been appointed Interior Minister.
+Robert Kerber of the <span style="color: #000000;">CS</span> has been appointed Interior Minister.
+
+@interior_discussion
+title: Who should be interior minister.
+
+- @interior_seipel
+- @interior_kerber: Robert Kerber.
+
+@interior_seipel
+title: Interior Ministry
+subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 6
+view-if: interior_minister_party != "CS" and not seipel_dead
+on-arrival: leverage -= 6; interior_minister_party = "CS"; interior_minister = "Seipel"
+go-to: interior_discussion
+
+Ignaz Seipel of the <span style="color: #000000;">CS</span> has been appointed Interior Minister.
 
 @foreign
 title: Foreign Ministry
@@ -460,9 +488,9 @@ title: Defense Ministry
 subtitle: This is expected of us. The Defense Ministry controls the Federal Army (Bundesheer) and national military policy.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 10
+choose-if: leverage >= 5
 view-if: defense_minister_party != "CS"
-on-arrival: leverage -= 10; defense_minister_party = "CS"; defense_minister = "Vaugoin"
+on-arrival: leverage -= 5; defense_minister_party = "CS"; defense_minister = "Vaugoin"
 go-to: ministries
 
 Carl Vaugoin of the <span style="color: #000000;">CS</span>  has been appointed Defense Minister.
@@ -540,7 +568,7 @@ go-to: ministries
 @drop_defense
 title: Drop the Defense Ministry.
 view-if: defense_minister_party = "CS"
-on-arrival: leverage += 10
+on-arrival: leverage += 5
 tags: drop_mins_1928
 go-to: defense_discussion
 
