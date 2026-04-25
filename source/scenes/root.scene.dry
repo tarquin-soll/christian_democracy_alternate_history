@@ -549,7 +549,7 @@ However this is will be kept to a minimum to prevent extremist from fully experi
 - @1926_historical: Begin (historical mode)
 
 @1926_true
-on-arrival: difficulty = -1; Q.lord_advisor = 1
+on-arrival: difficulty = -1; lord_advisor = 1; funder_advisor = 0
 go-to: 1926_main
 
 @1926_easy
