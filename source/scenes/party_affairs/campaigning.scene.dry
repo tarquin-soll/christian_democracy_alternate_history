@@ -24,7 +24,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_cs += 6*(1-dissent); workers_cs -= 2 if unemployed >= 15; workers_cs -= 2 if unemployed >= 25; workers_cs -= 2 socialism_stance <= 3
+on-arrival: workers_cs += 6*(1-dissent); workers_cs -= 2 if unemployed >= 15; workers_cs -= 2 if unemployed >= 25; workers_cs -= 2 if socialism_stance <= 3
 
 We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if socialism <= 3 : Since our party is irreceptive to socialism which is popular among the workers, they still favour the SDAPÖ ?]
 
@@ -40,7 +40,7 @@ We have increased our campaigning among the new middle class. [? if pro_republic
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: old_middle_spd += 6*(1-dissent); resources -= 1; old_middle_cs -= 4 if nationalism <= 49 and republicanism_stance >= 4
+on-arrival: old_middle_cs += 6*(1-dissent); resources -= 1; old_middle_cs -= 4 if nationalism <= 49 and republicanism_stance >= 4
 
 We have increased our campaigning among the old middle class. [? if pro_republic <= 49 and republicanism_stance >= 4: The popular antipathy towards democracy among this conservative group makes our campaign more difficult. ?]
 
