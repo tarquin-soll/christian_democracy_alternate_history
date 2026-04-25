@@ -378,24 +378,31 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "CS" and not seipel_dead
-on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Seipel"
 go-to: interior_discussion
 
 @interior_discussion
 title: Who should be interior minister.
 
 - @interior_seipel
-- @interior_kerber: Robert Kerber.
+- @interior_kerber2
 
 @interior_seipel
 title: Ignaz Seipel
 unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
 choose-if: leverage >= 6
 on-arrival: leverage -= 6; interior_minister_party = "CS"; interior_minister = "Seipel"
 go-to: ministries
 
 Ignaz Seipel of the <span style="color: #000000;">CS</span> has been appointed Interior Minister.
+
+@interior_kerber2
+title: Robert Kerber
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 5
+on-arrival: leverage -= 5; interior_minister_party = "CS"; interior_minister = "Kerber"
+go-to: ministries
+
+Robert Kerber of the <span style="color: #000000;">CS</span> has been appointed Interior Minister.
 
 @foreign
 title: Foreign Ministry
