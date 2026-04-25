@@ -483,13 +483,12 @@ Q.march_on_berlin_timer = 0;
 
 
 // centrist advisor
-Q.lord_advisor = 1; // Jesus Christ of Nazareth
+Q.lord_advisor = 0; // Jesus Christ of Nazareth
 Q.miklas_advisor = 1; // Wilhelm Miklas
+Q.funder_advisor = 1; // Friedrich Funder
 Q.wels_advisor = 0; // Otto Wels
 Q.muller_advisor = 0; // Hermann Müller
 Q.muller_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
-Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 0; // Rudolf Hilferding
 
 // clerical advisors (temporary)
@@ -550,11 +549,11 @@ However this is will be kept to a minimum to prevent extremist from fully experi
 - @1926_historical: Begin (historical mode)
 
 @1926_true
-on-arrival: difficulty = -1
+on-arrival: difficulty = -1; Q.lord_advisor = 1
 go-to: 1926_main
 
 @1926_easy
-on-arrival: difficulty = -1; resources = 4; dues = 2; budget = 3;
+on-arrival: difficulty = -1; dues = 3; budget = 2
 go-to: 1926_main
 
 @1926_hard
