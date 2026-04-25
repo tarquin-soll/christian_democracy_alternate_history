@@ -36,7 +36,7 @@ Q.old_demographics = 0;
 Q.use_decimals = 0;
 
 // party resources
-Q.resources = 4;
+Q.resources = 2;
 // party dues
 Q.dues = 2;
 
@@ -191,7 +191,7 @@ Q.rural = 35;
 Q.unemployed = 6.0;
 Q.catholics = 65;
 
-Q.inflation = 2.9;
+Q.inflation = 2.1;
 
 Q.economic_growth = 4.4;
 
@@ -453,7 +453,7 @@ Q.no_majority_elections = 0;
 Q.in_election = 1;
 Q.next_election_year = 1927;
 Q.next_election_month = 4;
-Q.next_election_time = 5;
+Q.next_election_time = 4;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
 Q.domestic_enemies_timer = 0;
@@ -473,6 +473,7 @@ Q.homosexual_rights_timer = 0;
 Q.economic_democracy_timer = 0;
 Q.coalition_affairs_timer = 0;
 // event timers
+Q.cs_congress = 12;
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
 Q.sa_ban_timer = 0;
