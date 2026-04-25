@@ -56,6 +56,11 @@ Q.labor_strength = 10;
 Q.labor_dissent = 15;
 Q.clerical_strength = 45;
 Q.clerical_dissent = 0;
+// cs congress
+Q.old_right_strength_r = 30;
+Q.old_center_strength_r = 15;
+Q.old_labor_strength_r = 10;
+Q.old_clerical_strength_r = 45;
 
 //internal party positions
 Q.minority_stance = 6;
