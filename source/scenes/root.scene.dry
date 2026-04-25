@@ -20,7 +20,7 @@ go-to: start_menu_2
 on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
-Q.time = 12;
+Q.time = 10;
 Q.year = 1926;
 Q.month = 10;
 // how many actions have been taken this month?
@@ -56,11 +56,6 @@ Q.labor_strength = 10;
 Q.labor_dissent = 15;
 Q.clerical_strength = 45;
 Q.clerical_dissent = 0;
-// cs congress
-Q.right_strength_r = 30;
-Q.center_strength_r = 15;
-Q.labor_strength_r = 10;
-Q.clerical_strength_r = 45;
 
 //internal party positions
 Q.minority_stance = 6;
@@ -124,29 +119,11 @@ Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
 Q.hindenburg_enabled = 0;
 
-
-// W.I.P
-// Viennese Variables (https://hdgoe.at/wahlen/wahlergebnis_wien_en.html?year=1923#)
-Q.cs_vienna = 0;
-Q.sdapo_r_v = (Q.sdapo_r * Q.adjustmentsdapocs);
-Q.cs_r_v = (Q.cs_r * Q.adjustmentFactorcs);
-Q.gdvp_r_v = (Q.gdvp_r * Q.adjustmentFactorgdvp);
-Q.other_r_v = (Q.old_other_r_v * Q.adjustmentFactorother);
-Q.old_sdapo_r_v = 55.5;
-Q.old_cs_r_g = 32.8;
-Q.old_gdvp_r_v = 5.2;
-Q.old_other_r_v = 6.4;
-
-Q.adjustmentFactorcs =  0;
-Q.adjustmentFactorsdapo = 0;
-Q.adjustmentFactorgdvp = 0;
-Q.adjustmentFactorother = 0.625;
-
 // The array of forces - paramilitary groups
 // Number of members in 1927 (in thousands)
 // https://de.wikipedia.org/wiki/Frontk%C3%A4mpfervereinigung_Deutsch-%C3%96sterreichs
 // Heimwehr and Republikanischer Schutzbund wikipedia says the Schutzbund peaked at 100,000 so its 90,000 here
-Q.hw_strength = 300;
+Q.hw_strength = 200;
 Q.hw_militancy = 0.8;
 Q.hw_loyalty = 0.8;
 Q.hw_banned = 0;
@@ -154,7 +131,7 @@ Q.fb_strength = 1;
 Q.fb_militancy = 0;
 Q.fb_loyalty = 0.80;
 Q.fb_formed = 0;
-Q.rs_strength = 90;
+Q.rs_strength = 70;
 Q.rs_militancy = 0.7;
 Q.rs_banned = 0;
 Q.fdo_strength = 3;
@@ -181,9 +158,9 @@ Q.reichswehr_loyalty = 0.2;
 // nationalism vs internationalism or pacifism or non-nationalism
 Q.nationalism = 60;
 // socialism vs capitalism
-Q.socialism = 40;
+Q.socialism = 45;
 // pro-republic vs anti-republic
-Q.pro_republic = 40;
+Q.pro_republic = 35;
 
 Q.emergency_rule = 0;
 
