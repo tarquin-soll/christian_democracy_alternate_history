@@ -1,0 +1,58 @@
+title: Friedrich Funder
+is-pinned-card: true
+tags: advisor, centrist
+card-image: img/portraits/FriedrichFunder.jpg
+view-if: funder_advisor = 1
+new-page: true 
+
+= Friedrich Funder
+
+Friedrich Funder is the long-time editor-in-chief of Reichspost, our party's viennese newspaper. He was historically an advisor of the heir to the throne Archduke Franz Ferdinand which he supported his trialism and pro-slavic reforms.
+
+- @media_
+- @faction_support_
+- @root: Return to main
+
+
+@media_
+title: Media
+subtitle: Manage our party's newspapers and media.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
+go-to: media
+
+
+@faction_support_
+title: Editorial Line
+subtitle: We can change the editorial line of the Reichspost to support a particular faction.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
+
+Which faction should we support?
+
+- @support_right: Right
+- @support_center: Center
+- @support_labor: Labor
+- @support_clerical: Clerical
+
+@support_right
+on-arrival: right_dissent -= 8; right_strength += 8
+
+Vorwärts prints editorials in support of Right positions.
+
+@support_center
+on-arrival: center_dissent -= 8; center_strength += 8
+
+Vorwärts prints editorials in support of centrist positions.
+
+@support_labor
+on-arrival: labor_dissent -= 8; labor_strength += 8
+
+Vorwärts prints editorials in support of the policies of the trade unions.
+
+@support_clerical
+on-arrival: clerical_dissent -= 8; clerical_strength += 8;
+
+Vorwärts prints editorials in support of the clerist policies.
