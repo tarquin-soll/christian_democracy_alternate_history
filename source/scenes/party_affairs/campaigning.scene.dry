@@ -32,15 +32,29 @@ We have increased our campaigning among the workers. [? if unemployed >= 15: The
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: new_middle_cs += 6*(1-dissent); resources -= 1; new_middle_cs -= 3 if nationalism <= 49 and republicanism_stance >= 4
+on-arrival: {!
+Q.resources -= 1;
+Q.new_middle_cs += 6 * (1-dissent);
 
-We have increased our campaigning among the new middle class. [? if pro_republic <= 49 and republicanism stance >= 5: The popular antipathy towards democracy among this group makes our campaign more difficult. ?]
+if (Q.nationalism <= 49 && Q.republicanism_stance >= 4) {
+    Q.new_middle_cs -= 4;
+}
+!}
+
+We have increased our campaigning among the new middle class. [? if pro_republic <= 49 and republicanism_stance >= 5: The popular antipathy towards democracy among this group makes our campaign more difficult. ?]
 
 @old_middle
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: old_middle_cs += 6*(1-dissent); resources -= 1; old_middle_cs -= 4 if nationalism <= 49 and republicanism_stance >= 4
+on-arrival: {!
+Q.resources -= 1;
+Q.old_middle_cs += 6 * (1-dissent);
+
+if (Q.nationalism <= 49 && Q.republicanism_stance >= 4) {
+    Q.old_middle_cs -= 4;
+}
+!}
 
 We have increased our campaigning among the old middle class. [? if pro_republic <= 49 and republicanism_stance >= 4: The popular antipathy towards democracy among this conservative group makes our campaign more difficult. ?]
 
@@ -56,7 +70,7 @@ We have increased our campaigning among farmers.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_cs += 6*(1-dissent); resources -= 1; unemployed_cs -= 3 and unemployed_sdapo += 1 if welfare < 0; unemployed_cs += 3*(1-dissent) if welfare >= 2
+on-arrival: unemployed_cs += 6*(1-dissent); resources -= 1; unemployed_cs -= 3 if welfare < 0; unemployed_sdapo += 1 if welfare < 0; unemployed_cs += 3*(1-dissent) if welfare >= 2
 
 We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we enacted these cuts, and our campaign may even backfire. ?]
 
