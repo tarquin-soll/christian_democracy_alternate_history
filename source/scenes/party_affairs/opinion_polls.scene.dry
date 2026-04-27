@@ -9,7 +9,7 @@ Q.month_actions += 1
 !}
 frequency: 100 if cs_in_government else 30
 is-card: true
-card-image: img/Polls.jpg
+card-image: img/Polling.jpg
 tags: party_affairs
 
 = Opinion Polls
