@@ -12,41 +12,6 @@ max-visits: 6
 
 The *Heimwehr* is a nationalist paramilitary group whose opposed to parliamentary democracy, socialism and Marxism. It is officially associated with us, the CS.
 
-- @militant: Fund more military-style training and equipment for the Reichsbanner.
-- @militant_2: Use our existing resources to support more training for the Reichsbanner.
-- @aussage
-- @same: Keep the Reichsbanner as it is.
-- @cut_hw: Cut funding for the Reichsbanner.
 - @easy_discard
 - @cancel_advisor_action
-
-@militant
-choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
-subtitle: -[+ rb_militarization_cost +] resources
-on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; reformist_dissent += 5; spd_militancy += 0.05; workers_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent); z_relation -= 5 if historical_mode 
-
-Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
-
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
-
-
-@militant_2
-view-if: funded_reichsbanner >= 1
-on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
-
-As we have already funded resources towards the Reichsbanner, we can invest in building up their militancy.
-
-
-@same
-
-The Heimwher is already serving the purpose it needs to serve. There is no reason to change what already works.
-
-- @return: Continue...
-
-
-@cut_hw
-subtitle: +1 resources
-on-arrival: resources += 1; hw_strength -= 30; hw_militancy -= 0.05; right_strength -= 2; right_dissent += 2; hw_loyalty -= 0.1 if 
-
-Cutting resources to the Reichsbanner causes a drop in the membership, and leads some would-be members to join the Communists instead.
+- @return: W.I.P
