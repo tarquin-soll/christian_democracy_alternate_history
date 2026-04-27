@@ -3,8 +3,10 @@ new-page: true
 view-if: polls_timer <= 0 and historical_mode = 1
 on-arrival: {! 
 // Generates numbers from (-2)-(2)
-Q.random = Math.round(Math.random() * 4) - 2; 
-!} fundraising_timer = 6; month_actions += 1
+Q.random = Math.round(Math.random() * 4) - 2;
+Q.fundraising_timer = 6;
+Q.month_actions += 1
+!}
 frequency: 100 if cs_in_government else 30
 is-card: true
 card-image: img/Polls.jpg
