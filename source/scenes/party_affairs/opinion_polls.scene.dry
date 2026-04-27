@@ -1,0 +1,38 @@
+title: Opinion Polls
+new-page: true
+view-if: polls_timer <= 0 and historical_mode = 1
+on-arrival: {! 
+// Generates numbers from (-2)-(2)
+Q.random = Math.round(Math.random() * 4) - 2; 
+!}
+on-arrival: fundraising_timer = 6; month_actions += 1
+frequency: 100 if cs_in_government else 30
+is-card: true
+card-image: img/Polls.jpg
+tags: party_affairs
+
+= Opinion Polls
+  
+We can host an opinion polls to foresee the results in the following election
+
+- @host
+- @return: We cant or choose not to host a poll at the moment.
+  
+@host
+title: Host a poll
+subtitle: -1 resource
+unavailable-subtitle: Not enough resources.
+choose-if: resources >= 1
+on-arrival: resources -= 1
+
+If elections are held now.
+
+<span style="color: #000000;"><b>CS</b></span>: ([+ cs_votes +] + [+ random +])%
+
+<span style="color: #D00000;"><b>SDAPÖ</b></span>: ([+ sdapo_votes +] + [+ random +])%
+
+[? if npo_formed : <span style="color: #002050;">NPÖ</span> ([+ npo_votes +] + [+ random +])% ?]
+
+<span style="color: #2080A0;"><b>GDVP</b></span>: ([+ gdvp_votes +] + [+ random +])%
+
+<span style="color: #408040;"><b>LB</b></span>: ([+ lb_votes +] + [+ random +])%
