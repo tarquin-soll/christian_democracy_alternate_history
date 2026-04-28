@@ -4,10 +4,10 @@ view-if: polls_timer <= 0 and historical_mode = 1
 on-arrival: {! 
 // Generates numbers from (-2)-(2)
 Q.random.cs = Math.round(Math.random() * 4) - 2;
-Q.random.cs = Math.round(Math.random() * 4) - 2;
-Q.random.cs = Math.round(Math.random() * 4) - 2;
-Q.random.cs = Math.round(Math.random() * 4) - 2;
-Q.random.cs = Math.round(Math.random() * 4) - 2;
+Q.random.sdapo = Math.round(Math.random() * 4) - 2;
+Q.random.npo = Math.round(Math.random() * 4) - 2;
+Q.random.gdvp = Math.round(Math.random() * 4) - 2;
+Q.random.lb = Math.round(Math.random() * 4) - 2;
 // New vars
 Q.cs_poll = Q.cs_votes + Q.random.cs;
 Q.sdapo_poll = Q.sdapo_votes + Q.random.sdapo;
