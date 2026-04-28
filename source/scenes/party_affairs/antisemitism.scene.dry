@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 tags: party_affairs
 view-if: antisemitism_timer <= 0 and minority_stance >= 2
-on-arrival: month_actions += 1; antisemitism_timer += 68
+on-arrival: month_actions += 1; antisemitism_timer += 6
 card-image: img/KarlLueger.jpg
 #subtitle: Attacking the semites.
 
@@ -13,17 +13,21 @@ W.I.P
 
 - @attack
 - @deradicalise
+- @root: We should do this another time...
 - @easy_discard
 
 @attack
 title: Attack the Jews
 subtitle: Through rhetorics in our campaigns.
+unavailable-subtitle: [? if minority_stance <= 3 :No, we will not do this. ?]
+choose-if: minority_stance >= 4
+on-arrival: enemies = "Jewish elements"; labor_dissent -= 5; center_dissent -= 3; right_dissent -= 10; clerical_dissent -= 10; sdapo_relation -= 5; gdvp_relation += 4; lb_relation += 1; workers_sdapo -= 3; old_middle_sdapo -= 2; new_middle_sdapo -= 2
 
-W.I.P We have historically attacked Jews using antisemitic rhetorics.
+We have historically attacked them using anti-semitic rhetorics, this was present under the Leadership of Karl Lueger. By attacking the Jewish Minority, we've effectively pointed our party to attack a certain demographic as a scapegoat, thus reducing internal dissent.
 
 @deradicalise
 title: Deradicalize
-view-if: center_strength >= 35
-on-arrival: right_strength -= 5; right_dissent += 10; minority_stance -= 1
+view-if: center_strength > (clerical_strength + right_strength)
+on-arrival: right_strength -= 3; right_dissent += 10; minority_stance -= 1
 
-W.I.P (there's effects though)
+Attempting to remove the anti-semitic rhetorics weakens our relationship with austro-nationalists inside our parties.
