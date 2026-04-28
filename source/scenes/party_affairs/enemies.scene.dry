@@ -25,19 +25,19 @@ on-arrival: enemies = "Austromarxists"; center_dissent -= 5; right_dissent -= 8;
 Our anti-Socialist rhetoric is popular among all but the most radical elements of the working class, and it wins us a measure of approval among our coalition partners. However, if we are to reconcile with the <span style="color: #D00000;">SDAPÖ</span>, this may not be the best choice.
 
 @paramilitaries
-on-arrival: enemies = "paramilitaries"; fdo_militancy -= 0.1; hw_militancy -= 0.1; rs_militancy -= 0.1; hw_loyalty -= 0.1; right_strength -= 5; right_dissent -= 5; center_dissent -= 5
+on-arrival: enemies = "paramilitaries"; fdo_militancy -= 0.1; hw_militancy -= 0.1; rs_militancy -= 0.1; fb_militancy -= 0.1; hw_loyalty -= 0.1; fb_loyalty -= 0.1; right_strength -= 5; right_dissent -= 5; center_dissent -= 5
 
 This is unpopular to our heimwehr but it results in the reduced militancy of these paramilitaries, this however is opposed by the right and the center of our party who see at as a necessity to defend the republic against the socialists.
 
 @jewish
 unavailable-subtitle: [? if minority_stance <= 3 :No, we will not do this. ?]
 choose-if: minority_stance >= 4
-on-arrival: enemies = "Jewish elements"; labor_dissent -= 5; center_dissent -= 5; right_dissent -= 10; clerical_dissent -= 10; sdapo_relation -= 5; gdvp_relation += 1; lb_relation += 1; workers_sdapo -= 3; old_middle_sdapo -= 2; new_middle_sdapo -= 2
+on-arrival: enemies = "Jewish elements"; labor_dissent -= 5; center_dissent -= 3; right_dissent -= 10; clerical_dissent -= 10; sdapo_relation -= 5; gdvp_relation += 4; lb_relation += 1; workers_sdapo -= 3; old_middle_sdapo -= 2; new_middle_sdapo -= 2
 
-W.I.P 👍 
+By attacking the Jewish Minority, we've effectively pointed our party to attack a certain demographic as a scapegoat, thus reducing internal dissent.
 
 @coalition_rivals
-on-arrival: enemies = "Coalition rivals"; right_strength -= 5; right_dissent += 5; center_dissent += 5; gdvp_relation -= 8; lb_relation -= 5; sdapo_relation += 5; rural_lb -= 3; new_middle_gdvp -= 3; coalition_dissent += 1
+on-arrival: enemies = "Coalition rivals"; right_strength -= 5; right_dissent += 5; center_dissent += 5; gdvp_relation -= 8; lb_relation -= 5; sdapo_relation += 5; rural_lb -= 3; new_middle_gdvp -= 3; coalition_dissent += 1 if cs_in_government and (not cs_majority)
 
-Our rhetoric against the "Secular Bloc" is popular among the rural clergy and the devout middle class, who see the <span style="color: #2080A0;">GDVP</span> and <span style="color: #408040;">LB</span> as a traitor to their faith. However, by attacking own partners, it makes it harder to build coalitions that are necessary for governments in the future.
+Our rhetoric against the "Secular Bloc" is popular among religious demographics, who see the <span style="color: #2080A0;">GDVP</span> and <span style="color: #408040;">LB</span> as a traitor to their faith. However, by attacking own partners, it makes it harder to build coalitions that are necessary for governments in the future.
 
