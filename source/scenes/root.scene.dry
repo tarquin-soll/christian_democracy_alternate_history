@@ -427,7 +427,7 @@ Q.timers = ['advisor_action', 'antisemitism', 'confronting_nazis', 'crisis_progr
             'sa_ban', 'sh_ban', 'papen_chancellor',
             'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
-            'understanding_enemy', 'schleichers_schemes'];
+            'understanding_enemy', 'schleichers_schemes', 'cs_congress'];
 Q.advisor_action_timer = 0;
 // party affairs timers
 Q.antisemitism_timer = 0;
@@ -474,7 +474,7 @@ Q.homosexual_rights_timer = 0;
 Q.economic_democracy_timer = 0;
 Q.coalition_affairs_timer = 0;
 // event timers
-Q.cs_congress = 12;
+Q.cs_congress_timer = 1;
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
 Q.sa_ban_timer = 0;
@@ -554,7 +554,7 @@ on-arrival: difficulty = -1; lord_advisor = 1; funder_advisor = 0
 go-to: 1926_main
 
 @1926_easy
-on-arrival: difficulty = -1; dues = 3; budget = 2
+on-arrival: difficulty = -1; dues = 3; budget = 2; funder_advisor = 1
 go-to: 1926_main
 
 @1926_hard
