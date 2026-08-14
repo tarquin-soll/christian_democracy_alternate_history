@@ -16,6 +16,8 @@ if (Q.economic_growth) {
 
 = Status
 
+random variable [+ random +]
+
 [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
